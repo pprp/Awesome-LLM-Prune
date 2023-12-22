@@ -4,9 +4,9 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
 - LLM-KICK: COMPRESSING LLMS: THE TRUTH IS RARELY PURE AND NEVER SIMPLE
     - Author: Ajay Jaiswal, Zhe Gan, etc
     - Link: https://arxiv.org/pdf/2310.01382.pdf
-    - Code: Not avaliable
+    - Code: Not available
     - Pub: Arxiv
-    - Summary: Re-define the evaluation protocal for compressed LLMs; Observation: SoTA Pruning methods suffer significant performance degradation, despite negligible changes in perplexity. SoTA Pruning do not work well for N:M structured pruning. Quantization methods are more successful.
+    - Summary: Re-define the evaluation protocol for compressed LLMs; Observation: SoTA Pruning methods suffer significant performance degradation, despite negligible changes in perplexity. SoTA Pruning do not work well for N:M structured pruning. Quantization methods are more successful.
     - Comment: This paper question the performance of LLM after pruning, which provide us a new perspective besides pure perplexity
 - PRUNING LARGE LANGUAGE MODELS VIA ACCURACY PREDICTOR
     - Author: Yupeng Ji, Yibo Cao, Jiucai Liu 
@@ -21,7 +21,7 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Code: https://github.com/horseee/LLM-Pruner
     - Pub: NeurIPS 2023 
     - Summary: This paper endeavor find the copuled structures (Dependency Graph) in LLaMA and proposed Groupded Importance Estimation like Vector-wise, Element-wise, and Group Importance. 
-    - Comment: Impressive work. This work is simmlary to MMRazor, which can handle CNN-based model. 
+    - Comment: Impressive work. This work is similar to MMRazor, which can handle CNN-based model. 
 - SparseGPT: Massive Language Models Can be Accurately Pruned in One-shot 
     - Author: Elias Frantar, Dan Alistarh
     - Link: https://arxiv.org/pdf/2301.00774.pdf 
@@ -50,3 +50,4 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Pub: Under Review 
     - Summary: Combing instruction tuninng with training-based Pruning. LoRA is incorporated to achieve memory-efficient. Collaborative pruning prompt encourage LLMs to better alighn with the pruning algorithm. 
     - Comment: The prompt is really interesting, which is "Attention! LLM".
+
