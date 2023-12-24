@@ -48,6 +48,11 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Link: https://arxiv.org/pdf/2310.05015.pdf 
     - Code: https://github.com/microsoft/Moonlit/tree/main/Compresso
     - Pub: Under Review 
-    - Summary: Combing instruction tuninng with training-based Pruning. LoRA is incorporated to achieve memory-efficient. Collaborative pruning prompt encourage LLMs to better alighn with the pruning algorithm. 
+    - Summary: Combing instruction tuning with training-based Pruning. LoRA is incorporated to achieve memory-efficient. Collaborative pruning prompt encourage LLMs to better align with the pruning algorithm. 
     - Comment: The prompt is really interesting, which is "Attention! LLM".
-
+- The Truth is in There: Improving Reasoning in Language Models with Layer-Selective Rank Reduction
+	- Author: Pratyusha Sharma, Jordan T. Ash, Dipendra Misra 
+	- Link: https://arxiv.org/pdf/2312.13558.pdf 
+	- Code: Not available 
+	- Pub: ICLR Under review 
+	- Summary: This paper is not related to Pruning but to Low-rank decomposition. They find that removing higher-order component of weight matrics in MLP and attention can significantly improve the performance of LLMs. 
