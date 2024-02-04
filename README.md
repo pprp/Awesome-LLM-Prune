@@ -34,15 +34,14 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Link: https://arxiv.org/pdf/2306.03805.pdf
     - Code: https://github.com/VITA-Group/essential_sparsity
     - Pub: NeurIPS 2023 
-    - Summary: This paper propose the existence of – “essential sparsity” defined with a sharp dropping point beyond which the performance declines much faster w.r.t the rise of sparsity level, when we directly remove weights with the smallest magnitudes in one-shot.
+    - Summary: This paper proposes the existence of – “essential sparsity” defined with a sharp dropping point beyond which the performance declines much faster w.r.t the rise of sparsity level, when we directly remove weights with the smallest magnitudes in one-shot.
     - Comment: TBD 
-- Wanda: A SIMPLE AND EFFECTIVE PRUNING APPROACH FOR LARGE LANGUAGE MODELS
+- Wanda: A Simple and Effective Pruning Approach For Large Language Models
     - Author: Mingjie Sun, Zhuang Liu, Anna Bair, etc.
     - Link: https://arxiv.org/pdf/2306.11695.pdf 
     - Code: https://github.com/locuslab/wanda
     - Pub: Arxiv 
-    - Summary: 
-
+    - Summary: Wanda simplify the SparseGPT with approximation thus just rely on weight and activation to compute the pruning metric. 
 - COMPRESSO: STRUCTURED PRUNING WITH COLLABORATIVE PROMPTING LEARNS COMPACT LARGE LANGUAGE MODELS
     - Author: Song Guo, Jiahang Xu, Li Lyna Zhang, Mao Yang 
     - Link: https://arxiv.org/pdf/2310.05015.pdf 
@@ -56,3 +55,14 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
 	- Code: Not available 
 	- Pub: ICLR Under review 
 	- Summary: This paper is not related to Pruning but to Low-rank decomposition. They find that removing higher-order component of weight matrics in MLP and attention can significantly improve the performance of LLMs. 
+- Outlier Weighed Layerwise Sparsity (OWL): A Missing Secret Sauce for Pruning LLMs to High Sparsity
+	- Author:Lu Yin, You Wu, Zhenyu Zhang, Cheng-Yu Hsieh, Yaqing Wang, Yiling Jia, Mykola Pechenizkiy, Yi Liang, Zhangyang Wang, Shiwei Liu
+	- Link:https://arxiv.org/abs/2310.05175
+	- Code:https://github.com/luuyin/OWL 
+	- Pub: Rejected by ICLR
+	- Summary: OWL challenges the assumption of uniform layer-wise assumption and tries to assign different layers with different pruning ratio by proposed OWL metric. 
+- The LLM Surgeon
+	- Author:Tycho F.A. van der Ouderaa, Markus Nagel, Mart van Baalen, Yuki M. Asano, Tijmen Blankevoort
+	- Link:https://arxiv.org/abs/2312.17244
+	- Pub: ICLR
+	- This paper scales Kronecker-factored curvature approximations of the target loss landscape to large language models. The metric for this paper is Fisher information matrix. 
