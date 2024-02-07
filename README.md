@@ -1,5 +1,5 @@
 # Awesome-LLM-Prune
-Awesome list for LLM pruning. I will comment over the following paper once I really got the idea. Please leave comments on issue once you are interested. 
+Awesome list for LLM pruning. I will comment over the following paper once I really got the idea. Please leave comments on issue once you are interested. And please correct me if I misunderstand any of the papers.
 
 - LLM-KICK: COMPRESSING LLMS: THE TRUTH IS RARELY PURE AND NEVER SIMPLE
     - Author: Ajay Jaiswal, Zhe Gan, etc
@@ -65,4 +65,19 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
 	- Author:Tycho F.A. van der Ouderaa, Markus Nagel, Mart van Baalen, Yuki M. Asano, Tijmen Blankevoort
 	- Link:https://arxiv.org/abs/2312.17244
 	- Pub: ICLR
-	- This paper scales Kronecker-factored curvature approximations of the target loss landscape to large language models. The metric for this paper is Fisher information matrix. 
+	- Summary: This paper scales Kronecker-factored curvature approximations of the target loss landscape to large language models. The metric for this paper is Fisher information matrix. 
+- Shortened LLaMA: A Simple Depth Pruning for Large Language Models
+	- Authors: Bo-Kyeong Kim, Geonmin Kim, Tae-Ho Kim, Thibault Castells, Shinkook Choi, Junho Shin, Hyoung-Kyu Song
+	- Link: https://arxiv.org/abs/2402.02834 
+	- Pub: Arxiv 
+	- Summary: This paper delves into the naive implementation of structured pruning, specifically Depth Pruning, for Large Language Models (LLMs). Through experiments on zero-shot tasks, it is revealed that its performance is on par with width pruning techniques. However, the pruning ratio remains constrained to less than 35% (20%, 27%, 35%), and the performance on wikitext-2 (PPL) is somewhat less favorable compared to wanda. Nonetheless, this study demonstrates the feasibility of pruning by eliminating layers with lower block-level importance scores. Moreover, performance enhancement is observed after one-shot pruning via LoRA fine-tuning.
+- SliceGPT: Compress Large Language Models by Deleting Rows and Columns
+	- Author: Saleh Ashkboos, Maximilian L. Croci, Marcelo Gennari do Nascimento, Torsten Hoefler, James Hensman
+	- Link: https://arxiv.org/abs/2401.15024 
+	- Pub: ICLR24
+	- Summary: This paper focuses on structured pruning by removing rows and columns of a matrix to reduce parameters. However, this idea is similar to LLM-Pruner but weaker. The organization of this paper is somewhat peculiar: it dedicates two and a half pages to related works (too long). Additionally, in Table 1, SliceGPT (<30% sparsity) mainly compares its performance with SparseGPT under 2:4 structure pruning settings (50% sparsity), which is not quite fair. Please correct me if I am wrong.
+- PERP: Rethinking the Prune-Retrain Paradigm in the Era of LLMs 
+	- Author: Max Zimmer, Megi Andoni, Christoph Spiegel, Sebastian Pokutta
+	- Link: https://arxiv.org/pdf/2312.15230.pdf
+	- Pub: Arxiv 
+	- Summary: In the era of Large Language Models (LLMs), retraining becomes impractical due to memory and compute constraints. This paper proposes the use of Low-Rank Adaption to mitigate the expense of the retraining process. They explore four approaches, including BN-Recalibration, Biases, BN-Parameters, and Linear Probing. However, it's worth noting that most LLMs do not utilize Batch Normalization (BN). Indeed, this paper only conducts a few experiments on OPT and primarily focuses on works such as ResNet50 pruning. Furthermore, LoRA + Pruning is actually a component of SparseGPT (published in January 2023), so the novelty of this paper is somewhat limited.
