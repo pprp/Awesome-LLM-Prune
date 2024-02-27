@@ -1,5 +1,6 @@
 # Awesome-LLM-Prune
-Awesome list for LLM pruning. I will comment over the following paper once I really got the idea. Please leave comments on issue once you are interested. And please correct me if I misunderstand any of the papers.
+
+Awesome list for LLM pruning. I will comment over the following paper once I really got the idea. Please leave comments on issue once you are interested. And please correct me if I misunderstand any of the papers. If there is any question, please submit a PR or open an issue. 
 
 - LLM-KICK: COMPRESSING LLMS: THE TRUTH IS RARELY PURE AND NEVER SIMPLE
     - Author: Ajay Jaiswal, Zhe Gan, etc
@@ -81,3 +82,8 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
 	- Link: https://arxiv.org/pdf/2312.15230.pdf
 	- Pub: Arxiv 
 	- Summary: In the era of Large Language Models (LLMs), retraining becomes impractical due to memory and compute constraints. This paper proposes the use of Low-Rank Adaption to mitigate the expense of the retraining process. They explore four approaches, including BN-Recalibration, Biases, BN-Parameters, and Linear Probing. However, it's worth noting that most LLMs do not utilize Batch Normalization (BN). Indeed, this paper only conducts a few experiments on OPT and primarily focuses on works such as ResNet50 pruning. Furthermore, LoRA + Pruning is actually a component of SparseGPT (published in January 2023), so the novelty of this paper is somewhat limited.
+- Structural pruning of large language models via neural architecture search
+	- Author:Aaron Klein, Jacek Golebiowski, Xingchen Ma, Valerio Perrone, Cedric Archambeau 
+	- Link: https://openreview.net/pdf?id=SHlZcInS6C
+	- Pub: AutoML 
+	- Summary: This paper discuss the relationship between NAS and structural pruning and employ multi-objective NAS to compress LLM. They view the pre-trained network as a super-network and search for the best sub-network that optimally balance between downstream tasks and parameter count. For training weight-sharing NAS, they employ sandwich rule to train sub-networks. After training, local search is utilized for finding the best sub-network. 
