@@ -1,4 +1,4 @@
-xie# Awesome-LLM-Prune
+# Awesome-LLM-Prune
 
 Awesome list for LLM pruning. I will comment over the following paper once I really got the idea. Please leave comments on issue once you are interested. And please correct me if I misunderstand any of the papers. If there is any question, please submit a PR or open an issue. 
 
