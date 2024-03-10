@@ -106,4 +106,5 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
 - Shortened LLaMA: A Simple Depth Pruning for Large Language Models 
 	- Author: Bo-Kyeong Kim, Geonmin Kim, Tae-Ho Kim, Thibault Castells, Shinkook Choi, Junho Shin, Hyoung-Kyu Song 
 	- Link:https://arxiv.org/abs/2402.02834 
+	- Pub: CoRR
 	- 
