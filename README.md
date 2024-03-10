@@ -102,8 +102,8 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
 	- Link: https://arxiv.org/pdf/2402.11187.pdf
 	- Pub: CoRR 
 	- Summary: These paper compute the different among layers (call it Reserving-Difference) and merge them (Call it Seeking-Common). Specifically, they merge m consecutive layers into one by using sum of parameter difference. Also, they employ trial-and-error by evaluating each merged  model with Cosine Similarity and make adjustment of the merge.
-	- Comments: There is a lack of explanation of equation-1. 
-$$
-theta_i^* = \theta_l + (\theta_{l+1} - \theta_l) + \dots + (\theta_{l+m} - \theta_l)
-= \theta_l + \sum_{k=1}^{m} (\theta_{l+k} - \theta_l)
-$$
+	- Comments: There is a lack of explanation of equation-1. Why it worked? 
+- Shortened LLaMA: A Simple Depth Pruning for Large Language Models 
+	- Author: Bo-Kyeong Kim, Geonmin Kim, Tae-Ho Kim, Thibault Castells, Shinkook Choi, Junho Shin, Hyoung-Kyu Song 
+	- Link:https://arxiv.org/abs/2402.02834 
+	- 
