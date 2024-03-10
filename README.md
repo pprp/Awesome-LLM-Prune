@@ -108,3 +108,10 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
 	- Link:https://arxiv.org/abs/2402.02834 
 	- Pub: CoRR
 	- Summary: This paper focus on depth pruning and analysis the influence of depth and width pruning on LLM inference efficiency. They explore various design factors including the choice of prunable units, the criteria and retraining frequency. (1) Prunable Units: width and depth; (2) Criteria: Magnitude, Taylor, Mag+ and Talyor+, PPL; (3)retrain: LoRA. Finally, they choose PPL as criteria and target Depth Pruning. They claim that depth pruning approach can compte with recent width pruning methods  on Zero-shot tasks performance. 
+- FLAP: Fluctuation-based adaptive structured pruning for large language models
+	- Author: Yongqi An, Xu Zhao, Tao Yu, Ming Tang, Jinqiao Wang
+	- Link: https://arxiv.org/abs/2312.11983 
+	- Code: https://github.com/CASIA-IVA-Lab/FLAP 
+	- Pub: AAAI 24
+	- Summary: They proposed a retraining-free structured pruning framework for LLMs. (1) Structured Importance Metric: Fluctuation Pruning Metric (2) Adaptively Search Global Compress Ratio: (3) Compensation Mechanism: add additional biases to recover the output feature maps. Specifically, they observe that certain channels of hidden state features exhibits a low variation across different samples, indicating that if their corresponding input feature channels are pruned, the resulted change can be counterbalanced by the baseline value. Compared with Wanda, FLAP compute the sample variance of each input feature and weight it with the squared norm of the corresponding column of the weight matrics. 
+	- Comment: This paper is well-written and the framework is clear. However, I have a question: they claim FLAP is a retraining-free framework but it still require retraining the biases. 
