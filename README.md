@@ -2,20 +2,30 @@
 
 Awesome list for LLM pruning. I will comment over the following paper once I really got the idea. Please leave comments on issue once you are interested. And please correct me if I misunderstand any of the papers. If there is any question, please submit a PR or open an issue. 
 
-- LLM-KICK: COMPRESSING LLMS: THE TRUTH IS RARELY PURE AND NEVER SIMPLE
+- SparseGPT: Massive Language Models Can be Accurately Pruned in One-shot 
+    - Author: Elias Frantar, Dan Alistarh
+    - Link: https://arxiv.org/pdf/2301.00774.pdf 
+    - Code: https://github.com/IST-DASLab/sparsegpt 
+    - Pub: ICML 2023
+    - Summary: First to prune GPT with at least 50% sparsity without any training. SparseGPT is entirely local, which only focus on weight updates without any global gradient information. 
+
+- LLM-Kick: Compressing Llms: The Truth Is Rarely Pure and Never Simple
     - Author: Ajay Jaiswal, Zhe Gan, etc
     - Link: https://arxiv.org/pdf/2310.01382.pdf
     - Code: Not available
     - Pub: Arxiv
     - Summary: Re-define the evaluation protocol for compressed LLMs; Observation: SoTA Pruning methods suffer significant performance degradation, despite negligible changes in perplexity. SoTA Pruning do not work well for N:M structured pruning. Quantization methods are more successful.
     - Comment: This paper question the performance of LLM after pruning, which provide us a new perspective besides pure perplexity
-- PRUNING LARGE LANGUAGE MODELS VIA ACCURACY PREDICTOR
+ 
+  
+- Pruning Large Language Models via Accuracy Predictor
     - Author: Yupeng Ji, Yibo Cao, Jiucai Liu 
     - Link: https://arxiv.org/pdf/2309.09507.pdf 
     - Code: Not available 
     - Pub: Arxiv 
     - Summary: Formulate the pruning LLM as NAS problem. The search space is the prunining ratio, layer type, etc. By utilizing GBDT accuracy predictor, this paper take the layer-wise importance as input and predict the PPL. 
-    - Comment: With 525 architecture-accuracy pair, this paper train the GBDT with 7:3 ratio. 
+    - Comment: With 525 architecture-accuracy pair, this paper train the GBDT with 7:3 ratio.
+
 - LLM-Pruner: On the Strucutal Pruning of Large Language Models 
     - Author: Xinyin Ma, Gongfan Fang, Xinchao Wang 
     - Link: https://arxiv.org/pdf/2305.11627.pdf 
@@ -23,45 +33,45 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Pub: NeurIPS 2023 
     - Summary: This paper endeavor find the copuled structures (Dependency Graph) in LLaMA and proposed Groupded Importance Estimation like Vector-wise, Element-wise, and Group Importance. 
     - Comment: Impressive work. This work is similar to MMRazor, which can handle CNN-based model. 
-- SparseGPT: Massive Language Models Can be Accurately Pruned in One-shot 
-    - Author: Elias Frantar, Dan Alistarh
-    - Link: https://arxiv.org/pdf/2301.00774.pdf 
-    - Code: https://github.com/IST-DASLab/sparsegpt 
-    - Pub: ICML 2023
-    - Summary: First to prune GPT with at least 50% sparsity without any training. SparseGPT is entirely local, which only focus on weight updates without any global gradient information. 
-    - Comment: TBD 
+
 - The Emergence of Essential Sparsity in Large Pre-trained Models: The Weights that Matter
     - Author: Ajay Jaiswal, Shiwei Liu, Tianlong Chen, Zhangyang Wang
     - Link: https://arxiv.org/pdf/2306.03805.pdf
     - Code: https://github.com/VITA-Group/essential_sparsity
     - Pub: NeurIPS 2023 
     - Summary: This paper proposes the existence of – “essential sparsity” defined with a sharp dropping point beyond which the performance declines much faster w.r.t the rise of sparsity level, when we directly remove weights with the smallest magnitudes in one-shot.
-    - Comment: TBD 
+
 - Wanda: A Simple and Effective Pruning Approach For Large Language Models
     - Author: Mingjie Sun, Zhuang Liu, Anna Bair, etc.
     - Link: https://arxiv.org/pdf/2306.11695.pdf 
     - Code: https://github.com/locuslab/wanda
     - Pub: Arxiv 
-    - Summary: Wanda simplify the SparseGPT with approximation thus just rely on weight and activation to compute the pruning metric. 
-- COMPRESSO: STRUCTURED PRUNING WITH COLLABORATIVE PROMPTING LEARNS COMPACT LARGE LANGUAGE MODELS
+    - Summary: Wanda simplify the SparseGPT with approximation thus just rely on weight and activation to compute the pruning metric.
+
+- Compresso: Structured Pruning with Collaborative Prompting Learns Compact Large Language Models
     - Author: Song Guo, Jiahang Xu, Li Lyna Zhang, Mao Yang 
     - Link: https://arxiv.org/pdf/2310.05015.pdf 
     - Code: https://github.com/microsoft/Moonlit/tree/main/Compresso
     - Pub: Under Review 
     - Summary: Combing instruction tuning with training-based Pruning. LoRA is incorporated to achieve memory-efficient. Collaborative pruning prompt encourage LLMs to better align with the pruning algorithm. 
     - Comment: The prompt is really interesting, which is "Attention! LLM".
+      
 - The Truth is in There: Improving Reasoning in Language Models with Layer-Selective Rank Reduction
 	- Author: Pratyusha Sharma, Jordan T. Ash, Dipendra Misra 
 	- Link: https://arxiv.org/pdf/2312.13558.pdf 
 	- Code: Not available 
 	- Pub: ICLR Under review 
-	- Summary: This paper is not related to Pruning but to Low-rank decomposition. They find that removing higher-order component of weight matrics in MLP and attention can significantly improve the performance of LLMs. 
+	- Summary: This paper is not related to Pruning but to Low-rank decomposition. They find that removing higher-order component of weight matrics in MLP and attention can significantly improve the performance of LLMs.
+
+   
 - Outlier Weighed Layerwise Sparsity (OWL): A Missing Secret Sauce for Pruning LLMs to High Sparsity
 	- Author:Lu Yin, You Wu, Zhenyu Zhang, Cheng-Yu Hsieh, Yaqing Wang, Yiling Jia, Mykola Pechenizkiy, Yi Liang, Zhangyang Wang, Shiwei Liu
 	- Link:https://arxiv.org/abs/2310.05175
 	- Code:https://github.com/luuyin/OWL 
 	- Pub: Rejected by ICLR
-	- Summary: OWL challenges the assumption of uniform layer-wise assumption and tries to assign different layers with different pruning ratio by proposed OWL metric. 
+	- Summary: OWL challenges the assumption of uniform layer-wise assumption and tries to assign different layers with different pruning ratio by proposed OWL metric.
+
+
 - The LLM Surgeon
 	- Author:Tycho F.A. van der Ouderaa, Markus Nagel, Mart van Baalen, Yuki M. Asano, Tijmen Blankevoort
 	- Link:https://arxiv.org/abs/2312.17244
@@ -72,6 +82,8 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
 	- Link: https://arxiv.org/abs/2402.02834 
 	- Pub: Arxiv 
 	- Summary: This paper delves into the naive implementation of structured pruning, specifically Depth Pruning, for Large Language Models (LLMs). Through experiments on zero-shot tasks, it is revealed that its performance is on par with width pruning techniques. However, the pruning ratio remains constrained to less than 35% (20%, 27%, 35%), and the performance on wikitext-2 (PPL) is somewhat less favorable compared to wanda. Nonetheless, this study demonstrates the feasibility of pruning by eliminating layers with lower block-level importance scores. Moreover, performance enhancement is observed after one-shot pruning via LoRA fine-tuning.
+
+   
 - SliceGPT: Compress Large Language Models by Deleting Rows and Columns
 	- Author: Saleh Ashkboos, Maximilian L. Croci, Marcelo Gennari do Nascimento, Torsten Hoefler, James Hensman
 	- Link: https://arxiv.org/abs/2401.15024 
@@ -82,32 +94,39 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
 	- Link: https://arxiv.org/pdf/2312.15230.pdf
 	- Pub: Arxiv 
 	- Summary: In the era of Large Language Models (LLMs), retraining becomes impractical due to memory and compute constraints. This paper proposes the use of Low-Rank Adaption to mitigate the expense of the retraining process. They explore four approaches, including BN-Recalibration, Biases, BN-Parameters, and Linear Probing. However, it's worth noting that most LLMs do not utilize Batch Normalization (BN). Indeed, this paper only conducts a few experiments on OPT and primarily focuses on works such as ResNet50 pruning. Furthermore, LoRA + Pruning is actually a component of SparseGPT (published in January 2023), so the novelty of this paper is somewhat limited.
+
+   
 - Structural pruning of large language models via neural architecture search
 	- Author:Aaron Klein, Jacek Golebiowski, Xingchen Ma, Valerio Perrone, Cedric Archambeau 
 	- Link: https://openreview.net/pdf?id=SHlZcInS6C
 	- Pub: AutoML 
-	- Summary: This paper discuss the relationship between NAS and structural pruning and employ multi-objective NAS to compress LLM. They view the pre-trained network as a super-network and search for the best sub-network that optimally balance between downstream tasks and parameter count. For training weight-sharing NAS, they employ sandwich rule to train sub-networks. After training, local search is utilized for finding the best sub-network. 
+	- Summary: This paper discuss the relationship between NAS and structural pruning and employ multi-objective NAS to compress LLM. They view the pre-trained network as a super-network and search for the best sub-network that optimally balance between downstream tasks and parameter count. For training weight-sharing NAS, they employ sandwich rule to train sub-networks. After training, local search is utilized for finding the best sub-network.
+   
 - Not all Layers of LLMs are Necessary during Inference 
 	- Author: Siqi Fan, Xin JIang, Xiang Li, Xuying Meng, Peng Han, Shuo Shang, Aixin Sun, Yequan Wang, Zhongyuan Wang
 	- Link: https://arxiv.org/pdf/2403.02181.pdf 
 	- Pub: CoRR 
-	- Summary: This paper analyse the activated layers across tasks and propose AdaInfer to determine the inference termination moments based on the input instance. Thus, they can use shallow layers for easy instance and deep layers for hard ones. In general, this technique can be treated as an early stopping strategy. The early stop signal is generated by two components: Feature Selection Module that crafts feature vector for current input instance; Classifier that utilize SVM or CRF to access the strength of stopping signal. 
+	- Summary: This paper analyse the activated layers across tasks and propose AdaInfer to determine the inference termination moments based on the input instance. Thus, they can use shallow layers for easy instance and deep layers for hard ones. In general, this technique can be treated as an early stopping strategy. The early stop signal is generated by two components: Feature Selection Module that crafts feature vector for current input instance; Classifier that utilize SVM or CRF to access the strength of stopping signal.
+   
 - ShortGPT: Layers in Large Language Models are More Redundant Than You Expect
 	- Author: Xin Men, Mingyu Xu, Qingyu Zhang, Bingning Wang, Hongyu Lin, Yaojie Lu, Xianpei Han, Weipeng Chen
 	- Link: https://arxiv.org/abs/2403.03853 
 	- Pub: CoRR 
-	- Summary: They discovered that the layers of LLMs exhibit high similarity and some layers are negligible. To remove the unimportant layers, they define a metric called Block Influence (BI) to gauge the significance of each layers in LLMs. Specifically, the BI score is actually the cosine similarity of two successive blocks. The experiments are limited as they didn't provide the results of ppl and there are various one-shot pruning for LLMs like SparseGPT and Wanda etc. 
+	- Summary: They discovered that the layers of LLMs exhibit high similarity and some layers are negligible. To remove the unimportant layers, they define a metric called Block Influence (BI) to gauge the significance of each layers in LLMs. Specifically, the BI score is actually the cosine similarity of two successive blocks. The experiments are limited as they didn't provide the results of ppl and there are various one-shot pruning for LLMs like SparseGPT and Wanda etc.
+   
 - LaCo: Large Language Model Pruning via Layer Collapse
 	- Author:Yifei Yang, Zouying Cao, Hai Zhao
 	- Link: https://arxiv.org/pdf/2402.11187.pdf
 	- Pub: CoRR 
 	- Summary: These paper compute the different among layers (call it Reserving-Difference) and merge them (Call it Seeking-Common). Specifically, they merge m consecutive layers into one by using sum of parameter difference. Also, they employ trial-and-error by evaluating each merged  model with Cosine Similarity and make adjustment of the merge.
-	- Comments: There is a lack of explanation of equation-1. Why it worked? 
+	- Comments: There is a lack of explanation of equation-1. Why it worked?
+   
 - Shortened LLaMA: A Simple Depth Pruning for Large Language Models 
 	- Author: Bo-Kyeong Kim, Geonmin Kim, Tae-Ho Kim, Thibault Castells, Shinkook Choi, Junho Shin, Hyoung-Kyu Song 
 	- Link:https://arxiv.org/abs/2402.02834 
 	- Pub: CoRR
-	- Summary: This paper focus on depth pruning and analysis the influence of depth and width pruning on LLM inference efficiency. They explore various design factors including the choice of prunable units, the criteria and retraining frequency. (1) Prunable Units: width and depth; (2) Criteria: Magnitude, Taylor, Mag+ and Talyor+, PPL; (3)retrain: LoRA. Finally, they choose PPL as criteria and target Depth Pruning. They claim that depth pruning approach can compte with recent width pruning methods  on Zero-shot tasks performance. 
+	- Summary: This paper focus on depth pruning and analysis the influence of depth and width pruning on LLM inference efficiency. They explore various design factors including the choice of prunable units, the criteria and retraining frequency. (1) Prunable Units: width and depth; (2) Criteria: Magnitude, Taylor, Mag+ and Talyor+, PPL; (3)retrain: LoRA. Finally, they choose PPL as criteria and target Depth Pruning. They claim that depth pruning approach can compte with recent width pruning methods  on Zero-shot tasks performance.
+   
 - FLAP: Fluctuation-based adaptive structured pruning for large language models
 	- Author: Yongqi An, Xu Zhao, Tao Yu, Ming Tang, Jinqiao Wang
 	- Link: https://arxiv.org/abs/2312.11983 
