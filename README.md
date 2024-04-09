@@ -9,13 +9,13 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Pub: ICML 2023
     - Summary: First to prune GPT with at least 50% sparsity without any training. SparseGPT is entirely local, which only focus on weight updates without any global gradient information. 
 
-- LLM-Kick: Compressing Llms: The Truth Is Rarely Pure and Never Simple
+- LLM-Kick: Compressing LLMs: The Truth Is Rarely Pure and Never Simple
     - Author: Ajay Jaiswal, Zhe Gan, etc
     - Link: https://arxiv.org/pdf/2310.01382.pdf
-    - Code: Not available
-    - Pub: Arxiv
+    - Code: https://github.com/VITA-Group/llm-kick
+    - Pub: ICLR 2024
     - Summary: Re-define the evaluation protocol for compressed LLMs; Observation: SoTA Pruning methods suffer significant performance degradation, despite negligible changes in perplexity. SoTA Pruning do not work well for N:M structured pruning. Quantization methods are more successful.
-    - Comment: This paper question the performance of LLM after pruning, which provide us a new perspective besides pure perplexity
+    - Comment: This paper question the performance of LLM after pruning, which provide us a new perspective besides pure perplexity. This paper is worth reading because its evaluation is comprehensive. 
  
   
 - Pruning Large Language Models via Accuracy Predictor
