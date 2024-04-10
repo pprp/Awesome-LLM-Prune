@@ -155,3 +155,11 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Pub: Arxiv
     - Summary: This paper streamlines LLMs by identifying and removing redundant blocks. Specifically, cosine similarity is utilized to analyze the redundancy. Another metric3 is proposed for removing blocks.
     - Comment: There should be more methods for comparison.
+
+- Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning
+	- Tag: Structured Pruning
+	- Author: Mengzhou Xia, Tianyu Gao, Zhiyuan Zeng, Danqi Chen;
+	- Link: https://arxiv.org/abs/2310.06694
+	- Code: https://github.com/princeton-nlp/LLM-Shearing
+	- Pub: ICLR 2024 
+	- Summary: To prune larger pre-trained model, this paper proposed (1) Targeted structured pruning: prune a LLM to specified target shape by removing layers, heads, and intermediate and hidden dimensions in an end-to-end manner; (2) Dynamic Batch Loading: update the composition of sampled data in each training batch based on varying losses across different domains. 
