@@ -75,12 +75,12 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
 - The LLM Surgeon
 	- Author:Tycho F.A. van der Ouderaa, Markus Nagel, Mart van Baalen, Yuki M. Asano, Tijmen Blankevoort
 	- Link:https://arxiv.org/abs/2312.17244
-	- Pub: ICLR
+	- Pub: ICLR24
 	- Summary: This paper scales Kronecker-factored curvature approximations of the target loss landscape to large language models. The metric for this paper is Fisher information matrix. 
 - Shortened LLaMA: A Simple Depth Pruning for Large Language Models
 	- Authors: Bo-Kyeong Kim, Geonmin Kim, Tae-Ho Kim, Thibault Castells, Shinkook Choi, Junho Shin, Hyoung-Kyu Song
 	- Link: https://arxiv.org/abs/2402.02834 
-	- Pub: Arxiv 
+	- Pub: ICLR24 Workshop (ME-FoMo) 
 	- Summary: This paper delves into the naive implementation of structured pruning, specifically Depth Pruning, for Large Language Models (LLMs). Through experiments on zero-shot tasks, it is revealed that its performance is on par with width pruning techniques. However, the pruning ratio remains constrained to less than 35% (20%, 27%, 35%), and the performance on wikitext-2 (PPL) is somewhat less favorable compared to wanda. Nonetheless, this study demonstrates the feasibility of pruning by eliminating layers with lower block-level importance scores. Moreover, performance enhancement is observed after one-shot pruning via LoRA fine-tuning.
 
    
