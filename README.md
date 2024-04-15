@@ -162,4 +162,11 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
 	- Link: https://arxiv.org/abs/2310.06694
 	- Code: https://github.com/princeton-nlp/LLM-Shearing
 	- Pub: ICLR 2024 
-	- Summary: To prune larger pre-trained model, this paper proposed (1) Targeted structured pruning: prune a LLM to specified target shape by removing layers, heads, and intermediate and hidden dimensions in an end-to-end manner; (2) Dynamic Batch Loading: update the composition of sampled data in each training batch based on varying losses across different domains. 
+	- Summary: To prune larger pre-trained model, this paper proposed (1) Targeted structured pruning: prune a LLM to specified target shape by removing layers, heads, and intermediate and hidden dimensions in an end-to-end manner; (2) Dynamic Batch Loading: update the composition of sampled data in each training batch based on varying losses across different domains.
+
+- Gradient-Free Adaptive Global Pruning for Pre-trained Language Models
+    - Author: Guangji Bai, Yijiang Li, Chen Ling, Kibaek Kim, Liang Zhao
+    - Link: https://arxiv.org/pdf/2402.17946v1.pdf
+    - Pub: Arxiv
+    - Code: https://github.com/BaiTheBest/AdaGP
+    - Summary: Due to the size of LLM, global pruning becomes impractical. However, local pruning often leads to suboptimal solutions. To address this issue, this paper propose Adaptive Global Pruning (AdaGP) to redefine the global pruning process into manageable, coordinated subproblems, allowing for resource-efficient optimization with global optimality.
