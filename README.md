@@ -170,3 +170,10 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Pub: Arxiv
     - Code: https://github.com/BaiTheBest/AdaGP
     - Summary: Due to the size of LLM, global pruning becomes impractical. However, local pruning often leads to suboptimal solutions. To address this issue, this paper propose Adaptive Global Pruning (AdaGP) to redefine the global pruning process into manageable, coordinated subproblems, allowing for resource-efficient optimization with global optimality.
+ 
+- NutePrune: Efficient Progressive Pruning with Numerous Teachers for Large Language Models
+    - Author: Shengrui Li, Xueting Han, Jing Bai
+    - Link: https://arxiv.org/pdf/2402.09773.pdf
+    - Pub: Arxiv
+    - Code: Not available
+    - This work = structure pruning + progressive knowledge distillation; However, due to the memory constraints, knowledge distillation is hard in the context of LLM. To mitigate the memory cost, this paper propose to switch teacher and student by apply different sparsity ratio using various masks and LoRA modules.
