@@ -177,3 +177,17 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Pub: Arxiv
     - Code: Not available
     - This work = structure pruning + progressive knowledge distillation; However, due to the memory constraints, knowledge distillation is hard in the context of LLM. To mitigate the memory cost, this paper propose to switch teacher and student by apply different sparsity ratio using various masks and LoRA modules.
+ 
+- BESA: Pruning Large Language Models with Blockwise Parameter-Efficient Sparity Allocation
+    - Author: Peng Xu, Wenqi Shao, Mengzhao Chen, Shitao Tang, Kaipeng Zhang, Peng Gao, Fengwei An, Yu Qiao, Ping Luo.
+    - Link: https://openreview.net/pdf?id=gC6JTEU3jl
+    - Code: https://github.com/LinkAnonymous/BESA
+    - Pub: ICLR 2024
+    - Summary: Existing pruning methods for LLM adopted a layer-wise approach but resulted in significant perturbation to the model’s output and required meticulous hyperparameter tuning(Pruning Ratio). This paper proposes BESA to handle it with block-wise adaptation. (1) Instead of pruning each Linear layer, BESA targets the overall pruning error w.r.t. one transformer block (2) it allocates layer-specific sparsity in a differentiable manner.
+
+- Fast and Optimal Weight Update for Pruned Large Language Models
+    - Authors: **Vladim ́ır Bozˇa**
+    - Link: https://arxiv.org/pdf/2401.02938.pdf
+    - Code: Not available
+    - Code: https://github.com/fmfi-compbio/admm-pruning
+    - Summary:  This paper focuses on the recovery process, which was first proposed in SparseGPT. This paper proposed an Alternating Direction Method of Multipliers (ADMM), with a simple iterative pruning mask selection.
