@@ -16,7 +16,14 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Pub: ICLR 2024
     - Summary: Re-define the evaluation protocol for compressed LLMs; Observation: SoTA Pruning methods suffer significant performance degradation, despite negligible changes in perplexity. SoTA Pruning do not work well for N:M structured pruning. Quantization methods are more successful.
     - Comment: This paper question the performance of LLM after pruning, which provide us a new perspective besides pure perplexity. This paper is worth reading because its evaluation is comprehensive. 
- 
+
+- RIA: Plug-and-Play: An Efficient Post-Training Pruning Method for Large Language Models
+    - Author: Yingtao Zhang, Haoli Bai, Haokun Lin, Jialin Zhao, Lu Hou, Carlo Vittorio Cannistraci
+    - Link: https://openreview.net/pdf?id=Tr0lPx9woF
+    - Code: https://github.com/biomedical-cybernetics/Relative-importance-and-activation-pruning
+    - Pub: ICLR 2024
+    - Summary: For post-training pruning method, this paper proposed two innovative and plug-and-play components, which is Relative Importance and Activations (RIA) and Channel Permutation (CP). (1) RIA re-evaluate the importance of each weight element based on all connections that originate from input and output. (2) CP aims to preserve important weights under N:M sparsity, which yields better N:M structures by permuting the input channels of weight.
+    - Comment: I have thoroughly reviewed the source code and can affirm its effectiveness. The code is indeed of superior quality, demonstrating excellent standards in development. 
   
 - Pruning Large Language Models via Accuracy Predictor
     - Author: Yupeng Ji, Yibo Cao, Jiucai Liu 
@@ -191,3 +198,5 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Code: Not available
     - Code: https://github.com/fmfi-compbio/admm-pruning
     - Summary:  This paper focuses on the recovery process, which was first proposed in SparseGPT. This paper proposed an Alternating Direction Method of Multipliers (ADMM), with a simple iterative pruning mask selection.
+ 
+
