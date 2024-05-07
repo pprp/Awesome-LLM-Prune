@@ -241,3 +241,11 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Code: Not available
     - Code: https://github.com/fmfi-compbio/admm-pruning
     - Summary:  This paper focuses on the recovery process, which was first proposed in SparseGPT. This paper proposed an Alternating Direction Method of Multipliers (ADMM), with a simple iterative pruning mask selection.
+
+- COPAL: Continual Pruning in Large Language Generative Models
+    - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
+    - Authors: Srikanth Malla, Joon Hee Choi, Chiho Choi
+    - Link: https://arxiv.org/pdf/2405.02347v1.pdf
+    - Code: Not Available
+    - Summary: This paper introduces COPAL, an algorithm for continual pruning of large language models under a model adaptation setting. The approach utilizes sensitivity analysis to guide the pruning process, enhancing model adaptability and computational efficiency without the need for retraining. The empirical evaluation demonstrates COPAL's effectiveness in maintaining performance across various datasets and model sizes.
+    
