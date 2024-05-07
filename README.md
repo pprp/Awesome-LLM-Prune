@@ -98,7 +98,7 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
   - Author:Lu Yin, You Wu, Zhenyu Zhang, Cheng-Yu Hsieh, Yaqing Wang, Yiling Jia, Mykola Pechenizkiy, Yi Liang, Zhangyang Wang, Shiwei Liu
   - Link:https://arxiv.org/abs/2310.05175
   - Code:https://github.com/luuyin/OWL 
-  - Pub: Rejected by ICLR
+  - Pub: ICML 2024
   - Summary: OWL challenges the assumption of uniform layer-wise assumption and tries to assign different layers with different pruning ratio by proposed OWL metric.
 
 
