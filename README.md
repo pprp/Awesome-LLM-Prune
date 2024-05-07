@@ -248,4 +248,10 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Link: https://arxiv.org/pdf/2405.02347v1.pdf
     - Code: Not Available
     - Summary: This paper introduces COPAL, an algorithm for continual pruning of large language models under a model adaptation setting. The approach utilizes sensitivity analysis to guide the pruning process, enhancing model adaptability and computational efficiency without the need for retraining. The empirical evaluation demonstrates COPAL's effectiveness in maintaining performance across various datasets and model sizes.
-    
+
+- Dependency-Aware Semi-Structured Sparsity of GLU Variants in Large Language Models
+    - Label: <img src=https://img.shields.io/badge/hardware_friendly-sparsity-success.svg >
+    - Authors: Zhiyu Guo, Hidetaka Kamigaito, Taro Wanatnabe
+    - Link: https://arxiv.org/pdf/2405.01943v1.pdf
+    - Code: Not available
+    - Summary: This paper introduces Dependency-aware Semi-structured Sparsity (DaSS), a novel pruning method for SwiGLU-based Large Language Models (LLMs). DaSS integrates structural dependency into weight magnitude-based pruning, using an MLP-specific pruning metric that evaluates the importance of each weight by considering both its magnitude and the corresponding MLP intermediate activation norms. The method offers a balance between unstructured pruning flexibility and structured pruning consistency, achieving hardware-friendly N:M sparsity patterns. Empirical results show DaSS outperforms SparseGPT and Wanda in various tasks while maintaining computational efficiency.
