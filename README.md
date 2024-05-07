@@ -257,6 +257,7 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Summary: This paper introduces Dependency-aware Semi-structured Sparsity (DaSS), a novel pruning method for SwiGLU-based Large Language Models (LLMs). DaSS integrates structural dependency into weight magnitude-based pruning, using an MLP-specific pruning metric that evaluates the importance of each weight by considering both its magnitude and the corresponding MLP intermediate activation norms. The method offers a balance between unstructured pruning flexibility and structured pruning consistency, achieving hardware-friendly N:M sparsity patterns. Empirical results show DaSS outperforms SparseGPT and Wanda in various tasks while maintaining computational efficiency.
 
 - Structural Pruning of Pre-trained Language Models via Neural Architecture Search
+    - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Aaron Klein, Jacek Golebiowski, Xingchen Ma, Valerio Perrone, Cedric Archambeau
     - Link: https://arxiv.org/pdf/2405.02267v1.pdf
     - Code: Not available
