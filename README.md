@@ -3,9 +3,10 @@
 A list for papers regarding to LLM pruning(but may also contain other papers regarding to acceleration of LLM-inference, such as NAS,quantization,etc). I will comment over the following paper once I really got the idea. Please leave comments on issue once you are interested. And please correct me if I misunderstand any of the papers. If there is any question, please submit a PR or open an issue. 
 
 | Taxonomy | Unstructured                                                 | Structured                                                  | Semi-Structured                                              | Benchmark                                                    |NAS                                                           |Quantization
-       |Knowledge distillation
+       |Knowledge distillation                                       |Parameter-efficient finetuning 
 | -------- | ------------------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Label    | <img src=https://img.shields.io/badge/unstructured-turquoise.svg > | <img src=https://img.shields.io/badge/structured-blue.svg > | <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > | <img src=https://img.shields.io/badge/NAS-red.svg > | <img src=https://img.shields.io/badge/benchmark-purple.svg > | <img src=https://img.shields.io/badge/Quantization-yellow.svg > | <img src=https://img.shields.io/badge/Knowledge_distillation-orange.svg > |
+| Label    | <img src=https://img.shields.io/badge/unstructured-turquoise.svg > | <img src=https://img.shields.io/badge/structured-blue.svg > | <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > | <img src=https://img.shields.io/badge/NAS-red.svg > | <img src=https://img.shields.io/badge/benchmark-purple.svg > | <img src=https://img.shields.io/badge/Quantization-yellow.svg > | <img src=https://img.shields.io/badge/Knowledge_distillation-orange.svg > | <img src=https://img.shields.io/badge/Parameter-efficient_finetuning-lightgreen.svg > |
+
 
 
 
