@@ -5,7 +5,7 @@ A list for papers regarding to LLM pruning(but may also contain other papers reg
 | Taxonomy | Unstructured                                                 | Structured                                                  | Semi-Structured                                              | Benchmark                                                    |NAS                                                           |Quantization
        |Knowledge distillation
 | -------- | ------------------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Label    | <img src=https://img.shields.io/badge/unstructured-turquoise.svg > | <img src=https://img.shields.io/badge/structured-blue.svg > | <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > | <img src=https://img.shields.io/badge/NAS-red.svg > | <img src=https://img.shields.io/badge/benchmark-purple.svg > | <img src=https://img.shields.io/badge/Quantization-yellow.svg > | <img src=https://img.shields.io/badge/Knowledge distillation-orange.svg > |
+| Label    | <img src=https://img.shields.io/badge/unstructured-turquoise.svg > | <img src=https://img.shields.io/badge/structured-blue.svg > | <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > | <img src=https://img.shields.io/badge/NAS-red.svg > | <img src=https://img.shields.io/badge/benchmark-purple.svg > | <img src=https://img.shields.io/badge/Quantization-yellow.svg > | <img src=https://img.shields.io/badge/Knowledge_distillation-orange.svg > |
 
 
 
