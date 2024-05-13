@@ -16,8 +16,35 @@ A list for papers regarding to LLM pruning(but may also contain other papers reg
     - Link: https://arxiv.org/pdf/2301.00774.pdf 
     - Code: https://github.com/IST-DASLab/sparsegpt 
     - Pub: ICML 2023
-    - Summary: First to prune GPT with at least 50% sparsity without any training. SparseGPT is entirely local, which only focus on weight updates without any global gradient information. 
-    
+    - Summary: First to prune GPT with at least 50% sparsity without any training. SparseGPT is entirely local, which only focus on weight updates without any global gradient information.
+    - method: 
+    - Experiment results:
+
+- LLM-Pruner: On the Strucutal Pruning of Large Language Models 
+    - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
+    - Author: Xinyin Ma, Gongfan Fang, Xinchao Wang 
+    - Link: https://arxiv.org/pdf/2305.11627.pdf 
+    - Code: https://github.com/horseee/LLM-Pruner
+    - Pub: NeurIPS 2023 
+    - Summary: This paper endeavor find the copuled structures (Dependency Graph) in LLaMA and proposed Groupded Importance Estimation like Vector-wise, Element-wise, and Group Importance. 
+    - Comment: Impressive work. This work is similar to MMRazor, which can handle CNN-based model. 
+
+- The Emergence of Essential Sparsity in Large Pre-trained Models: The Weights that Matter
+    - Label: <img src=https://img.shields.io/badge/benchmark-purple.svg >
+    - Author: Ajay Jaiswal, Shiwei Liu, Tianlong Chen, Zhangyang Wang
+    - Link: https://arxiv.org/pdf/2306.03805.pdf
+    - Code: https://github.com/VITA-Group/essential_sparsity
+    - Pub: NeurIPS 2023 
+    - Summary: This paper proposes the existence of – “essential sparsity” defined with a sharp dropping point beyond which the performance declines much faster w.r.t the rise of sparsity level, when we directly remove weights with the smallest magnitudes in one-shot.
+
+- Wanda: A Simple and Effective Pruning Approach For Large Language Models
+    - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/structured-blue.svg >
+    - Author: Mingjie Sun, Zhuang Liu, Anna Bair, etc.
+    - Link: https://arxiv.org/pdf/2306.11695.pdf 
+    - Code: https://github.com/locuslab/wanda
+    - Pub: Arxiv 
+    - Summary: Wanda simplify the SparseGPT with approximation thus just rely on weight and activation to compute the pruning metric.
+
 - LLM-Kick: Compressing LLMs: The Truth Is Rarely Pure and Never Simple
     - Label: <img src=https://img.shields.io/badge/benchmark-purple.svg >
     - Author: Ajay Jaiswal, Zhe Gan, etc
@@ -45,31 +72,7 @@ A list for papers regarding to LLM pruning(but may also contain other papers reg
     - Summary: Formulate the pruning LLM as NAS problem. The search space is the prunining ratio, layer type, etc. By utilizing GBDT accuracy predictor, this paper take the layer-wise importance as input and predict the PPL. 
     - Comment: With 525 architecture-accuracy pair, this paper train the GBDT with 7:3 ratio.
 
-- LLM-Pruner: On the Strucutal Pruning of Large Language Models 
-    - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
-    - Author: Xinyin Ma, Gongfan Fang, Xinchao Wang 
-    - Link: https://arxiv.org/pdf/2305.11627.pdf 
-    - Code: https://github.com/horseee/LLM-Pruner
-    - Pub: NeurIPS 2023 
-    - Summary: This paper endeavor find the copuled structures (Dependency Graph) in LLaMA and proposed Groupded Importance Estimation like Vector-wise, Element-wise, and Group Importance. 
-    - Comment: Impressive work. This work is similar to MMRazor, which can handle CNN-based model. 
-
-- The Emergence of Essential Sparsity in Large Pre-trained Models: The Weights that Matter
-    - Label: <img src=https://img.shields.io/badge/benchmark-purple.svg >
-    - Author: Ajay Jaiswal, Shiwei Liu, Tianlong Chen, Zhangyang Wang
-    - Link: https://arxiv.org/pdf/2306.03805.pdf
-    - Code: https://github.com/VITA-Group/essential_sparsity
-    - Pub: NeurIPS 2023 
-    - Summary: This paper proposes the existence of – “essential sparsity” defined with a sharp dropping point beyond which the performance declines much faster w.r.t the rise of sparsity level, when we directly remove weights with the smallest magnitudes in one-shot.
-
-- Wanda: A Simple and Effective Pruning Approach For Large Language Models
-    - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/structured-blue.svg >
-    - Author: Mingjie Sun, Zhuang Liu, Anna Bair, etc.
-    - Link: https://arxiv.org/pdf/2306.11695.pdf 
-    - Code: https://github.com/locuslab/wanda
-    - Pub: Arxiv 
-    - Summary: Wanda simplify the SparseGPT with approximation thus just rely on weight and activation to compute the pruning metric.
-
+ 
 - Compresso: Structured Pruning with Collaborative Prompting Learns Compact Large Language Models
     - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
     - Author: Song Guo, Jiahang Xu, Li Lyna Zhang, Mao Yang 
