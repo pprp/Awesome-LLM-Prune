@@ -1,13 +1,5 @@
 # LLM-Prune
 
-<div align='center'>
-  <img src=https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg >
-  <img src=https://img.shields.io/github/stars/pprp/Awesome-LLM-Prune.svg?style=social >
-  <img src=https://img.shields.io/github/watchers/pprp/Awesome-LLM-Prune.svg?style=social >
-  <img src=https://img.shields.io/badge/Release-v0.1-brightgreen.svg >
-  <img src=https://img.shields.io/badge/License-GPLv3.0-turquoise.svg >
- </div>   
-
 A list for papers regarding to LLM pruning(but may also contain other papers regarding to acceleration of LLM-inference, such as NAS,quantization,etc). I will comment over the following paper once I really got the idea. Please leave comments on issue once you are interested. And please correct me if I misunderstand any of the papers. If there is any question, please submit a PR or open an issue. 
 
 | Taxonomy | Unstructured                                                 | Structured                                                  | Semi-Structured                                              | Benchmark                                                    |NAS                                                           |Quantization
