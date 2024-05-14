@@ -9,6 +9,7 @@ A list for papers regarding to LLM pruning(but may also contain other papers reg
 | Label    | <img src=https://img.shields.io/badge/unstructured-turquoise.svg > | <img src=https://img.shields.io/badge/structured-blue.svg > | <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > | <img src=https://img.shields.io/badge/NAS-red.svg > | <img src=https://img.shields.io/badge/benchmark-purple.svg > | <img src=https://img.shields.io/badge/Quantization-yellow.svg > | <img src=https://img.shields.io/badge/Knowledge_distillation-orange.svg > | <img src=https://img.shields.io/badge/Parameter_efficient_finetuning-lightgreen.svg > |
 
 Contents:
+
 1.SparseGPT: Massive Language Models Can be Accurately Pruned in One-shot (finish)
 
 2.LLM-Pruner: On the Strucutal Pruning of Large Language Models (finish)
