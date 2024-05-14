@@ -85,6 +85,7 @@ Contents:
     - Experiment results:<p align="center">
                          <img width="85%" alt="image" src="Pictures/Sparsegpt_results 1.jpg">    
                          </p>
+			 we can find the trend of how perplexity changes in ficture 1.
 
 - LLM-Pruner: On the Strucutal Pruning of Large Language Models 
     - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
