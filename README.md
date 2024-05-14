@@ -73,6 +73,7 @@ Contents:
 31.Structural Pruning of Pre-trained Language Models via Neural Architecture Search(same source as 15) ()
 
 
+
 - SparseGPT: Massive Language Models Can be Accurately Pruned in One-shot 
     - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
     - Author: Elias Frantar, Dan Alistarh
@@ -82,7 +83,7 @@ Contents:
     - Summary: First to prune GPT with at least 50% sparsity without any training. SparseGPT is entirely local, which only focus on weight updates without any global gradient information.
     - method: 
     - Experiment results:<p align="center">
-                         <img width="100%" alt="image" src="Pictures/Sparsegpt_results 1.jpg">    
+                         <img width="85%" alt="image" src="Pictures/Sparsegpt_results 1.jpg">    
                          </p>
 
 - LLM-Pruner: On the Strucutal Pruning of Large Language Models 
