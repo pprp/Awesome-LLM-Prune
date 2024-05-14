@@ -10,36 +10,67 @@ A list for papers regarding to LLM pruning(but may also contain other papers reg
 
 Contents:
 1.SparseGPT: Massive Language Models Can be Accurately Pruned in One-shot (finish)
+
 2.LLM-Pruner: On the Strucutal Pruning of Large Language Models (finish)
+
 3.The Emergence of Essential Sparsity in Large Pre-trained Models: The Weights that Matter ()
+
 4.Wanda: A Simple and Effective Pruning Approach For Large Language Models (finish)
+
 5.Pruning Large Language Models via Accuracy Predictor ()
+
 6.Pruning Small Pre-Trained Weights Irreversibly and Monotonically Impairs "Difficult" Downstream Tasks in LLMs ()
+
 7.LLM-Kick: Compressing LLMs: The Truth Is Rarely Pure and Never Simple ()
+
 8.RIA: Plug-and-Play: An Efficient Post-Training Pruning Method for Large Language Models ()
+
 9.The Truth is in There: Improving Reasoning in Language Models with Layer-Selective Rank Reduction ()
+
 10.Outlier Weighed Layerwise Sparsity (OWL): A Missing Secret Sauce for Pruning LLMs to High Sparsity ()
+
 11.The LLM Surgeon ()
+
 12.Shortened LLaMA: A Simple Depth Pruning for Large Language Models ()
+
 13.SliceGPT: Compress Large Language Models by Deleting Rows and Columns ()
+
 14.PERP: Rethinking the Prune-Retrain Paradigm in the Era of LLMs ()
+
 15.Structural pruning of large language models via neural architecture search ()
+
 16.Not all Layers of LLMs are Necessary during Inference ()
+
 17.ShortGPT: Layers in Large Language Models are More Redundant Than You Expect ()
+
 18.LaCo: Large Language Model Pruning via Layer Collapse ()
+
 19.Shortened LLaMA: A Simple Depth Pruning for Large Language Models ()
+
 20.FLAP: Fluctuation-based adaptive structured pruning for large language models ()
+
 21.Bonsai: Everybody Prune Now: Structured Pruning of LLMs with only Forward Passes ()
+
 22.The Unreasonable Ineffectiveness of the Deeper Layers ()
+
 23.SLEB: Streamlining LLMs through Redundancy Verification and Elimination of Transformer Blocks ()
+
 24.Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning ()
+
 25.Gradient-Free Adaptive Global Pruning for Pre-trained Language Models ()
+
 26.NutePrune: Efficient Progressive Pruning with Numerous Teachers for Large Language Models ()
+
 27.BESA: Pruning Large Language Models with Blockwise Parameter-Efficient Sparity Allocation ()
+
 28.Fast and Optimal Weight Update for Pruned Large Language Models ()
+
 29.COPAL: Continual Pruning in Large Language Generative Models ()
+
 30.DaSS: Dependency-Aware Semi-Structured Sparsity of GLU Variants in Large Language Models ()
+
 31.Structural Pruning of Pre-trained Language Models via Neural Architecture Search(same source as 15) ()
+
 
 - SparseGPT: Massive Language Models Can be Accurately Pruned in One-shot 
     - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
