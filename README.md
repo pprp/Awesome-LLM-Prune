@@ -83,9 +83,14 @@ Contents:
     - Summary: First to prune GPT with at least 50% sparsity without any training. SparseGPT is entirely local, which only focus on weight updates without any global gradient information.
     - method: 
     - Experiment results:<p align="center">
-                         <img width="85%" alt="image" src="Pictures/Sparsegpt_results 1.jpg">    
+                         <img width="90%" alt="image" src="Pictures/Sparsegpt_results 1.jpg">    
                          </p>
-			 we can find the trend of how perplexity changes in ficture 1.
+			 we can find the trend of how perplexity changes as pruning rate increases in ficture 1.
+                         <p align="center">
+                         <img width="90%" alt="image" src="Pictures/Sparsegpt_results 2.jpg">
+                         <img width="90%" alt="image" src="Pictures/Sparsegpt_results 7.jpg">
+                         <img width="90%" alt="image" src="Pictures/Sparsegpt_results 8.jpg"> 
+                         </p>
 
 - LLM-Pruner: On the Strucutal Pruning of Large Language Models 
     - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
