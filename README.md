@@ -1,4 +1,4 @@
-# LLM-Prune
+# LLM-Prune papers
 
 A list for papers regarding to LLM pruning(but may also contain other papers regarding to acceleration of LLM-inference, such as NAS,quantization,etc). I will comment over the following paper once I really got the idea. Please leave comments on issue once you are interested. And please correct me if I misunderstand any of the papers. If there is any question, please submit a PR or open an issue. 
 
