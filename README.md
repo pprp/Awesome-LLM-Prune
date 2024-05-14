@@ -19,7 +19,9 @@ A list for papers regarding to LLM pruning(but may also contain other papers reg
     - Pub: ICML 2023
     - Summary: First to prune GPT with at least 50% sparsity without any training. SparseGPT is entirely local, which only focus on weight updates without any global gradient information.
     - method: 
-    - Experiment results:
+    - Experiment results:<p align="center">
+                         <img width="100%" alt="image" src="Pictures/Sparsegpt_results 1.jpg">    
+                         </p>
 
 - LLM-Pruner: On the Strucutal Pruning of Large Language Models 
     - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
