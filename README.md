@@ -87,7 +87,7 @@ Contents:
     - method: 
     - Experiment results:<p align="center">
                          <img width="90%" alt="image" src="Pictures/Sparsegpt_results 1.jpg">
-                         <img width="60%" alt="image" src="Pictures/Sparsegpt_results 3.jpg">
+                         <img width="50%" alt="image" src="Pictures/Sparsegpt_results 3.jpg">
                          </p>
 			 we can find the trend of how perplexity changes as pruning rate increases in ficture 1.
                          <p align="center">
