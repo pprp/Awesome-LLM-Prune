@@ -72,6 +72,9 @@ Contents:
 
 31.Structural Pruning of Pre-trained Language Models via Neural Architecture Search(same source as 15) ()
 
+32.LORAPRUNE: PRUNING MEETS LOW-RANK PARAMETER-EFFICIENT FINE-TUNING∗ (finish)
+
+33.
 
 
 - SparseGPT: Massive Language Models Can be Accurately Pruned in One-shot 
@@ -83,14 +86,22 @@ Contents:
     - Summary: First to prune GPT with at least 50% sparsity without any training. SparseGPT is entirely local, which only focus on weight updates without any global gradient information.
     - method: 
     - Experiment results:<p align="center">
-                         <img width="90%" alt="image" src="Pictures/Sparsegpt_results 1.jpg">    
+                         <img width="90%" alt="image" src="Pictures/Sparsegpt_results 1.jpg">
+                         <img width="100%" alt="image" src="Pictures/Sparsegpt_results 3.jpg">
                          </p>
 			 we can find the trend of how perplexity changes as pruning rate increases in ficture 1.
                          <p align="center">
-                         <img width="90%" alt="image" src="Pictures/Sparsegpt_results 2.jpg">
-                         <img width="90%" alt="image" src="Pictures/Sparsegpt_results 7.jpg">
-                         <img width="90%" alt="image" src="Pictures/Sparsegpt_results 8.jpg"> 
+                         <img width="85%" alt="image" src="Pictures/Sparsegpt_results 2.jpg">
+                         <img width="85%" alt="image" src="Pictures/Sparsegpt_results 7.jpg">
+                         <img width="85%" alt="image" src="Pictures/Sparsegpt_results 8.jpg"> 
                          </p>
+			 These are perplexity results for opt-models of different sizes on wikitext,ptb and c4 datasets under 50% sparsity.
+
+                         <p align="center">
+                         <img width="85%" alt="image" src="Pictures/Sparsegpt_results 9.jpg">
+                         <img width="85%" alt="image" src="Pictures/Sparsegpt_results 10.jpg">
+                         </p>
+			 These are perplexity results for opt-175B and Bloom-176B models on wikitext,ptb and c4 datasets under 2:4 pattern.
 
 - LLM-Pruner: On the Strucutal Pruning of Large Language Models 
     - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
@@ -100,6 +111,16 @@ Contents:
     - Pub: NeurIPS 2023 
     - Summary: This paper endeavor find the copuled structures (Dependency Graph) in LLaMA and proposed Groupded Importance Estimation like Vector-wise, Element-wise, and Group Importance. 
     - Comment: Impressive work. This work is similar to MMRazor, which can handle CNN-based model. 
+
+-LoraPrune: Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning∗
+    - Label: <img src=https://img.shields.io/badge/structured-blue.svg ><img src=https://img.shields.io/badge/Parameter_efficient_finetuning-lightgreen.svg >
+    - Author: Mingyang Zhang, Hao Chen, Chunhua Shen, Zhen Yang, Linlin Ou,Xinyi Yu, Bohan Zhuang
+    - Link: https://arxiv.org/abs/2305.18403
+    - Code: Unavalable?
+    - Pub: Arxiv 
+    - Summary: 
+    - method: 
+    - Experiment results: 
 
 - The Emergence of Essential Sparsity in Large Pre-trained Models: The Weights that Matter
     - Label: <img src=https://img.shields.io/badge/benchmark-purple.svg >
