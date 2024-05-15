@@ -87,7 +87,7 @@ Contents:
     - method: 
     - Experiment results:<p align="center">
                          <img width="90%" alt="image" src="Pictures/Sparsegpt_results 1.jpg">
-                         <img width="100%" alt="image" src="Pictures/Sparsegpt_results 3.jpg">
+                         <img width="60%" alt="image" src="Pictures/Sparsegpt_results 3.jpg">
                          </p>
 			 we can find the trend of how perplexity changes as pruning rate increases in ficture 1.
                          <p align="center">
@@ -96,7 +96,6 @@ Contents:
                          <img width="85%" alt="image" src="Pictures/Sparsegpt_results 8.jpg"> 
                          </p>
 			 These are perplexity results for opt-models of different sizes on wikitext,ptb and c4 datasets under 50% sparsity.
-
                          <p align="center">
                          <img width="85%" alt="image" src="Pictures/Sparsegpt_results 9.jpg">
                          <img width="85%" alt="image" src="Pictures/Sparsegpt_results 10.jpg">
@@ -112,7 +111,7 @@ Contents:
     - Summary: This paper endeavor find the copuled structures (Dependency Graph) in LLaMA and proposed Groupded Importance Estimation like Vector-wise, Element-wise, and Group Importance. 
     - Comment: Impressive work. This work is similar to MMRazor, which can handle CNN-based model. 
 
--LoraPrune: Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning∗
+- LoraPrune: Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning∗
     - Label: <img src=https://img.shields.io/badge/structured-blue.svg ><img src=https://img.shields.io/badge/Parameter_efficient_finetuning-lightgreen.svg >
     - Author: Mingyang Zhang, Hao Chen, Chunhua Shen, Zhen Yang, Linlin Ou,Xinyi Yu, Bohan Zhuang
     - Link: https://arxiv.org/abs/2305.18403
@@ -120,7 +119,8 @@ Contents:
     - Pub: Arxiv 
     - Summary: 
     - method: 
-    - Experiment results: 
+    - Experiment results:
+    - comment: 
 
 - The Emergence of Essential Sparsity in Large Pre-trained Models: The Weights that Matter
     - Label: <img src=https://img.shields.io/badge/benchmark-purple.svg >
