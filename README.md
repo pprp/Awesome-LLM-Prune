@@ -72,9 +72,13 @@ Content:
 
 31.Structural Pruning of Pre-trained Language Models via Neural Architecture Search(same source as 15) ()
 
-32.LORAPRUNE: PRUNING MEETS LOW-RANK PARAMETER-EFFICIENT FINE-TUNING∗ (finish)
+32.LoraPrune: Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning∗ (finish)
 
-33. 
+33.Beyond Size: How Gradients Shape Pruning Decisions in Large Language Models
+
+34.Pruning as a Domain-specific LLM Extractor
+
+35.
 
 -------------
 
@@ -217,6 +221,17 @@ Content:
     - Summary: For post-training pruning method, this paper proposed two innovative and plug-and-play components, which is Relative Importance and Activations (RIA) and Channel Permutation (CP). (1) RIA re-evaluate the importance of each weight element based on all connections that originate from input and output. (2) CP aims to preserve important weights under N:M sparsity, which yields better N:M structures by permuting the input channels of weight.
     - Comment: I have thoroughly reviewed the source code and can affirm its effectiveness. The code is indeed of superior quality, demonstrating excellent standards in development. 
 
+- Beyond Size: How Gradients Shape Pruning Decisions in Large Language Models
+  - Label:<img src=https://img.shields.io/badge/unstructured-turquoise.svg >
+  - Author: Rocktim Jyoti Das, Mingjie Sun, Liqun Ma, Zhiqiang Shen
+  - Link: https://arxiv.org/pdf/2311.04902
+  - Code: https://github.com/VILA-Lab/GBLM-Pruner
+  - Pub: Arxiv
+  - Summary: 
+  - Method:
+  - Experiment results:
+  - Comment:
+
 
 - The Truth is in There: Improving Reasoning in Language Models with Layer-Selective Rank Reduction
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
@@ -352,10 +367,10 @@ Content:
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
   - Author: Andrey Gromov, Kushal Tirumala, Hassan Shapourian, Paolo Glorioso, Daniel A. Roberts
   - Link: https://arxiv.org/pdf/2403.17887v1.pdf
+  - Code: (not exactly,just a relating one)https://github.com/arcee-ai/PruneMe
   - Pub: Arxiv 
   - Summary: This paper aims to layer-pruning (structured pruning) by identify the optimal block of layers to prune by considering the similarity across layers. To recover performance, QLoRA is employed to make all experiments can be conducted on a A100. This paper claims that the shallow layers plays a more critical role than deeper layers of network. 
   - Comment: good reference for studying the depth-dependence of neural networks.
-
 
 - BESA: Pruning Large Language Models with Blockwise Parameter-Efficient Sparity Allocation
     - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg >
@@ -387,5 +402,7 @@ Content:
     - Code: Not available
     - Summary: This paper explores the use of Neural Architecture Search (NAS) for structural pruning of pre-trained language models to address the challenges of high GPU memory requirements and inference latency. The authors propose a multi-objective approach that identifies the Pareto optimal set of sub-networks, enabling a flexible compression process without the need for retraining. The method leverages weight-sharing NAS techniques to accelerate the search for efficient sub-networks. Empirical evaluations demonstrate that their approach outperforms baseline models in terms of efficiency and adaptability, offering a promising strategy for deploying large language models in real-world applications.
     - Note: All experiments are conducted on BERT not LLAMA. This NAS procedure requires massive computation when applying to LLaMA.
-
+ 
+- Pruning as a Domain-specific LLM Extractor
+    - Label: 
 
