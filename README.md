@@ -88,12 +88,14 @@ Content:
     - method: Authors adopt the point of view proposed by (Hubara et al., 2021a/b,2022) and deem the problem as composed by two separate parts-mask selection and weight reconstruction. They adapt existing methods-Adaprune and OBC and propose thier method. First to determine a mask matrix for some columns, then compensate for pruning loss though changing the weights of corresponding rows until the whole block is finished. Notice that during reconstruction, this method needs input data(Calibration data).
       
       main reference:
+      
       ①Frantar, E. and Alistarh, D. SPDY: Accurate pruning with
       speedup guarantees. arXiv preprint arXiv:2201.13096,2022.
       
       ②Frantar, E., Kurtic, E., and Alistarh, D. M-FAC: Efficient
       matrix-free approximations of second-order information.
       In Conference on Neural Information Processing System,(NeurIPS), 2021.
+      
       ③Frantar, E., Ashkboos, S., Hoefler, T., and Alistarh,
       D. GPTQ: Accurate post-training compression for
       generative pretrained transformers. arXiv preprint arXiv:2210.17323, 2022a.
