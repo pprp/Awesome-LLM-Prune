@@ -86,18 +86,22 @@ Content:
     - Pub: ICML 2023
     - Summary: First to prune GPT with at least 50% sparsity without any training. SparseGPT is entirely local, which only focus on weight updates without any global gradient information.
     - method: Authors adopt the point of view proposed by (Hubara et al., 2021a/b,2022) and deem the problem as composed by two separate parts-mask selection and weight reconstruction. They adapt existing methods-Adaprune and OBC and propose thier method. First to determine a mask matrix for some columns, then compensate for pruning loss though changing the weights of corresponding rows until the whole block is finished. Notice that during reconstruction, this method needs input data(Calibration data).
+      
       main reference:
       ①Frantar, E. and Alistarh, D. SPDY: Accurate pruning with
       speedup guarantees. arXiv preprint arXiv:2201.13096,2022.
+      
       ②Frantar, E., Kurtic, E., and Alistarh, D. M-FAC: Efficient
       matrix-free approximations of second-order information.
       In Conference on Neural Information Processing System,(NeurIPS), 2021.
       ③Frantar, E., Ashkboos, S., Hoefler, T., and Alistarh,
       D. GPTQ: Accurate post-training compression for
       generative pretrained transformers. arXiv preprint arXiv:2210.17323, 2022a.
+      
       ④Frantar, E., Singh, S. P., and Alistarh, D. Optimal
       Brain Compression(OBC): A framework for accurate post-training quantization and pruning. arXiv preprint
       arXiv:2208.11580, 2022b. Accepted to NeurIPS 2022.
+      
     - Experiment results:<p align="center">
                          <img width="90%" alt="image" src="Pictures/Sparsegpt_results 1.jpg">
                          <img width="36%" alt="image" src="Pictures/Sparsegpt_results 3.jpg">
