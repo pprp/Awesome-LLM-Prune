@@ -87,7 +87,7 @@ Content:
     - Summary: First to prune GPT with at least 50% sparsity without any training. SparseGPT is entirely local, which only focus on weight updates without any global gradient information.
     - method: Authors adopt the point of view proposed by (Hubara et al., 2021a/b,2022) and deem the problem as composed by two separate parts-mask selection and weight reconstruction. They adapt existing methods-Adaprune and OBC and propose thier method. First to determine a mask matrix for some columns, then compensate for pruning loss though changing the weights of corresponding rows until the whole block is finished. Notice that during reconstruction, this method needs input data(Calibration data).
       
-      main reference:
+      main reference(method in this paper mainly comes from previous work):
       
       ①Frantar, E. and Alistarh, D. SPDY: Accurate pruning with
       speedup guarantees. arXiv preprint arXiv:2201.13096,2022.
