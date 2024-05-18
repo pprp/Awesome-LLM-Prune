@@ -78,7 +78,9 @@ Content:
 
 34.Pruning as a Domain-specific LLM Extractor
 
-35.
+35. LoRAShear: Efficient Large Language Model Structured Pruning and Knowledge Recovery
+
+36.Everybody Prune Now: Structured Pruning of LLMs with only Forward Passes
 
 -------------
 
@@ -212,6 +214,17 @@ Content:
   - Pub: ICLR 2024 
   - Summary: To prune larger pre-trained model, this paper proposed (1) Targeted structured pruning: prune a LLM to specified target shape by removing layers, heads, and intermediate and hidden dimensions in an end-to-end manner; (2) Dynamic Batch Loading: update the composition of sampled data in each training batch based on varying losses across different domains.
 
+- LoRAShear: Efficient Large Language Model Structured Pruning and Knowledge Recovery
+   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
+   - Author: Tianyi Chen, Tianyu Ding, Badal Yadav, Ilya Zharkov, Luming Liang
+   - Link: https://arxiv.org/abs/2310.18356
+   - Code: not found?
+   - Pub: Arxiv
+   - Summary:
+   - Method:
+   - Experiment results:
+   - Comment:
+
 - RIA: Plug-and-Play: An Efficient Post-Training Pruning Method for Large Language Models
     - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
     - Author: Yingtao Zhang, Haoli Bai, Haokun Lin, Jialin Zhao, Lu Hou, Carlo Vittorio Cannistraci
@@ -304,6 +317,8 @@ Content:
   - Pub: ICLR24 Workshop (ME-FoMo) 
   - Summary: This paper delves into the naive implementation of structured pruning, specifically Depth Pruning, for Large Language Models (LLMs). Through experiments on zero-shot tasks, it is revealed that its performance is on par with width pruning techniques. However, the pruning ratio remains constrained to less than 35% (20%, 27%, 35%), and the performance on wikitext-2 (PPL) is somewhat less favorable compared to wanda. Nonetheless, this study demonstrates the feasibility of pruning by eliminating layers with lower block-level importance scores. Moreover, performance enhancement is observed after one-shot pruning via LoRA fine-tuning.
 
+There are two "Shortened LLaMa", this is a mistake of the original author!
+
 - SLEB: Streamlining LLMs through Redundancy Verification and Elimination of Transformer Blocks
     - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
     - Author: Jiwon Song, Kyungseok Oh, Taesu Kim, Hyungjun Kim, Yulhwa Kim, Jae-Joon Kim
@@ -328,8 +343,18 @@ Content:
     - Link: https://arxiv.org/pdf/2402.09773.pdf
     - Pub: Arxiv
     - Code: Not available
-    - This work = structure pruning + progressive knowledge distillation; However, due to the memory constraints, knowledge distillation is hard in the context of LLM. To mitigate the memory cost, this paper propose to switch teacher and student by apply different sparsity ratio using various masks and LoRA modules.
+    - Comment: This work = structure pruning + progressive knowledge distillation; However, due to the memory constraints, knowledge distillation is hard in the context of LLM. To mitigate the memory cost, this paper propose to switch teacher and student by apply different sparsity ratio using various masks and LoRA modules.
 
+- Everybody Prune Now: Structured Pruning of LLMs with only Forward Passes
+     - Label:
+     - Author:
+     - Link: https://arxiv.org/abs/2402.05406
+     - Pub: Arxiv
+     - Code: https://github.com/ldery/Bonsai
+     - Summary:
+     - Method:
+     - Experiment results:
+     - Comment: 
 
 - Structural pruning of large language models via neural architecture search
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
