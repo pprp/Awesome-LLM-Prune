@@ -171,6 +171,22 @@ reconstruction. They adapt existing methods-Adaprune and OBC and propose thier m
     - Summary: Re-define the evaluation protocol for compressed LLMs; Observation: SoTA Pruning methods suffer significant performance degradation, despite negligible changes in perplexity. SoTA Pruning do not work well for N:M structured pruning. Quantization methods are more successful.
     - Comment: This paper question the performance of LLM after pruning, which provide us a new perspective besides pure perplexity. This paper is worth reading because its evaluation is comprehensive. 
 
+- Outlier Weighed Layerwise Sparsity (OWL): A Missing Secret Sauce for Pruning LLMs to High Sparsity
+  - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg >
+  - Author:Lu Yin, You Wu, Zhenyu Zhang, Cheng-Yu Hsieh, Yaqing Wang, Yiling Jia, Mykola Pechenizkiy, Yi Liang, Zhangyang Wang, Shiwei Liu
+  - Link:https://arxiv.org/abs/2310.05175
+  - Code:https://github.com/luuyin/OWL 
+  - Pub: ICML 2024
+  - Summary: OWL challenges the assumption of uniform layer-wise assumption and tries to assign different layers with different pruning ratio by proposed OWL metric.
+
+- Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning
+  - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
+  - Tag: Structured Pruning
+  - Author: Mengzhou Xia, Tianyu Gao, Zhiyuan Zeng, Danqi Chen;
+  - Link: https://arxiv.org/abs/2310.06694
+  - Code: https://github.com/princeton-nlp/LLM-Shearing
+  - Pub: ICLR 2024 
+  - Summary: To prune larger pre-trained model, this paper proposed (1) Targeted structured pruning: prune a LLM to specified target shape by removing layers, heads, and intermediate and hidden dimensions in an end-to-end manner; (2) Dynamic Batch Loading: update the composition of sampled data in each training batch based on varying losses across different domains.
 
 - RIA: Plug-and-Play: An Efficient Post-Training Pruning Method for Large Language Models
     - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
@@ -190,13 +206,12 @@ reconstruction. They adapt existing methods-Adaprune and OBC and propose thier m
   - Pub: ICLR Under review 
   - Summary: This paper is not related to Pruning but to Low-rank decomposition. They find that removing higher-order component of weight matrics in MLP and attention can significantly improve the performance of LLMs.
 
-- Outlier Weighed Layerwise Sparsity (OWL): A Missing Secret Sauce for Pruning LLMs to High Sparsity
+- PERP: Rethinking the Prune-Retrain Paradigm in the Era of LLMs 
   - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg >
-  - Author:Lu Yin, You Wu, Zhenyu Zhang, Cheng-Yu Hsieh, Yaqing Wang, Yiling Jia, Mykola Pechenizkiy, Yi Liang, Zhangyang Wang, Shiwei Liu
-  - Link:https://arxiv.org/abs/2310.05175
-  - Code:https://github.com/luuyin/OWL 
-  - Pub: ICML 2024
-  - Summary: OWL challenges the assumption of uniform layer-wise assumption and tries to assign different layers with different pruning ratio by proposed OWL metric.
+  - Author: Max Zimmer, Megi Andoni, Christoph Spiegel, Sebastian Pokutta
+  - Link: https://arxiv.org/pdf/2312.15230.pdf
+  - Pub: Arxiv 
+  - Summary: In the era of Large Language Models (LLMs), retraining becomes impractical due to memory and compute constraints. This paper proposes the use of Low-Rank Adaption to mitigate the expense of the retraining process. They explore four approaches, including BN-Recalibration, Biases, BN-Parameters, and Linear Probing. However, it's worth noting that most LLMs do not utilize Batch Normalization (BN). Indeed, this paper only conducts a few experiments on OPT and primarily focuses on works such as ResNet50 pruning. Furthermore, LoRA + Pruning is actually a component of SparseGPT (published in January 2023), so the novelty of this paper is somewhat limited.
 
 
 - The LLM Surgeon
@@ -206,14 +221,14 @@ reconstruction. They adapt existing methods-Adaprune and OBC and propose thier m
 	- Pub: ICLR24
 	- Summary: This paper scales Kronecker-factored curvature approximations of the target loss landscape to large language models. The metric for this paper is Fisher information matrix.
 
-
-- Shortened LLaMA: A Simple Depth Pruning for Large Language Models
+- FLAP: Fluctuation-based adaptive structured pruning for large language models
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
-  - Authors: Bo-Kyeong Kim, Geonmin Kim, Tae-Ho Kim, Thibault Castells, Shinkook Choi, Junho Shin, Hyoung-Kyu Song
-  - Link: https://arxiv.org/abs/2402.02834 
-  - Pub: ICLR24 Workshop (ME-FoMo) 
-  - Summary: This paper delves into the naive implementation of structured pruning, specifically Depth Pruning, for Large Language Models (LLMs). Through experiments on zero-shot tasks, it is revealed that its performance is on par with width pruning techniques. However, the pruning ratio remains constrained to less than 35% (20%, 27%, 35%), and the performance on wikitext-2 (PPL) is somewhat less favorable compared to wanda. Nonetheless, this study demonstrates the feasibility of pruning by eliminating layers with lower block-level importance scores. Moreover, performance enhancement is observed after one-shot pruning via LoRA fine-tuning.
-
+  - Author: Yongqi An, Xu Zhao, Tao Yu, Ming Tang, Jinqiao Wang
+  - Link: https://arxiv.org/abs/2312.11983 
+  - Code: https://github.com/CASIA-IVA-Lab/FLAP 
+  - Pub: AAAI 24
+  - Summary: They proposed a retraining-free structured pruning framework for LLMs. (1) Structured Importance Metric: Fluctuation Pruning Metric (2) Adaptively Search Global Compress Ratio: (3) Compensation Mechanism: add additional biases to recover the output feature maps. Specifically, they observe that certain channels of hidden state features exhibits a low variation across different samples, indicating that if their corresponding input feature channels are pruned, the resulted change can be counterbalanced by the baseline value. Compared with Wanda, FLAP compute the sample variance of each input feature and weight it with the squared norm of the corresponding column of the weight matrics. 
+  - Comment: This paper is well-written and the framework is clear. However, I have a question: they claim FLAP is a retraining-free framework but it still require retraining the biases.
 
 - SliceGPT: Compress Large Language Models by Deleting Rows and Columns 
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
@@ -223,12 +238,62 @@ reconstruction. They adapt existing methods-Adaprune and OBC and propose thier m
   - Summary: This paper focuses on structured pruning by removing rows and columns of a matrix to reduce parameters. However, this idea is similar to LLM-Pruner but weaker. The organization of this paper is somewhat peculiar: it dedicates two and a half pages to related works (too long). Additionally, in Table 1, SliceGPT (<30% sparsity) mainly compares its performance with SparseGPT under 2:4 structure pruning settings (50% sparsity), which is not quite fair. Please correct me if I am wrong.
 
 
-- PERP: Rethinking the Prune-Retrain Paradigm in the Era of LLMs 
-  - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg >
-  - Author: Max Zimmer, Megi Andoni, Christoph Spiegel, Sebastian Pokutta
-  - Link: https://arxiv.org/pdf/2312.15230.pdf
-  - Pub: Arxiv 
-  - Summary: In the era of Large Language Models (LLMs), retraining becomes impractical due to memory and compute constraints. This paper proposes the use of Low-Rank Adaption to mitigate the expense of the retraining process. They explore four approaches, including BN-Recalibration, Biases, BN-Parameters, and Linear Probing. However, it's worth noting that most LLMs do not utilize Batch Normalization (BN). Indeed, this paper only conducts a few experiments on OPT and primarily focuses on works such as ResNet50 pruning. Furthermore, LoRA + Pruning is actually a component of SparseGPT (published in January 2023), so the novelty of this paper is somewhat limited.
+-pruning Fast and Optimal Weight Update for Pruned Large Language Models
+    - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
+    - Authors: **Vladim ́ır Bozˇa**
+    - Link: https://arxiv.org/pdf/2401.02938.pdf
+    - Code: Not available
+    - Code: https://github.com/fmfi-compbio/admm-
+    - Summary:  This paper focuses on the recovery process, which was first proposed in SparseGPT. This paper proposed an Alternating Direction Method of Multipliers (ADMM), with a simple iterative pruning mask selection.
+
+- LaCo: Large Language Model Pruning via Layer Collapse
+  - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
+  - Author:Yifei Yang, Zouying Cao, Hai Zhao
+  - Link: https://arxiv.org/pdf/2402.11187.pdf
+  - Pub: CoRR 
+  - Summary: These paper compute the different among layers (call it Reserving-Difference) and merge them (Call it Seeking-Common). Specifically, they merge m consecutive layers into one by using sum of parameter difference. Also, they employ trial-and-error by evaluating each merged  model with Cosine Similarity and make adjustment of the merge.
+  - Comments: There is a lack of explanation of equation-1. Why it worked?
+
+
+- Shortened LLaMA: A Simple Depth Pruning for Large Language Models 
+  - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
+  - Author: Bo-Kyeong Kim, Geonmin Kim, Tae-Ho Kim, Thibault Castells, Shinkook Choi, Junho Shin, Hyoung-Kyu Song 
+  - Link:https://arxiv.org/abs/2402.02834 
+  - Pub: CoRR
+  - Summary: This paper focus on depth pruning and analysis the influence of depth and width pruning on LLM inference efficiency. They explore various design factors including the choice of prunable units, the criteria and retraining frequency. (1) Prunable Units: width and depth; (2) Criteria: Magnitude, Taylor, Mag+ and Talyor+, PPL; (3)retrain: LoRA. Finally, they choose PPL as criteria and target Depth Pruning. They claim that depth pruning approach can compte with recent width pruning methods  on Zero-shot tasks performance.
+
+- Shortened LLaMA: A Simple Depth Pruning for Large Language Models
+  - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
+  - Authors: Bo-Kyeong Kim, Geonmin Kim, Tae-Ho Kim, Thibault Castells, Shinkook Choi, Junho Shin, Hyoung-Kyu Song
+  - Link: https://arxiv.org/abs/2402.02834 
+  - Pub: ICLR24 Workshop (ME-FoMo) 
+  - Summary: This paper delves into the naive implementation of structured pruning, specifically Depth Pruning, for Large Language Models (LLMs). Through experiments on zero-shot tasks, it is revealed that its performance is on par with width pruning techniques. However, the pruning ratio remains constrained to less than 35% (20%, 27%, 35%), and the performance on wikitext-2 (PPL) is somewhat less favorable compared to wanda. Nonetheless, this study demonstrates the feasibility of pruning by eliminating layers with lower block-level importance scores. Moreover, performance enhancement is observed after one-shot pruning via LoRA fine-tuning.
+
+- SLEB: Streamlining LLMs through Redundancy Verification and Elimination of Transformer Blocks
+    - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
+    - Author: Jiwon Song, Kyungseok Oh, Taesu Kim, Hyungjun Kim, Yulhwa Kim, Jae-Joon Kim
+    - Link: https://arxiv.org/pdf/2402.09025.pdf
+    - Code: [https://github.com/leapingjagg-dev/SLEB](https://github.com/leapingjagg-dev/SLEB?tab=readme-ov-file)
+    - Pub: Arxiv
+    - Summary: This paper streamlines LLMs by identifying and removing redundant blocks. Specifically, cosine similarity is utilized to analyze the redundancy. Another metric3 is proposed for removing blocks.
+    - Comment: There should be more methods for comparison.
+
+- Gradient-Free Adaptive Global Pruning for Pre-trained Language Models
+    - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg >
+    - Author: Guangji Bai, Yijiang Li, Chen Ling, Kibaek Kim, Liang Zhao
+    - Link: https://arxiv.org/pdf/2402.17946v1.pdf
+    - Pub: Arxiv
+    - Code: https://github.com/BaiTheBest/AdaGP
+    - Summary: Due to the size of LLM, global pruning becomes impractical. However, local pruning often leads to suboptimal solutions. To address this issue, this paper propose Adaptive Global Pruning (AdaGP) to redefine the global pruning process into manageable, coordinated subproblems, allowing for resource-efficient optimization with global optimality.
+
+
+- NutePrune: Efficient Progressive Pruning with Numerous Teachers for Large Language Models
+    - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg >
+    - Author: Shengrui Li, Xueting Han, Jing Bai
+    - Link: https://arxiv.org/pdf/2402.09773.pdf
+    - Pub: Arxiv
+    - Code: Not available
+    - This work = structure pruning + progressive knowledge distillation; However, due to the memory constraints, knowledge distillation is hard in the context of LLM. To mitigate the memory cost, this paper propose to switch teacher and student by apply different sparsity ratio using various masks and LoRA modules.
 
 
 - Structural pruning of large language models via neural architecture search
@@ -253,33 +318,6 @@ reconstruction. They adapt existing methods-Adaprune and OBC and propose thier m
   - Link: https://arxiv.org/abs/2403.03853 
   - Pub: CoRR 
   - Summary: They discovered that the layers of LLMs exhibit high similarity and some layers are negligible. To remove the unimportant layers, they define a metric called Block Influence (BI) to gauge the significance of each layers in LLMs. Specifically, the BI score is actually the cosine similarity of two successive blocks. The experiments are limited as they didn't provide the results of ppl and there are various one-shot pruning for LLMs like SparseGPT and Wanda etc.
- 
-
-- LaCo: Large Language Model Pruning via Layer Collapse
-  - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
-  - Author:Yifei Yang, Zouying Cao, Hai Zhao
-  - Link: https://arxiv.org/pdf/2402.11187.pdf
-  - Pub: CoRR 
-  - Summary: These paper compute the different among layers (call it Reserving-Difference) and merge them (Call it Seeking-Common). Specifically, they merge m consecutive layers into one by using sum of parameter difference. Also, they employ trial-and-error by evaluating each merged  model with Cosine Similarity and make adjustment of the merge.
-  - Comments: There is a lack of explanation of equation-1. Why it worked?
-
-
-- Shortened LLaMA: A Simple Depth Pruning for Large Language Models 
-  - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
-  - Author: Bo-Kyeong Kim, Geonmin Kim, Tae-Ho Kim, Thibault Castells, Shinkook Choi, Junho Shin, Hyoung-Kyu Song 
-  - Link:https://arxiv.org/abs/2402.02834 
-  - Pub: CoRR
-  - Summary: This paper focus on depth pruning and analysis the influence of depth and width pruning on LLM inference efficiency. They explore various design factors including the choice of prunable units, the criteria and retraining frequency. (1) Prunable Units: width and depth; (2) Criteria: Magnitude, Taylor, Mag+ and Talyor+, PPL; (3)retrain: LoRA. Finally, they choose PPL as criteria and target Depth Pruning. They claim that depth pruning approach can compte with recent width pruning methods  on Zero-shot tasks performance.
- 
-
-- FLAP: Fluctuation-based adaptive structured pruning for large language models
-  - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
-  - Author: Yongqi An, Xu Zhao, Tao Yu, Ming Tang, Jinqiao Wang
-  - Link: https://arxiv.org/abs/2312.11983 
-  - Code: https://github.com/CASIA-IVA-Lab/FLAP 
-  - Pub: AAAI 24
-  - Summary: They proposed a retraining-free structured pruning framework for LLMs. (1) Structured Importance Metric: Fluctuation Pruning Metric (2) Adaptively Search Global Compress Ratio: (3) Compensation Mechanism: add additional biases to recover the output feature maps. Specifically, they observe that certain channels of hidden state features exhibits a low variation across different samples, indicating that if their corresponding input feature channels are pruned, the resulted change can be counterbalanced by the baseline value. Compared with Wanda, FLAP compute the sample variance of each input feature and weight it with the squared norm of the corresponding column of the weight matrics. 
-  - Comment: This paper is well-written and the framework is clear. However, I have a question: they claim FLAP is a retraining-free framework but it still require retraining the biases.
 
 
 - Bonsai: Everybody Prune Now: Structured Pruning of LLMs with only Forward Passes
@@ -299,43 +337,6 @@ reconstruction. They adapt existing methods-Adaprune and OBC and propose thier m
   - Comment: good reference for studying the depth-dependence of neural networks.
 
 
-- SLEB: Streamlining LLMs through Redundancy Verification and Elimination of Transformer Blocks
-    - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
-    - Author: Jiwon Song, Kyungseok Oh, Taesu Kim, Hyungjun Kim, Yulhwa Kim, Jae-Joon Kim
-    - Link: https://arxiv.org/pdf/2402.09025.pdf
-    - Code: [https://github.com/leapingjagg-dev/SLEB](https://github.com/leapingjagg-dev/SLEB?tab=readme-ov-file)
-    - Pub: Arxiv
-    - Summary: This paper streamlines LLMs by identifying and removing redundant blocks. Specifically, cosine similarity is utilized to analyze the redundancy. Another metric3 is proposed for removing blocks.
-    - Comment: There should be more methods for comparison.
-
-
-- Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning
-  - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
-  - Tag: Structured Pruning
-  - Author: Mengzhou Xia, Tianyu Gao, Zhiyuan Zeng, Danqi Chen;
-  - Link: https://arxiv.org/abs/2310.06694
-  - Code: https://github.com/princeton-nlp/LLM-Shearing
-  - Pub: ICLR 2024 
-  - Summary: To prune larger pre-trained model, this paper proposed (1) Targeted structured pruning: prune a LLM to specified target shape by removing layers, heads, and intermediate and hidden dimensions in an end-to-end manner; (2) Dynamic Batch Loading: update the composition of sampled data in each training batch based on varying losses across different domains.
-
-
-- Gradient-Free Adaptive Global Pruning for Pre-trained Language Models
-    - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg >
-    - Author: Guangji Bai, Yijiang Li, Chen Ling, Kibaek Kim, Liang Zhao
-    - Link: https://arxiv.org/pdf/2402.17946v1.pdf
-    - Pub: Arxiv
-    - Code: https://github.com/BaiTheBest/AdaGP
-    - Summary: Due to the size of LLM, global pruning becomes impractical. However, local pruning often leads to suboptimal solutions. To address this issue, this paper propose Adaptive Global Pruning (AdaGP) to redefine the global pruning process into manageable, coordinated subproblems, allowing for resource-efficient optimization with global optimality.
-
-
-- NutePrune: Efficient Progressive Pruning with Numerous Teachers for Large Language Models
-    - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg >
-    - Author: Shengrui Li, Xueting Han, Jing Bai
-    - Link: https://arxiv.org/pdf/2402.09773.pdf
-    - Pub: Arxiv
-    - Code: Not available
-    - This work = structure pruning + progressive knowledge distillation; However, due to the memory constraints, knowledge distillation is hard in the context of LLM. To mitigate the memory cost, this paper propose to switch teacher and student by apply different sparsity ratio using various masks and LoRA modules.
-
 - BESA: Pruning Large Language Models with Blockwise Parameter-Efficient Sparity Allocation
     - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg >
     - Author: Peng Xu, Wenqi Shao, Mengzhao Chen, Shitao Tang, Kaipeng Zhang, Peng Gao, Fengwei An, Yu Qiao, Ping Luo.
@@ -344,13 +345,6 @@ reconstruction. They adapt existing methods-Adaprune and OBC and propose thier m
     - Pub: ICLR 2024
     - Summary: Existing pruning methods for LLM adopted a layer-wise approach but resulted in significant perturbation to the model’s output and required meticulous hyperparameter tuning(Pruning Ratio). This paper proposes BESA to handle it with block-wise adaptation. (1) Instead of pruning each Linear layer, BESA targets the overall pruning error w.r.t. one transformer block (2) it allocates layer-specific sparsity in a differentiable manner.
 
-- Fast and Optimal Weight Update for Pruned Large Language Models
-    - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
-    - Authors: **Vladim ́ır Bozˇa**
-    - Link: https://arxiv.org/pdf/2401.02938.pdf
-    - Code: Not available
-    - Code: https://github.com/fmfi-compbio/admm-pruning
-    - Summary:  This paper focuses on the recovery process, which was first proposed in SparseGPT. This paper proposed an Alternating Direction Method of Multipliers (ADMM), with a simple iterative pruning mask selection.
 
 - COPAL: Continual Pruning in Large Language Generative Models
     - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
