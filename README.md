@@ -84,7 +84,8 @@ Contents:
     - Code: https://github.com/IST-DASLab/sparsegpt 
     - Pub: ICML 2023
     - Summary: First to prune GPT with at least 50% sparsity without any training. SparseGPT is entirely local, which only focus on weight updates without any global gradient information.
-    - method: 
+    - method: Authors adopt the point of view proposed by (Hubara et al., 2021a) and deem the problem as composed by two separate parts-mask selection and weight
+reconstruction. They adapt existing methods-Adaprune and OBC and propose thier method. First to determine a mask matrix for some columns, then compensate for pruning loss though changing the weights of corresponding rows until the whole block is finished. Notice that during reconstruction, this method needs input data(Calibration data).
     - Experiment results:<p align="center">
                          <img width="90%" alt="image" src="Pictures/Sparsegpt_results 1.jpg">
                          <img width="50%" alt="image" src="Pictures/Sparsegpt_results 3.jpg">
