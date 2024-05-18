@@ -404,5 +404,5 @@ Content:
     - Note: All experiments are conducted on BERT not LLAMA. This NAS procedure requires massive computation when applying to LLaMA.
  
 - Pruning as a Domain-specific LLM Extractor
-    - Label: 
+    - Label: Should domain-specific approach be included?
 
