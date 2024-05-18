@@ -74,6 +74,7 @@ Contents:
 
 32.LORAPRUNE: PRUNING MEETS LOW-RANK PARAMETER-EFFICIENT FINE-TUNING∗ (finish)
 
+
 33.
 
 
@@ -88,7 +89,7 @@ Contents:
 reconstruction. They adapt existing methods-Adaprune and OBC and propose thier method. First to determine a mask matrix for some columns, then compensate for pruning loss though changing the weights of corresponding rows until the whole block is finished. Notice that during reconstruction, this method needs input data(Calibration data).
     - Experiment results:<p align="center">
                          <img width="90%" alt="image" src="Pictures/Sparsegpt_results 1.jpg">
-                         <img width="40%" alt="image" src="Pictures/Sparsegpt_results 3.jpg">
+                         <img width="36%" alt="image" src="Pictures/Sparsegpt_results 3.jpg">
                          </p>
 			 we can find the trend of how perplexity changes as pruning rate increases in ficture 1.
                          <p align="center">
@@ -98,11 +99,11 @@ reconstruction. They adapt existing methods-Adaprune and OBC and propose thier m
                          </p>
 			 These are perplexity results for opt-models of different sizes on wikitext,ptb and c4 datasets under 50% sparsity.
                          <p align="center">
-                         <img width="85%" alt="image" src="Pictures/Sparsegpt_results 4.jpg"> 
+                         <img width="75%" alt="image" src="Pictures/Sparsegpt_results 4.jpg"> 
                          </p>
 			 These are zero-shot results for opt 175B model on some baseline datasets under 50% sparsity.
                          <p align="center">
-			 <img width="85%" alt="image" src="Pictures/Sparsegpt_results 6.jpg">
+			 <img width="45%" alt="image" src="Pictures/Sparsegpt_results 6.jpg">
                          <img width="85%" alt="image" src="Pictures/Sparsegpt_results 9.jpg">
                          <img width="85%" alt="image" src="Pictures/Sparsegpt_results 10.jpg">
                          </p>
