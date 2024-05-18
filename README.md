@@ -96,13 +96,16 @@ Content:
       matrix-free approximations of second-order information.
       In Conference on Neural Information Processing System,(NeurIPS), 2021.
       
-      ③Frantar, E., Ashkboos, S., Hoefler, T., and Alistarh,
-      D. GPTQ: Accurate post-training compression for
-      generative pretrained transformers. arXiv preprint arXiv:2210.17323, 2022a.
+      ③Hubara, I., Chmiel, B., Island, M., Banner, R., Naor, S.,
+	and Soudry, D. Accelerated sparse neural training: A
+	provable and efficient method to find N:M transposable
+	masks. In Conference on Neural Information Processing
+	Systems (NeurIPS), 2021a.
       
       ④Frantar, E., Singh, S. P., and Alistarh, D. Optimal
       Brain Compression(OBC): A framework for accurate post-training quantization and pruning. arXiv preprint
       arXiv:2208.11580, 2022b. Accepted to NeurIPS 2022.
+
       
     - Experiment results:<p align="center">
                          <img width="90%" alt="image" src="Pictures/Sparsegpt_results 1.jpg">
