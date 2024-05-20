@@ -86,6 +86,7 @@ Content:
 
 38.
 
+
 -------------
 
 - SparseGPT: Massive Language Models Can be Accurately Pruned in One-shot 
@@ -289,7 +290,8 @@ Content:
   - Pub: ICLR24
   - Summary: This paper focuses on structured pruning by removing rows and columns of a matrix to reduce parameters. However, this idea is similar to LLM-Pruner but weaker. The organization of this paper is somewhat peculiar: it dedicates two and a half pages to related works (too long). Additionally, in Table 1, SliceGPT (<30% sparsity) mainly compares its performance with SparseGPT under 2:4 structure pruning settings (50% sparsity), which is not quite fair. Please correct me if I am wrong.
 
--APT: Adaptive Pruning and Tuning Pretrained Language Models for Efficient Training and Inference
+
+- APT: Adaptive Pruning and Tuning Pretrained Language Models for Efficient Training and Inference
     - Label: <img src=https://img.shields.io/badge/structured-blue.svg ><img src=https://img.shields.io/badge/Parameter_efficient_finetuning-lightgreen.svg >
     - Author: Bowen Zhao, Hannaneh Hajishirzi, Qingqing Cao
     - Link: https://arxiv.org/abs/2401.12200
@@ -299,6 +301,7 @@ Content:
     - Method:
     - Experiment results:
     - Comment:
+
 
 -pruning Fast and Optimal Weight Update for Pruned Large Language Models
     - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
