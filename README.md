@@ -84,8 +84,9 @@ Content:
 
 37.APT: Adaptive Pruning and Tuning Pretrained Language Models for Efficient Training and Inference ()
 
-38.
+38.Compresso: Structured Pruning with Collaborative Prompting Learns Compact Large Language Models ()
 
+39.
 
 -------------
 
@@ -181,7 +182,7 @@ Content:
     - Author: Yupeng Ji, Yibo Cao, Jiucai Liu 
     - Link: https://arxiv.org/pdf/2309.09507.pdf 
     - Code: Not available 
-    - Pub: Arxiv 
+    - Pub: Arxiv(submitted to IEEE ICASSP 2024)
     - Summary: Formulate the pruning LLM as NAS problem. The search space is the prunining ratio, layer type, etc. By utilizing GBDT accuracy predictor, this paper take the layer-wise importance as input and predict the PPL. 
     - Comment: With 525 architecture-accuracy pair, this paper train the GBDT with 7:3 ratio.
 
@@ -229,6 +230,17 @@ Content:
    - Method:
    - Experiment results:
    - Comment:
+
+- Compresso: Structured Pruning with Collaborative Prompting Learns Compact Large Language Models
+   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
+   - Author: Song Guo, Jiahang Xu, Li Lyna Zhang, Mao Yang
+   - Link: https://arxiv.org/pdf/2310.05015.pdf
+   - Code: https://github.com/microsoft/Moonlit/tree/main/Compresso
+   - Pub: Under Review
+   - Summary: Combing instruction tuning with training-based Pruning. LoRA is incorporated to achieve memory-efficient. Collaborative pruning prompt encourage LLMs to better align with the pruning algorithm.
+   - Method:
+   - Experiment results:
+   - Comment: The prompt is really interesting, which is "Attention! LLM".
 
 - RIA: Plug-and-Play: An Efficient Post-Training Pruning Method for Large Language Models
     - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
