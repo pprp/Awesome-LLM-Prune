@@ -315,9 +315,9 @@ Content:
     - Comment:
 
 
--pruning Fast and Optimal Weight Update for Pruned Large Language Models
+- pruning Fast and Optimal Weight Update for Pruned Large Language Models
     - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
-    - Authors: **Vladim ́ır Bozˇa**
+    - Authors: Vladim ́ır Bozˇa
     - Link: https://arxiv.org/pdf/2401.02938.pdf
     - Code: https://github.com/fmfi-compbio/admm-
     - Summary:  This paper focuses on the recovery process, which was first proposed in SparseGPT. This paper proposed an Alternating Direction Method of Multipliers (ADMM), with a simple iterative pruning mask selection.
