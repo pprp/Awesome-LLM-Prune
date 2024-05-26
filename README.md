@@ -28,7 +28,7 @@ Content:
 
 9.The Truth is in There: Improving Reasoning in Language Models with Layer-Selective Rank Reduction ()
 
-10.Outlier Weighed Layerwise Sparsity (OWL): A Missing Secret Sauce for Pruning LLMs to High Sparsity ()
+10.Outlier Weighed Layerwise Sparsity (OWL): A Missing Secret Sauce for Pruning LLMs to High Sparsity (finishing...)
 
 11.The LLM Surgeon ()
 
