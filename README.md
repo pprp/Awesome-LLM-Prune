@@ -10,13 +10,13 @@ A list for papers regarding to LLM pruning(but may also contain other papers reg
 
 Content:
 
-1.SparseGPT: Massive Language Models Can be Accurately Pruned in One-shot (finish)
+1.SparseGPT: Massive Language Models Can be Accurately Pruned in One-shot (finished)
 
-2.LLM-Pruner: On the Strucutal Pruning of Large Language Models (finish)
+2.LLM-Pruner: On the Strucutal Pruning of Large Language Models (finished)
 
 3.The Emergence of Essential Sparsity in Large Pre-trained Models: The Weights that Matter ()
 
-4.Wanda: A Simple and Effective Pruning Approach For Large Language Models (finish)
+4.Wanda: A Simple and Effective Pruning Approach For Large Language Models (finished)
 
 5.Pruning Large Language Models via Accuracy Predictor ()
 
@@ -28,7 +28,7 @@ Content:
 
 9.The Truth is in There: Improving Reasoning in Language Models with Layer-Selective Rank Reduction ()
 
-10.Outlier Weighed Layerwise Sparsity (OWL): A Missing Secret Sauce for Pruning LLMs to High Sparsity (finishing...)
+10.Outlier Weighed Layerwise Sparsity (OWL): A Missing Secret Sauce for Pruning LLMs to High Sparsity (finished)
 
 11.The LLM Surgeon ()
 
@@ -72,7 +72,7 @@ Content:
 
 31.Structural Pruning of Pre-trained Language Models via Neural Architecture Search(same source as 15) ()
 
-32.LoraPrune: Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning∗ (finish)
+32.LoraPrune: Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning∗ (finished)
 
 33.Beyond Size: How Gradients Shape Pruning Decisions in Large Language Models ()
 
