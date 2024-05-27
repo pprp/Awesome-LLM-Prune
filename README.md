@@ -86,7 +86,9 @@ Content:
 
 38.Compresso: Structured Pruning with Collaborative Prompting Learns Compact Large Language Models ()
 
-39.
+39.DYNAMIC SPARSE NO TRAINING þ:TRAINING-FREE FINE-TUNING FOR SPARSE LLMS
+
+40.
 
 -------------
 
@@ -242,6 +244,17 @@ Content:
    - Experiment results:
    - Comment: The prompt is really interesting, which is "Attention! LLM".
 
+- Dynamic Sparse no Training þ:Training-Free Fine-Tuning For Sparse LLMS
+    - Label: <img src=https://img.shields.io/badge/Parameter_efficient_finetuning-lightgreen.svg >
+    - Author: Yuxin Zhang, Lirui Zhao, Mingbao Lin, Yunyun Sun, Yiwu Yao, Xingjia Han, Jared Tanner, Shiwei Liu, Rongrong Ji
+    - Link: https://arxiv.org/pdf/2310.08915
+    - Code: https://github.com/zyxxmu/DSnoT
+    - Pub: ICLR 2024
+    - Summary:
+    - Method:
+    - Experiment results:
+    - Comment:
+  
 - RIA: Plug-and-Play: An Efficient Post-Training Pruning Method for Large Language Models
     - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
     - Author: Yingtao Zhang, Haoli Bai, Haokun Lin, Jialin Zhao, Lu Hou, Carlo Vittorio Cannistraci
