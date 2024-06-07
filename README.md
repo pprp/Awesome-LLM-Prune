@@ -254,15 +254,7 @@ Content:
     - Method:
     - Experiment results:
     - Comment:
-  
-- RIA: Plug-and-Play: An Efficient Post-Training Pruning Method for Large Language Models
-    - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
-    - Author: Yingtao Zhang, Haoli Bai, Haokun Lin, Jialin Zhao, Lu Hou, Carlo Vittorio Cannistraci
-    - Link: https://openreview.net/pdf?id=Tr0lPx9woF
-    - Code: https://github.com/biomedical-cybernetics/Relative-importance-and-activation-pruning
-    - Pub: ICLR 2024
-    - Summary: For post-training pruning method, this paper proposed two innovative and plug-and-play components, which is Relative Importance and Activations (RIA) and Channel Permutation (CP). (1) RIA re-evaluate the importance of each weight element based on all connections that originate from input and output. (2) CP aims to preserve important weights under N:M sparsity, which yields better N:M structures by permuting the input channels of weight.
-    - Comment: I have thoroughly reviewed the source code and can affirm its effectiveness. The code is indeed of superior quality, demonstrating excellent standards in development. 
+
 
 - Beyond Size: How Gradients Shape Pruning Decisions in Large Language Models
   - Label:<img src=https://img.shields.io/badge/unstructured-turquoise.svg >
@@ -403,7 +395,14 @@ There are two "Shortened LLaMa", this is a mistake of the original author!
   - Link: https://openreview.net/pdf?id=SHlZcInS6C
   - Pub: AutoML 
   - Summary: This paper discuss the relationship between NAS and structural pruning and employ multi-objective NAS to compress LLM. They view the pre-trained network as a super-network and search for the best sub-network that optimally balance between downstream tasks and parameter count. For training weight-sharing NAS, they employ sandwich rule to train sub-networks. After training, local search is utilized for finding the best sub-network.
- 
+
+- Bonsai: Everybody Prune Now: Structured Pruning of LLMs with only Forward Passes
+  - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
+  - Author: Lucio Dery, Steven Kolawole, Jean-François Kagy, Virginia Smith, Graham Neubig, Ameet Talwalkar
+  - Link: [arxiv.org/pdf/2402.05406.pdf](https://arxiv.org/pdf/2402.05406.pdf)
+  - Code: https://github.com/ldery/Bonsai 
+  - Summary: This work devoted to structured pruning of LLMs using only forward passes (gradient-free way). Bonsai can outperform gradient-based structured pruning methods and twice as fast as semi-structured pruning methods. Specifically, Bonsai measures the performance of each module's performance by generating sub-models, which require multiple forwards. Also, Bonsai use informative priors (Deep compression, a.k.a other unstructured pruning method) to drop modules. Bonsai adopts iterative pruning method. In each iteration, it will assess the prior of unpruned module and utilize them to select new sub-model.
+
 
 - Not all Layers of LLMs are Necessary during Inference 
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
@@ -419,14 +418,6 @@ There are two "Shortened LLaMa", this is a mistake of the original author!
   - Link: https://arxiv.org/abs/2403.03853 
   - Pub: CoRR 
   - Summary: They discovered that the layers of LLMs exhibit high similarity and some layers are negligible. To remove the unimportant layers, they define a metric called Block Influence (BI) to gauge the significance of each layers in LLMs. Specifically, the BI score is actually the cosine similarity of two successive blocks. The experiments are limited as they didn't provide the results of ppl and there are various one-shot pruning for LLMs like SparseGPT and Wanda etc.
-
-
-- Bonsai: Everybody Prune Now: Structured Pruning of LLMs with only Forward Passes
-  - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
-  - Author: Lucio Dery, Steven Kolawole, Jean-François Kagy, Virginia Smith, Graham Neubig, Ameet Talwalkar
-  - Link: [arxiv.org/pdf/2402.05406.pdf](https://arxiv.org/pdf/2402.05406.pdf)
-  - Code: https://github.com/ldery/Bonsai 
-  - Summary: This work devoted to structured pruning of LLMs using only forward passes (gradient-free way). Bonsai can outperform gradient-based structured pruning methods and twice as fast as semi-structured pruning methods. Specifically, Bonsai measures the performance of each module's performance by generating sub-models, which require multiple forwards. Also, Bonsai use informative priors (Deep compression, a.k.a other unstructured pruning method) to drop modules. Bonsai adopts iterative pruning method. In each iteration, it will assess the prior of unpruned module and utilize them to select new sub-model.
 
  
 - The Unreasonable Ineffectiveness of the Deeper Layers 
@@ -446,6 +437,14 @@ There are two "Shortened LLaMa", this is a mistake of the original author!
     - Pub: ICLR 2024
     - Summary: Existing pruning methods for LLM adopted a layer-wise approach but resulted in significant perturbation to the model’s output and required meticulous hyperparameter tuning(Pruning Ratio). This paper proposes BESA to handle it with block-wise adaptation. (1) Instead of pruning each Linear layer, BESA targets the overall pruning error w.r.t. one transformer block (2) it allocates layer-specific sparsity in a differentiable manner.
 
+- RIA: Plug-and-Play: An Efficient Post-Training Pruning Method for Large Language Models
+    - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
+    - Author: Yingtao Zhang, Haoli Bai, Haokun Lin, Jialin Zhao, Lu Hou, Carlo Vittorio Cannistraci
+    - Link: https://openreview.net/pdf?id=Tr0lPx9woF
+    - Code: https://github.com/biomedical-cybernetics/Relative-importance-and-activation-pruning
+    - Pub: ICLR 2024(I found that this paper is released at least after March,2024.)
+    - Summary: For post-training pruning method, this paper proposed two innovative and plug-and-play components, which is Relative Importance and Activations (RIA) and Channel Permutation (CP). (1) RIA re-evaluate the importance of each weight element based on all connections that originate from input and output. (2) CP aims to preserve important weights under N:M sparsity, which yields better N:M structures by permuting the input channels of weight.
+    - Comment: I have thoroughly reviewed the source code and can affirm its effectiveness. The code is indeed of superior quality, demonstrating excellent standards in development. 
 
 - COPAL: Continual Pruning in Large Language Generative Models
     - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
