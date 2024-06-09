@@ -148,9 +148,11 @@ Content:
     - Author: Xinyin Ma, Gongfan Fang, Xinchao Wang 
     - Link: https://arxiv.org/pdf/2305.11627.pdf 
     - Code: https://github.com/horseee/LLM-Pruner
-    - Pub: NeurIPS 2023 
-    - Summary: This paper endeavor find the copuled structures (Dependency Graph) in LLaMA and proposed Groupded Importance Estimation like Vector-wise, Element-wise, and Group Importance. 
-    - Comment: Impressive work. This work is similar to MMRazor, which can handle CNN-based model. 
+    - Pub: NeurIPS 2023
+    - Method:
+    - Experiment results:
+    - Summary: This paper endeavor find the coupled structures (Dependency Graph) in LLaMA and proposed Groupded Importance Estimation like Vector-wise, Element-wise, and Group Importance. 
+    - Comment: Impressive work. This work is similar to MMRazor, which can handle CNN-based model. This work explores structured pruning in LLMs for the first time and uses Dependency Graph to find implicit structures in LLMs, which is quite innovative. 
 
 - LoraPrune: Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning∗
     - Label: <img src=https://img.shields.io/badge/structured-blue.svg ><img src=https://img.shields.io/badge/Parameter_efficient_finetuning-lightgreen.svg >
@@ -212,6 +214,9 @@ Content:
   - Code:https://github.com/luuyin/OWL 
   - Pub: ICML 2024
   - Summary: OWL challenges the assumption of uniform layer-wise assumption and tries to assign different layers with different pruning ratio by proposed OWL metric.
+  - Method:
+  - Experiment results:
+  - Comment: This paper points out the importance of outlier weights for the first time. Authors put forward an improvement that can be combined with different pruning method. After slightly adjusting the pruning ratio of different layers across LLMs, the performance of pruned models improves a lot. Notice that the effect of this method(use layerwise pruning ratio) only becomes apparent under high sparsity conditions.
 
 - Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
