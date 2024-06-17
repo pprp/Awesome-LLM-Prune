@@ -23,7 +23,24 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Code: https://github.com/IST-DASLab/sparsegpt 
     - Pub: ICML 2023
     - Summary: First to prune GPT with at least 50% sparsity without any training. SparseGPT is entirely local, which only focus on weight updates without any global gradient information. 
-    
+
+- Wanda: A Simple and Effective Pruning Approach For Large Language Models
+    - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/structured-blue.svg >
+    - Author: Mingjie Sun, Zhuang Liu, Anna Bair, etc.
+    - Link: https://arxiv.org/pdf/2306.11695.pdf 
+    - Code: https://github.com/locuslab/wanda
+    - Pub: ICML23 workshop 
+    - Summary: Wanda simplify the SparseGPT with approximation thus just rely on weight and activation to compute the pruning metric. Wanda can be seen as a simplified version of SparseGPT, as it simplify the Hessian approximation, reducing computation greatly. 
+
+- Pruner-Zero: Evolving Symbolic Pruning Metric 
+
+    - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/structured-blue.svg >
+    - Author: Peijie Dong, Lujun Li, Zhenheng Tang, Xiang Liu, Xinglin Pan, Qiang Wang, Xiaowen Chu
+    - Link: [arxiv.org/pdf/2406.02924v1](https://arxiv.org/pdf/2406.02924v1) 
+    - Code: [pprp/Pruner-Zero: Evolving Symbolic Pruning Metric from scratch (github.com)](https://github.com/pprp/Pruner-Zero)
+    - Pub: ICML24 
+    - Summary: Pruner-Zero formulates the pruning metric as a symbolic discovery problem. They develop an automatic framework for searching symbolic pruning metrics using genetic programming. They model the pruning metric as tree-based symbols and employ genetic programming to automatically identify the optimal candidate symbolic pruning metric. Experiments on LLaMA, LLaMA-2, OPT demonstrate the superiority of Pruner-Zero. 
+
 - LLM-Kick: Compressing LLMs: The Truth Is Rarely Pure and Never Simple
     - Label: <img src=https://img.shields.io/badge/benchmark-purple.svg >
     - Author: Ajay Jaiswal, Zhe Gan, etc
@@ -68,13 +85,7 @@ Awesome list for LLM pruning. I will comment over the following paper once I rea
     - Pub: NeurIPS 2023 
     - Summary: This paper proposes the existence of – “essential sparsity” defined with a sharp dropping point beyond which the performance declines much faster w.r.t the rise of sparsity level, when we directly remove weights with the smallest magnitudes in one-shot.
 
-- Wanda: A Simple and Effective Pruning Approach For Large Language Models
-    - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/structured-blue.svg >
-    - Author: Mingjie Sun, Zhuang Liu, Anna Bair, etc.
-    - Link: https://arxiv.org/pdf/2306.11695.pdf 
-    - Code: https://github.com/locuslab/wanda
-    - Pub: Arxiv 
-    - Summary: Wanda simplify the SparseGPT with approximation thus just rely on weight and activation to compute the pruning metric.
+
 
 - Compresso: Structured Pruning with Collaborative Prompting Learns Compact Large Language Models
     - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
