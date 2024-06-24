@@ -86,9 +86,11 @@ Content:
 
 38.Compresso: Structured Pruning with Collaborative Prompting Learns Compact Large Language Models ()
 
-39.DYNAMIC SPARSE NO TRAINING þ:TRAINING-FREE FINE-TUNING FOR SPARSE LLMS
+39.DYNAMIC SPARSE NO TRAINING þ:TRAINING-FREE FINE-TUNING FOR SPARSE LLMS ()
 
-40.
+40.Pruner-Zero: Evolving Symbolic Pruning Metric from scratch for Large Language Models ()
+
+41.
 
 -------------
 
@@ -475,4 +477,14 @@ There are two "Shortened LLaMa", this is a mistake of the original author!
  
 - Pruning as a Domain-specific LLM Extractor
     - Label: Should domain-specific approach be included?
+ 
+- Pruner-Zero: Evolving Symbolic Pruning Metric from scratch for Large Language Models
+    - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg >
+    - Authors: Peijie Dong, Lujun Li, Zhenheng Tang, Xiang Liu, Xinglin Pan, Qiang Wang, Xiaowen Chu
+    - Link: https://arxiv.org/pdf/2406.02924
+    - Code: https://github.com/pprp/Pruner-Zero
+    - Summary: This paper explores importance metric automatically using genetic search and propose its own pruning metric.
+    - Main method:
+    - Experiment result:
+    - Comment: 
 
