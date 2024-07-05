@@ -24,7 +24,7 @@ Content:
 
 7.LLM-Kick: Compressing LLMs: The Truth Is Rarely Pure and Never Simple ()
 
-8.RIA: Plug-and-Play: An Efficient Post-Training Pruning Method for Large Language Models ()
+8.RIA: Plug-and-Play: An Efficient Post-Training Pruning Method for Large Language Models (finished)
 
 9.The Truth is in There: Improving Reasoning in Language Models with Layer-Selective Rank Reduction ()
 
@@ -180,7 +180,15 @@ Content:
     - Author: Mingjie Sun, Zhuang Liu, Anna Bair, etc.
     - Link: https://arxiv.org/pdf/2306.11695.pdf 
     - Code: https://github.com/locuslab/wanda
-    - Pub: Arxiv 
+    - Pub: Arxiv
+    - Main method: "Wanda" means "Pruning by Weights and Activations", instead of magnitude, Wanda is the first to emphasize the importance of activtions(inputs)
+      of a certain weights. A major limitation of magnitude pruning is that it doesn't take input activations into account, which could play an equally important 
+      role as weight magnitudes in determining the neoron output. (Above is the kay point of Wanda)
+      The Pruning metric of Wanda: Sij = |Wij|·∥Xj∥2(Weight W is of shape (Cout,Cin),Cin is the number of neurons of last layer,Cout is the number of neorons in 
+      this layer. For language models, this linear layer takes in input activations X with a shape of (N × L,Cin), where N and L are
+      batch and sequence dimensions respectively), Sij is the result of importance metric,|Wij| is the absolute value of the weight at position (i,j), ∥Xj∥2 
+      is the l2 norm of the jth feature aggregated across NxL different tokens.
+    - Experiment results:
     - Summary: Wanda simplify the SparseGPT with approximation thus just rely on weight and activation to compute the pruning metric.
 
 - Pruning Large Language Models via Accuracy Predictor
