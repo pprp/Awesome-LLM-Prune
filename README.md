@@ -188,6 +188,9 @@ Content:
       this layer. For language models, this linear layer takes in input activations X with a shape of (N × L,Cin), where N and L are
       batch and sequence dimensions respectively), Sij is the result of importance metric,|Wij| is the absolute value of the weight at position (i,j), ∥Xj∥2 
       is the l2 norm of the jth feature aggregated across NxL different tokens.
+                         <p align="center">
+                         <img width="90%" alt="image" src="Pictures/Wanda/Wanda method 1.jpg">
+                         </p>
     - Experiment results:
     - Summary: Wanda simplify the SparseGPT with approximation thus just rely on weight and activation to compute the pruning metric.(The author had demonstrated 
       that we can somehow transform the pruning metric formula of Sparsegpt into that of Wanda)
