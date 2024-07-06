@@ -195,11 +195,10 @@ Content:
       Sparsegpt and Wanda here use same set of calibration data, namely 128 sequences with context length size sampled from C4 training set. For sparsity, they 
       focus on pruning the linear layers(all layers except the first embedding layer and the final classification head). Here are the results:
                          <p align="center">
-                         <img width=80%" alt="image" src="Pictures/Wanda/Wanda experiment result 1.jpg">
-                                              perplexity results
-                         <img width=80%" alt="image" src="Pictures/Wanda/Wanda experiment result 2.jpg">
-                                              zero-shot results
+                         <img width=80%" alt="image" src="Pictures/Wanda/Wanda experiment result 1.jpg">       
+                         <img width=80%" alt="image" src="Pictures/Wanda/Wanda experiment result 2.jpg">         
                          </p>
+                         perplexity results and zero-shot results
     - Summary: Wanda simplify the SparseGPT with approximation thus just rely on weight and activation to compute the pruning metric.(The author had demonstrated 
       that we can somehow transform the pruning metric formula of Sparsegpt into that of Wanda)
 
