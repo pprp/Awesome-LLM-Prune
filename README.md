@@ -191,7 +191,15 @@ Content:
                          <p align="center">
                          <img width="70%" alt="image" src="Pictures/Wanda/Wanda method 1.jpg">
                          </p>
-    - Experiment results:
+    - Experiment results: First we should make the experiment settings clear-Zero-shot tasks are done using code from EltheutherAI LM Harness.Meanwhile, both 
+      Sparsegpt and Wanda here use same set of calibration data, namely 128 sequences with context length size sampled from C4 training set. For sparsity, they 
+      focus on pruning the linear layers(all layers except the first embedding layer and the final classification head). Here are the results:
+                         <p align="center">
+                         <img width=80%" alt="image" src="Pictures/Wanda/Wanda experiment result 1.jpg">
+                                              perplexity results
+                         <img width=80%" alt="image" src="Pictures/Wanda/Wanda experiment result 2.jpg">
+                                              zero-shot results
+                         </p>
     - Summary: Wanda simplify the SparseGPT with approximation thus just rely on weight and activation to compute the pruning metric.(The author had demonstrated 
       that we can somehow transform the pruning metric formula of Sparsegpt into that of Wanda)
 
