@@ -189,7 +189,8 @@ Content:
       batch and sequence dimensions respectively), Sij is the result of importance metric,|Wij| is the absolute value of the weight at position (i,j), ∥Xj∥2 
       is the l2 norm of the jth feature aggregated across NxL different tokens.
     - Experiment results:
-    - Summary: Wanda simplify the SparseGPT with approximation thus just rely on weight and activation to compute the pruning metric.
+    - Summary: Wanda simplify the SparseGPT with approximation thus just rely on weight and activation to compute the pruning metric.(The author had demonstrated 
+      that we can somehow transform the pruning metric formula of Sparsegpt into that of Wanda)
 
 - Pruning Large Language Models via Accuracy Predictor
     - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg >
