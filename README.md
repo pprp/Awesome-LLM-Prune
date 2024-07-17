@@ -105,24 +105,14 @@ Content:
       
       main reference(method in this paper mainly comes from previous work):
       
-      ①Frantar, E. and Alistarh, D. SPDY: Accurate pruning with
-      speedup guarantees. arXiv preprint arXiv:2201.13096,2022.
+      ①SPDY: Accurate pruning with speedup guarantees. 
       
-      ②Frantar, E., Kurtic, E., and Alistarh, D. M-FAC: Efficient
-      matrix-free approximations of second-order information.
-      In Conference on Neural Information Processing System,(NeurIPS), 2021.
+      ②M-FAC: Efficient matrix-free approximations of second-order information.
       
-      ③Hubara, I., Chmiel, B., Island, M., Banner, R., Naor, S.,
-	and Soudry, D. Accelerated sparse neural training: A
-	provable and efficient method to find N:M transposable
-	masks. In Conference on Neural Information Processing
-	Systems (NeurIPS), 2021a.
+      ③Accelerated sparse neural training: A provable and efficient method to find N:M transposable masks. 
       
-      ④Frantar, E., Singh, S. P., and Alistarh, D. Optimal
-      Brain Compression(OBC): A framework for accurate post-training quantization and pruning. arXiv preprint
-      arXiv:2208.11580, 2022b. Accepted to NeurIPS 2022.
+      ④Optimal Brain Compression(OBC): A framework for accurate post-training quantization and pruning. 
 
-      
     - Experiment results:<p align="center">
                          <img width="90%" alt="image" src="Pictures/Sparsegpt_results 1.jpg">
                          <img width="36%" alt="image" src="Pictures/Sparsegpt_results 3.jpg">
@@ -183,11 +173,13 @@ Content:
     - Pub: Arxiv
     - Main method: "Wanda" means "Pruning by Weights and Activations", instead of magnitude, Wanda is the first to emphasize the importance of activtions(inputs)
       of a certain weights. A major limitation of magnitude pruning is that it doesn't take input activations into account, which could play an equally important 
-      role as weight magnitudes in determining the neoron output. (Above is the kay point of Wanda)
+      role as weight magnitudes in determining the neoron output. (Above is the key point of Wanda)
+      
       The Pruning metric of Wanda: Sij = |Wij|·∥Xj∥2(Weight W is of shape (Cout,Cin),Cin is the number of neurons of last layer,Cout is the number of neorons in 
       this layer. For language models, this linear layer takes in input activations X with a shape of (N × L,Cin), where N and L are
       batch and sequence dimensions respectively), Sij is the result of importance metric,|Wij| is the absolute value of the weight at position (i,j), ∥Xj∥2 
       is the l2 norm of the jth feature aggregated across NxL different tokens.
+      
                          <p align="center">
                          <img width="70%" alt="image" src="Pictures/Wanda/Wanda method 1.jpg">
                          </p>
