@@ -174,9 +174,7 @@ Content:
     - Main method: "Wanda" means "Pruning by Weights and Activations", instead of magnitude, Wanda is the first to emphasize the importance of activtions(inputs)
       of a certain weights. A major limitation of magnitude pruning is that it doesn't take input activations into account, which could play an equally important 
       role as weight magnitudes in determining the neoron output. (Above is the key point of Wanda)
-      The Pruning metric of Wanda can be seen below.(Weight W is of shape (Cout,Cin),Cin is the number of neurons of last layer,Cout is the number of neorons in 
-      this layer. For language models, this linear layer takes in input activations X with a shape of (N × L,Cin), where N and L are
-      batch and sequence dimensions respectively), Sij is the result of importance metric,|Wij| is the absolute value of the weight at position (i,j), ∥Xj∥2 
+      The Pruning metric of Wanda can be seen below.(Weight W is of shape (Cout,Cin),|Wij| is the absolute value of the weight at position (i,j), ∥Xj∥2 
       is the l2 norm of the jth feature aggregated across NxL different tokens.
                          <p align="center">
                          <img width="70%" alt="image" src="Pictures/Wanda/Wanda method 1.jpg">
