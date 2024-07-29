@@ -372,7 +372,7 @@ There are two "Shortened LLaMa", this is a mistake of the original author!
     - Link: https://arxiv.org/pdf/2402.09025.pdf
     - Code: [https://github.com/leapingjagg-dev/SLEB](https://github.com/leapingjagg-dev/SLEB?tab=readme-ov-file)
     - Pub: Arxiv
-    - Summary: This paper streamlines LLMs by identifying and removing redundant blocks. Specifically, cosine similarity is utilized to analyze the redundancy. Another metric3 is proposed for removing blocks.
+    - Summary: This paper streamlines LLMs by identifying and removing redundant blocks. Specifically, cosine similarity is utilized to analyze the redundancy. Another metric3 is proposed for removing blocks. And this paper serves as a pioneer for shortened Llama.
     - Comment: There should be more methods for comparison.
 
 - Gradient-Free Adaptive Global Pruning for Pre-trained Language Models
