@@ -350,19 +350,12 @@ Content:
   - Comments: There is a lack of explanation of equation-1. Why it worked?
 
 
-- Shortened LLaMA: A Simple Depth Pruning for Large Language Models 
-  - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
-  - Author: Bo-Kyeong Kim, Geonmin Kim, Tae-Ho Kim, Thibault Castells, Shinkook Choi, Junho Shin, Hyoung-Kyu Song 
-  - Link:https://arxiv.org/abs/2402.02834 
-  - Pub: CoRR
-  - Summary: This paper focus on depth pruning and analysis the influence of depth and width pruning on LLM inference efficiency. They explore various design factors including the choice of prunable units, the criteria and retraining frequency. (1) Prunable Units: width and depth; (2) Criteria: Magnitude, Taylor, Mag+ and Talyor+, PPL; (3)retrain: LoRA. Finally, they choose PPL as criteria and target Depth Pruning. They claim that depth pruning approach can compte with recent width pruning methods  on Zero-shot tasks performance.
-
 - Shortened LLaMA: A Simple Depth Pruning for Large Language Models
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
   - Authors: Bo-Kyeong Kim, Geonmin Kim, Tae-Ho Kim, Thibault Castells, Shinkook Choi, Junho Shin, Hyoung-Kyu Song
   - Link: https://arxiv.org/abs/2402.02834 
   - Pub: ICLR24 Workshop (ME-FoMo) 
-  - Summary: This paper delves into the naive implementation of structured pruning, specifically Depth Pruning, for Large Language Models (LLMs). Through experiments on zero-shot tasks, it is revealed that its performance is on par with width pruning techniques. However, the pruning ratio remains constrained to less than 35% (20%, 27%, 35%), and the performance on wikitext-2 (PPL) is somewhat less favorable compared to wanda. Nonetheless, this study demonstrates the feasibility of pruning by eliminating layers with lower block-level importance scores. Moreover, performance enhancement is observed after one-shot pruning via LoRA fine-tuning.
+  - Summary: This paper delves into the naive implementation of structured pruning, specifically Depth Pruning, for Large Language Models (LLMs). Through experiments on zero-shot tasks, it is revealed that its performance is on par with width pruning techniques. However, the pruning ratio remains constrained to less than 35% (20%, 27%, 35%), and the performance on wikitext-2 (PPL) is somewhat less favorable compared to wanda(I don't consider that this comment is appropriate. If this "wanda" refers to the original unsturctured method,then I think that sturctured method can't be compared with unstructured method. Else if it refers to the sturctured variant given by this paper,then it has given results showing that depth pruning method outperforms wanda). Nonetheless, this study demonstrates the feasibility of pruning by eliminating layers with lower block-level importance scores. Moreover, performance enhancement is observed after one-shot pruning via LoRA fine-tuning.
 
 There are two "Shortened LLaMa", this is a mistake of the original author!
 
