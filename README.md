@@ -299,6 +299,9 @@ We encourage the community to engage with this resource; please leave comments o
     - Code: Not Available
     - Summary: The paper introduces "Token Fusion" (ToFu), a novel approach that combines the benefits of token pruning and token merging for Vision Transformers (ViTs). It is designed to address the high computational cost of deploying ViTs on edge devices by dynamically adapting the strategy based on the model's sensitivity to input interpolations. ToFu introduces a new merging technique called MLERP, which preserves the norm distribution during token merging, overcoming the limitations of average merging. The method is versatile and applicable to ViTs with or without additional training, establishing new benchmarks for computational efficiency and model accuracy in both classification and image generation tasks.
 
-
-
-
+- CaM: Cache Merging for Memory-efficient LLMs Inference
+    - Label: <img src=https://img.shields.io/badge/token-green.svg>
+    - Authors: Yuxin Zhang, Yuxuan Du, Gen Luo, Yunshan Zhong, Zhenyu Zhang, Shiwei Liu, Rongrong Ji
+    - Link: https://openreview.net/forum?id=LCTmppB165
+    - Code: https://github.com/zyxxmu/cam
+    - Summary: The paper introduces Cache Merging (CaM), an innovative approach to enhance the memory efficiency of Large Language Models (LLMs) during inference without compromising performance. CaM adaptively merges caches scheduled for eviction back into the remaining caches, using a novel sampling strategy based on attention score prominence. This method mitigates output perturbation caused by cache eviction, preserving critical token information. Extensive experiments with LLaMA, OPT, and GPTNeoX models across various benchmarks demonstrate CaM's effectiveness in improving the performance of memory-efficient LLMs.
