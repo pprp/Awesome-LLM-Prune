@@ -283,3 +283,13 @@ We encourage the community to engage with this resource; please leave comments o
     - Link: https://arxiv.org/pdf/2310.02277v2.pdf
     - Code: https://github.com/VITA-Group/Junk_DNA_Hypothesis.git
     - Summary: The paper presents the "Junk DNA Hypothesis," which challenges the notion that **small-magnitude weights in large language models (LLMs) are redundant and can be pruned without performance loss**. Contrary to common beliefs, the study argues that these weights encode essential knowledge for difficult downstream tasks. The authors demonstrate a monotonic relationship between the performance drop of downstream tasks and the magnitude of pruned weights, indicating that pruning can cause irreversible knowledge loss, even with continued training. The paper also contrasts pruning with quantization, showing that the latter does not exhibit the same monotonic effect on task difficulty. The findings suggest that small-magnitude weights are crucial for complex tasks and cannot be simply discarded. The study provides insights into the role of these weights and implications for LLM compression techniques.
+ 
+- Pruning via Merging: Compressing LLMs via Manifold Alignment Based Layer Merging
+    - Label: <img src=https://img.shields.io/badge/structured-blue.svg>
+    - Authors: Deyuan Liu, Zhanyue Qin, Hairu Wang, Zhao Yang, Zecheng Wang, Fangying Rong, Qingbin Liu, Yanchao Hao, Xi Chen, Cunhang Fan, Zhao Lv, Zhiying Tu, Dianhui Chu, Dianbo Sui
+    - Link: https://arxiv.org/pdf/2406.16330
+    - Code: Not available
+    - Summary: The paper introduces a novel model compression technique known as Manifold-Based Knowledge Alignment and Layer Merging Compression (MKA). This method utilizes manifold learning and the Normalized Pairwise Information Bottleneck (NPIB) measure to merge similar layers within large language models (LLMs), effectively reducing the model size while maintaining performance. The key innovation lies in the alignment of knowledge across layers and the subsequent merging of those with high input-output similarity, which helps preserve the model's capabilities despite size reduction. Extensive evaluations on multiple benchmark datasets and various LLMs demonstrate that MKA achieves substantial compression ratios, outperforming traditional pruning methods. Notably, when combined with quantization, MKA can achieve even greater compression efficiencies. For instance, on the MMLU dataset using the Llama3-8B model, MKA attains a compression ratio of 43.75% with only a minimal performance decrease of 2.82%. The study underscores the potential of MKA as a resource-efficient and performance-preserving model compression approach for LLMs.
+
+
+
