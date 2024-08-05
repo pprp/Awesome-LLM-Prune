@@ -291,5 +291,14 @@ We encourage the community to engage with this resource; please leave comments o
     - Code: Not available
     - Summary: The paper introduces a novel model compression technique known as Manifold-Based Knowledge Alignment and Layer Merging Compression (MKA). This method utilizes manifold learning and the Normalized Pairwise Information Bottleneck (NPIB) measure to merge similar layers within large language models (LLMs), effectively reducing the model size while maintaining performance. The key innovation lies in the alignment of knowledge across layers and the subsequent merging of those with high input-output similarity, which helps preserve the model's capabilities despite size reduction. Extensive evaluations on multiple benchmark datasets and various LLMs demonstrate that MKA achieves substantial compression ratios, outperforming traditional pruning methods. Notably, when combined with quantization, MKA can achieve even greater compression efficiencies. For instance, on the MMLU dataset using the Llama3-8B model, MKA attains a compression ratio of 43.75% with only a minimal performance decrease of 2.82%. The study underscores the potential of MKA as a resource-efficient and performance-preserving model compression approach for LLMs.
 
+- Token Fusion: Bridging the Gap between Token Pruning and Token Merging
+    - Label: <img src=https://img.shields.io/badge/token-green.svg>
+    - Authors: Minchul Kim*, Shangqian Gao, Yen-Chang Hsu, Yilin Shen, Hongxia Jin
+    - Affiliation: Michigan State University, Samsung Research America
+    - Link: [arXiv:2312.01026](https://arxiv.org/pdf/2312.01026)
+    - Code: Not Available
+    - Summary: The paper introduces "Token Fusion" (ToFu), a novel approach that combines the benefits of token pruning and token merging for Vision Transformers (ViTs). It is designed to address the high computational cost of deploying ViTs on edge devices by dynamically adapting the strategy based on the model's sensitivity to input interpolations. ToFu introduces a new merging technique called MLERP, which preserves the norm distribution during token merging, overcoming the limitations of average merging. The method is versatile and applicable to ViTs with or without additional training, establishing new benchmarks for computational efficiency and model accuracy in both classification and image generation tasks.
+
+
 
 
