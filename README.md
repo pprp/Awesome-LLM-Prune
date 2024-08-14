@@ -385,16 +385,6 @@ There are two "Shortened LLaMa", this is a mistake of the original author!
     - Code: Not available
     - Comment: This work = structure pruning + progressive knowledge distillation; However, due to the memory constraints, knowledge distillation is hard in the context of LLM. To mitigate the memory cost, this paper propose to switch teacher and student by apply different sparsity ratio using various masks and LoRA modules.
 
-- Everybody Prune Now: Structured Pruning of LLMs with only Forward Passes
-     - Label:
-     - Author:
-     - Link: https://arxiv.org/abs/2402.05406
-     - Pub: Arxiv
-     - Code: https://github.com/ldery/Bonsai
-     - Summary:
-     - Method:
-     - Experiment results:
-     - Comment: 
 
 - Structural pruning of large language models via neural architecture search
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
