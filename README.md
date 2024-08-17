@@ -375,3 +375,36 @@ We encourage the community to engage with this resource; please leave comments o
   - Pub: ACL24 Findings
   - Summary: LoRAPrune proposes a new framework that delivers an accurate structured pruned model in a highly memory-efficient manner. It first designs a LoRA-guided pruning criterion, which uses the weights and gradients of LoRA, rather than the gradients of pre-trained weights, for importance estimation. LoRAPrune then integrates this criterion into an iterative pruning process, effectively removing redundant channels and heads. Experiments on LLaMA series models show that LoRAPrune outperforms existing pruning methods in terms of performance and memory efficiency.
   - 摘要: LoRAPrune提出了一个新的框架,能够以高内存效率的方式生成精确的结构化剪枝模型。它首先设计了一个基于LoRA的剪枝准则,使用LoRA的权重和梯度,而不是预训练权重的梯度来估计重要性。LoRAPrune然后将这个准则集成到一个迭代剪枝过程中,有效地移除了冗余的通道和头。在LLaMA系列模型上的实验表明,LoRAPrune在性能和内存效率方面都优于现有的剪枝方法。
+
+- Sparse Fine-tuning for Inference Acceleration of Large Language Models
+  - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg>
+  - Author: Eldar Kurtic, Denis Kuznedelev, Elias Frantar, Michael Goin, Dan Alistarh
+  - Link: [arxiv.org/pdf/2306.02924v1](https://arxiv.org/pdf/2306.02924v1)
+  - Code: https://github.com/IST-DASLab/SparseFinetuning
+  - Pub: Arxiv
+  - Summary: The paper studies efficient sparse fine-tuning for large language models (LLMs) across three applications: speech transcription using Whisper, machine translation using T5, and reasoning using the open GPT-type MPT model. The key contributions are:(1) Investigating fine-tuning sparse models obtained via SparseGPT using various losses, including a type of per-token l2 knowledge distillation called SquareHead, which consistently recovers accuracy even at high sparsities. (2) Showing that the resulting sparse models can be executed with inference speedups on both CPUs and GPUs by leveraging sparsity, including a GPU-aware N:M sparse format for generative inference.
+  - 摘要: 本文研究了在语音转录、机器翻译和推理等三个应用中,对大型语言模型(LLM)进行高效稀疏微调的方法。主要贡献包括: (1) 探索使用包括一种称为SquareHead的每个token的l2知识蒸馏在内的各种损失函数,来微调通过SparseGPT获得的稀疏模型,这种方法能够在高稀疏度下保持准确性。(2) 展示通过利用稀疏性,所得到的稀疏模型可以在CPU和GPU上实现推理加速,包括为生成式推理开发了一种GPU感知的N:M稀疏格式。
+
+- The Cost of Down-Scaling Language Models: Fact Recall Deteriorates before In-Context Learning
+  - Labels: <img src=https://img.shields.io/badge/unstructured-turquoise.svg> 
+  - Authors: Tian Jin, Nolan Clement, Xin Dong, Vaishnavh Nagarajan, Michael Carbin, Jonathan Ragan-Kelley, Gintare Karolina Dziugaite
+  - Link: https://arxiv.org/abs/2310.04680
+  - Code: None
+  - Pub: None
+  - Summary: The paper studies the effects of scaling (pruning and dense scaling) on two core capabilities of large language models (LLMs): (1) recalling facts presented during pre-training, and (2) processing information presented in-context during inference. They find that reducing model size by more than 30% significantly decreases the ability to recall facts, while a 60-70% reduction largely preserves the ability to process in-context information, such as retrieving answers from a long context or learning parameterized functions from in-context examples. This disparity in the effects of scaling holds for both pruning and dense scaling, suggesting an inherent difference in how these two abilities are affected by model size.
+  - 摘要: 该论文研究了缩放(修剪和密集缩放)对大型语言模型(LLM)两个核心能力的影响:(1)回忆预训练期间呈现的事实,(2)在推理过程中处理上下文中呈现的信息。他们发现,将模型大小减少30%以上会显著降低回忆事实的能力,而减少60-70%则基本保留了从上下文信息中处理信息的能力,如从长上下文中检索答案或从上下文示例中学习参数化函数。这种缩放效果的差异在修剪和密集缩放中都存在,表明这两种能力受模型大小影响的内在差异。
+ 
+- One-Shot Sensitivity-Aware Mixed Sparsity Pruning for Large Language Models
+  - Label: <img src=https://img.shields.io/badge/structured-blue.svg>
+  - Author: Hang Shao, Bei Liu, Bo Xiao, Ke Zeng, Guanglu Wan, Yanmin Qian
+  - Link: https://arxiv.org/pdf/2310.09499
+  - Code: https://github.com/talkking/MixGPT
+  - Pub: ICASSP24
+  - Summary: The paper proposes a one-shot sensitivity-aware mixed sparsity pruning method for large language models. The key aspects are:
+    1. An improved saliency criterion (ISC) that combines the OBS and OBD approaches to better select weights to prune.
+    2. A sensitivity-aware mixed sparsity pruning strategy that allocates different sparsity levels to different layers and weight matrices based on their sensitivity estimated from the Hessian matrix.
+    3. Experiments on LLaMA, LLaMA-2, and Baichuan models show the proposed method outperforms previous one-shot pruning approaches in terms of perplexity and zero-shot downstream task performance.
+  - 摘要: 本文提出了一种一次性敏感性感知混合稀疏剪枝方法用于大型语言模型。主要包括以下几个关键点:
+    1. 提出了一种改进的显著性准则(ISC),结合了OBS和OBD方法,更好地选择要剪枝的权重。
+    2. 提出了一种基于敏感性的混合稀疏剪枝策略,根据来自Hessian矩阵估计的敏感性,为不同层和权重矩阵分配不同的稀疏度。
+    3. 在LLaMA、LLaMA-2和Baichuan模型上的实验表明,所提出的方法在困惑度和零样本下游任务性能方面优于之前的一次性剪枝方法。
