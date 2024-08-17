@@ -408,3 +408,12 @@ We encourage the community to engage with this resource; please leave comments o
     1. 提出了一种改进的显著性准则(ISC),结合了OBS和OBD方法,更好地选择要剪枝的权重。
     2. 提出了一种基于敏感性的混合稀疏剪枝策略,根据来自Hessian矩阵估计的敏感性,为不同层和权重矩阵分配不同的稀疏度。
     3. 在LLaMA、LLaMA-2和Baichuan模型上的实验表明,所提出的方法在困惑度和零样本下游任务性能方面优于之前的一次性剪枝方法。
+
+- Compact Language Models via Pruning and Knowledge Distillation
+  - Labels: <img src=https://img.shields.io/badge/unstructured-turquoise.svg> <img src=https://img.shields.io/badge/structured-blue.svg>
+  - Authors: Saurav Muralidharan, Sharath Turuvekere Sreenivas, Raviraj Joshi, Marcin Chochowski, Mostofa Patwary, Mohammad Shoeybi, Bryan Catanzaro, Jan Kautz, Pavlo Molchanov
+  - Link: https://www.arxiv.org/pdf/2407.14679
+  - Code: https://github.com/NVlabs/Minitron
+  - Pub: None
+  - Summary: The paper proposes a method to compress large language models (LLMs) by pruning and knowledge distillation. It explores structured pruning across multiple axes (depth, width, attention, and embeddings) and combines it with data-efficient retraining using knowledge distillation. The method is applied to compress the Nemotron-4 15B model, resulting in the MINITRON family of smaller models that outperform similarly-sized models while requiring significantly fewer training tokens.
+  - 摘要: 该论文提出了一种通过修剪和知识蒸馏来压缩大型语言模型(LLM)的方法。它探索了跨多个维度(深度、宽度、注意力和嵌入)的结构化修剪,并将其与使用知识蒸馏的数据高效再训练相结合。该方法被应用于压缩Nemotron-4 15B模型,得到了MINITRON系列更小的模型,这些模型在需要的训练样本大大减少的情况下,仍然优于同等大小的模型。
