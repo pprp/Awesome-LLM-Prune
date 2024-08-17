@@ -48,8 +48,11 @@ We encourage the community to engage with this resource; please leave comments o
     - Link: https://arxiv.org/pdf/2310.01382.pdf
     - Code: https://github.com/VITA-Group/llm-kick
     - Pub: ICLR 2024
-    - Summary: Re-define the evaluation protocol for compressed LLMs; Observation: SoTA Pruning methods suffer significant performance degradation, despite negligible changes in perplexity. SoTA Pruning do not work well for N:M structured pruning. Quantization methods are more successful.
+    - Summary: The paper introduces LLM-KICK, a comprehensive benchmark to evaluate the performance of compressed large language models (LLMs) across various tasks, including language understanding, reasoning, generation, in-context retrieval, and in-context summarization. The authors find that existing state-of-the-art compression methods, such as pruning and quantization, often fail to maintain the performance of the original uncompressed LLMs, despite negligible changes in perplexity. LLM-KICK unveils several interesting observations, including significant performance degradation in pruned LLMs at trivial sparsity ratios, failure of pruning methods for structured N:M sparsity patterns, and the relatively better performance of quantization methods compared to pruning. The paper also investigates the ability of compressed LLMs in in-context settings, where pruned LLMs with high sparsity ratios (≥50%) are found to be robust retrieval systems and maintain similar performance in text summarization as their dense counterparts.
+    - 摘要: 本文提出了LLM-KICK基准测试,用于评估压缩大型语言模型(LLMs)在各种任务上的性能,包括语言理解、推理、生成、上下文检索和上下文摘要。作者发现,现有的最先进压缩方法,如剪枝和量化,通常无法维持原始未压缩LLMs的性能,尽管困惑度的变化很小。LLM-KICK揭示了几个有趣的观察结果,包括剪枝LLMs在微小稀疏度下出现显著性能下降,剪枝方法在结构化N:M稀疏模式下失效,以及量化方法相对于剪枝的较佳性能。论文还研究了压缩LLMs在上下文设置中的能力,发现高稀疏度(≥50%)的剪枝LLMs是稳健的检索系统,在文本摘要方面与密集对应物保持相似的性能。
     - Comment: This paper question the performance of LLM after pruning, which provide us a new perspective besides pure perplexity. This paper is worth reading because its evaluation is comprehensive. 
+
+
 
 - RIA: Plug-and-Play: An Efficient Post-Training Pruning Method for Large Language Models
     - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
@@ -116,12 +119,12 @@ We encourage the community to engage with this resource; please leave comments o
 
 
 - The LLM Surgeon
-	
 	- Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg >
 	- Author:Tycho F.A. van der Ouderaa, Markus Nagel, Mart van Baalen, Yuki M. Asano, Tijmen Blankevoort
 	- Link:https://arxiv.org/pdf/2312.17244
 	- Pub: ICLR24
-	- Summary: This paper scales Kronecker-factored curvature approximations of the target loss landscape to large language models. The metric for this paper is Fisher information matrix. 
+	- Summary: This paper scales Kronecker-factored curvature approximations of the target loss landscape to large language models. The metric for this paper is Fisher information matrix.
+
 - Shortened LLaMA: A Simple Depth Pruning for Large Language Models
 
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
@@ -129,43 +132,46 @@ We encourage the community to engage with this resource; please leave comments o
   - Link: https://arxiv.org/abs/2402.02834 
   - Pub: ICLR24 Workshop (ME-FoMo) 
   - Summary: This paper delves into the naive implementation of structured pruning, specifically Depth Pruning, for Large Language Models (LLMs). Through experiments on zero-shot tasks, it is revealed that its performance is on par with width pruning techniques. However, the pruning ratio remains constrained to less than 35% (20%, 27%, 35%), and the performance on wikitext-2 (PPL) is somewhat less favorable compared to wanda. Nonetheless, this study demonstrates the feasibility of pruning by eliminating layers with lower block-level importance scores. Moreover, performance enhancement is observed after one-shot pruning via LoRA fine-tuning.
-- SliceGPT: Compress Large Language Models by Deleting Rows and Columns 
+ 
 
+- SliceGPT: Compress Large Language Models by Deleting Rows and Columns 
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
   - Author: Saleh Ashkboos, Maximilian L. Croci, Marcelo Gennari do Nascimento, Torsten Hoefler, James Hensman
   - Link: https://arxiv.org/abs/2401.15024 
   - Pub: ICLR24
   - Summary: This paper focuses on structured pruning by removing rows and columns of a matrix to reduce parameters. However, this idea is similar to LLM-Pruner but weaker. The organization of this paper is somewhat peculiar: it dedicates two and a half pages to related works (too long). Additionally, in Table 1, SliceGPT (<30% sparsity) mainly compares its performance with SparseGPT under 2:4 structure pruning settings (50% sparsity), which is not quite fair. Please correct me if I am wrong.
-- PERP: Rethinking the Prune-Retrain Paradigm in the Era of LLMs 
 
+- PERP: Rethinking the Prune-Retrain Paradigm in the Era of LLMs 
   - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg >
   - Author: Max Zimmer, Megi Andoni, Christoph Spiegel, Sebastian Pokutta
   - Link: https://arxiv.org/pdf/2312.15230.pdf
   - Pub: Arxiv 
   - Summary: In the era of Large Language Models (LLMs), retraining becomes impractical due to memory and compute constraints. This paper proposes the use of Low-Rank Adaption to mitigate the expense of the retraining process. They explore four approaches, including BN-Recalibration, Biases, BN-Parameters, and Linear Probing. However, it's worth noting that most LLMs do not utilize Batch Normalization (BN). Indeed, this paper only conducts a few experiments on OPT and primarily focuses on works such as ResNet50 pruning. Furthermore, LoRA + Pruning is actually a component of SparseGPT (published in January 2023), so the novelty of this paper is somewhat limited.
-- Structural pruning of large language models via neural architecture search
+ 
 
+- Structural pruning of large language models via neural architecture search
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
   - Author:Aaron Klein, Jacek Golebiowski, Xingchen Ma, Valerio Perrone, Cedric Archambeau 
   - Link: https://openreview.net/pdf?id=SHlZcInS6C
   - Pub: AutoML 
   - Summary: This paper discuss the relationship between NAS and structural pruning and employ multi-objective NAS to compress LLM. They view the pre-trained network as a super-network and search for the best sub-network that optimally balance between downstream tasks and parameter count. For training weight-sharing NAS, they employ sandwich rule to train sub-networks. After training, local search is utilized for finding the best sub-network.
-- Not all Layers of LLMs are Necessary during Inference 
 
+- Not all Layers of LLMs are Necessary during Inference 
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
   - Author: Siqi Fan, Xin JIang, Xiang Li, Xuying Meng, Peng Han, Shuo Shang, Aixin Sun, Yequan Wang, Zhongyuan Wang
   - Link: https://arxiv.org/pdf/2403.02181.pdf 
   - Pub: CoRR 
   - Summary: This paper analyse the activated layers across tasks and propose AdaInfer to determine the inference termination moments based on the input instance. Thus, they can use shallow layers for easy instance and deep layers for hard ones. In general, this technique can be treated as an early stopping strategy. The early stop signal is generated by two components: Feature Selection Module that crafts feature vector for current input instance; Classifier that utilize SVM or CRF to access the strength of stopping signal.
-- ShortGPT: Layers in Large Language Models are More Redundant Than You Expect
 
+- ShortGPT: Layers in Large Language Models are More Redundant Than You Expect
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
   - Author: Xin Men, Mingyu Xu, Qingyu Zhang, Bingning Wang, Hongyu Lin, Yaojie Lu, Xianpei Han, Weipeng Chen
   - Link: https://arxiv.org/abs/2403.03853 
   - Pub: CoRR 
   - Summary: They discovered that the layers of LLMs exhibit high similarity and some layers are negligible. To remove the unimportant layers, they define a metric called Block Influence (BI) to gauge the significance of each layers in LLMs. Specifically, the BI score is actually the cosine similarity of two successive blocks. The experiments are limited as they didn't provide the results of ppl and there are various one-shot pruning for LLMs like SparseGPT and Wanda etc.
-- LaCo: Large Language Model Pruning via Layer Collapse
 
+
+- LaCo: Large Language Model Pruning via Layer Collapse
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg >
   - Author:Yifei Yang, Zouying Cao, Hai Zhao
   - Link: https://arxiv.org/pdf/2402.11187.pdf
@@ -314,3 +320,22 @@ We encourage the community to engage with this resource; please leave comments o
   - Pub: VLDB23
   - Summary: The paper proposes Flash-LLM, an efficient GPU library to support unstructured sparsity on tensor cores for large generative model inference. Flash-LLM uses a "Load-as-Sparse and Compute-as-Dense" strategy to address the memory bandwidth bottleneck while tolerating redundant computations on tensor cores. It includes a new sparse format, sparse-to-dense transformation, and a two-level overlapping strategy to enable high-performance unstructured sparse matrix multiplication on tensor cores. Extensive evaluations show that Flash-LLM significantly outperforms state-of-the-art solutions at both the kernel and end-to-end framework levels.
   - 摘要: 本文提出了Flash-LLM,这是一个在张量核上支持非结构化稀疏性的高效GPU库,用于大型生成式模型推理。Flash-LLM采用"以稀疏方式加载,以密集方式计算"的策略,以解决内存带宽瓶颈,同时容忍张量核上的冗余计算。它包括一种新的稀疏格式、稀疏到密集的转换,以及一种双层重叠策略,以实现张量核上高性能的非结构化稀疏矩阵乘法。广泛的评估表明,Flash-LLM在内核和端到端框架级别都显著优于最先进的解决方案。
+
+
+- NASH: A Simple Unified Framework of Structured Pruning for Accelerating Encoder-Decoder Language Models
+  - Label: <img src=https://img.shields.io/badge/structured-blue.svg>
+  - Author: Jongwoo Ko, Seungjoon Park, Yujin Kim, Sumyeong Ahn, Du-Seong Chang, Euijai Ahn, Se-Young Yun
+  - Link: https://arxiv.org/abs/2310.10054
+  - Code: https://github.com/jongwooko/NASH-Pruning-Official
+  - Pub: EMNLP23 Findings
+  - Summary: The paper proposes a structured pruning framework called NASH (Narrow encoder and Shallow decoder) for accelerating encoder-decoder language models. The key insights are: (1) the number of decoder layers is the dominant factor for inference speedup, and (2) low sparsity in the pruned encoder network enhances generation quality. Based on these findings, NASH narrows the encoder and shortens the decoder networks. The encoder uses gradual L0 regularization pruning to induce low sparsity, while the decoder employs uniform layer selection to achieve faster inference speed. Extensive experiments on diverse generation and inference tasks validate the effectiveness of NASH in both speedup and output quality.
+  - 摘要: 该论文提出了一个称为NASH(窄编码器和浅解码器)的结构化剪枝框架,用于加速编码器-解码器语言模型。主要发现包括:(1)解码器层数是推理加速的主要因素,(2)编码器网络的低稀疏性可以提高生成质量。基于这些发现,NASH缩小了编码器并缩短了解码器网络。编码器使用渐进的L0正则化剪枝来诱导低稀疏性,而解码器采用统一的层选择来实现更快的推理速度。广泛的实验验证了NASH在加速和输出质量方面的有效性。
+ 
+- LoRAPrune: Structured Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning
+  - Label: <img src=https://img.shields.io/badge/structured-blue.svg> <img src=https://img.shields.io/badge/semi__structured-brightgreen.svg>
+  - Author: Mingyang Zhang, Hao Chen, Chunhua Shen, Zhen Yang, Linlin Ou, Xinyi Yu, Bohan Zhuang
+  - Link: https://arxiv.org/abs/2305.18403
+  - Code: https://github.com/aim-uofa/LoRAPrune
+  - Pub: ACL24 Findings
+  - Summary: LoRAPrune proposes a new framework that delivers an accurate structured pruned model in a highly memory-efficient manner. It first designs a LoRA-guided pruning criterion, which uses the weights and gradients of LoRA, rather than the gradients of pre-trained weights, for importance estimation. LoRAPrune then integrates this criterion into an iterative pruning process, effectively removing redundant channels and heads. Experiments on LLaMA series models show that LoRAPrune outperforms existing pruning methods in terms of performance and memory efficiency.
+  - 摘要: LoRAPrune提出了一个新的框架,能够以高内存效率的方式生成精确的结构化剪枝模型。它首先设计了一个基于LoRA的剪枝准则,使用LoRA的权重和梯度,而不是预训练权重的梯度来估计重要性。LoRAPrune然后将这个准则集成到一个迭代剪枝过程中,有效地移除了冗余的通道和头。在LLaMA系列模型上的实验表明,LoRAPrune在性能和内存效率方面都优于现有的剪枝方法。
