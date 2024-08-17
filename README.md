@@ -305,3 +305,12 @@ We encourage the community to engage with this resource; please leave comments o
     - Link: https://openreview.net/forum?id=LCTmppB165
     - Code: https://github.com/zyxxmu/cam
     - Summary: The paper introduces Cache Merging (CaM), an innovative approach to enhance the memory efficiency of Large Language Models (LLMs) during inference without compromising performance. CaM adaptively merges caches scheduled for eviction back into the remaining caches, using a novel sampling strategy based on attention score prominence. This method mitigates output perturbation caused by cache eviction, preserving critical token information. Extensive experiments with LLaMA, OPT, and GPTNeoX models across various benchmarks demonstrate CaM's effectiveness in improving the performance of memory-efficient LLMs.
+
+- Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity
+  - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg> <img src=https://img.shields.io/badge/structured-blue.svg>
+  - Author: Haojun Xia, Zhen Zheng, Yuchao Li, Donglin Zhuang, Zhongzhu Zhou, Xiafei Qiu, Yong Li, Wei Lin, Shuaiwen Leon Song
+  - Link: https://arxiv.org/pdf/2309.10285
+  - Code: https://github.com/AlibabaResearch/flash-llm
+  - Pub: VLDB23
+  - Summary: The paper proposes Flash-LLM, an efficient GPU library to support unstructured sparsity on tensor cores for large generative model inference. Flash-LLM uses a "Load-as-Sparse and Compute-as-Dense" strategy to address the memory bandwidth bottleneck while tolerating redundant computations on tensor cores. It includes a new sparse format, sparse-to-dense transformation, and a two-level overlapping strategy to enable high-performance unstructured sparse matrix multiplication on tensor cores. Extensive evaluations show that Flash-LLM significantly outperforms state-of-the-art solutions at both the kernel and end-to-end framework levels.
+  - 摘要: 本文提出了Flash-LLM,这是一个在张量核上支持非结构化稀疏性的高效GPU库,用于大型生成式模型推理。Flash-LLM采用"以稀疏方式加载,以密集方式计算"的策略,以解决内存带宽瓶颈,同时容忍张量核上的冗余计算。它包括一种新的稀疏格式、稀疏到密集的转换,以及一种双层重叠策略,以实现张量核上高性能的非结构化稀疏矩阵乘法。广泛的评估表明,Flash-LLM在内核和端到端框架级别都显著优于最先进的解决方案。
