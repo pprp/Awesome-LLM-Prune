@@ -204,6 +204,7 @@ Content:
     - Authors: Lu Yin, Ajay Jaiswal, Shiwei Liu, Souvik Kundu, Zhangyang Wang
     - Link: https://arxiv.org/pdf/2310.02277v2.pdf
     - Code: https://github.com/VITA-Group/Junk_DNA_Hypothesis.git
+    - Pub : ICML2024
     - Summary: The paper presents the "Junk DNA Hypothesis," which challenges the notion that **small-magnitude weights in large language models (LLMs) are redundant and can be pruned without performance loss**. Contrary to common beliefs, the study argues that these weights encode essential knowledge for difficult downstream tasks. The authors demonstrate a monotonic relationship between the performance drop of downstream tasks and the magnitude of pruned weights, indicating that pruning can cause irreversible knowledge loss, even with continued training. The paper also contrasts pruning with quantization, showing that the latter does not exhibit the same monotonic effect on task difficulty. The findings suggest that small-magnitude weights are crucial for complex tasks and cannot be simply discarded. The study provides insights into the role of these weights and implications for LLM compression techniques.
 
 
