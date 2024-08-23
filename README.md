@@ -258,7 +258,7 @@ Content:
    - Experiment results:
    - Comment: The prompt is really interesting, which is "Attention! LLM".
 
-- Dynamic Sparse no Training þ:Training-Free Fine-Tuning For Sparse LLMS
+- Dynamic Sparse no Training þ:Training-Free Fine-Tuning For Sparse LLMs
     - Label: <img src=https://img.shields.io/badge/Parameter_efficient_finetuning-lightgreen.svg >
     - Author: Yuxin Zhang, Lirui Zhao, Mingbao Lin, Yunyun Sun, Yiwu Yao, Xingjia Han, Jared Tanner, Shiwei Liu, Rongrong Ji
     - Link: https://arxiv.org/pdf/2310.08915
@@ -476,7 +476,7 @@ There are two "Shortened LLaMa", this is a mistake of the original author!
     - Link: https://arxiv.org/pdf/2406.02924
     - Code: https://github.com/pprp/Pruner-Zero
     - Summary: This paper explores importance metric automatically using genetic search and propose its own pruning metric.
-    - Main method: Genetic search. This paper has noticed some similarities between Sparsegpt,Wanda,
+    - Main method: Genetic search. This paper has noticed some similarities between Sparsegpt,Wanda,GBLM. These papers all focus on unstructured pruning with no retraining and their main difference is their importance metric. So this paper proposes to search for the best importance metric through combining elements, namely arithmetic operations and different parts in the neural network. 
     - Experiment result:
     - Comment: 
 
