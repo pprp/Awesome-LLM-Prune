@@ -1,4 +1,4 @@
-<img width="1028" alt="image" src="https://github.com/user-attachments/assets/dc13183e-49bd-4db7-852e-7cc1812fd118"># Awesome-LLM-Prune
+# Awesome-LLM-Prune
 
 <div align='center'>
   <img src=https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg >
