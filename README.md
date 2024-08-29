@@ -1,4 +1,4 @@
-# Awesome-LLM-Prune
+<img width="1028" alt="image" src="https://github.com/user-attachments/assets/dc13183e-49bd-4db7-852e-7cc1812fd118"># Awesome-LLM-Prune
 
 <div align='center'>
   <img src=https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg >
@@ -265,7 +265,7 @@ We encourage the community to engage with this resource; please leave comments o
     - Author: Shengrui Li, Xueting Han, Jing Bai
     - Link: https://arxiv.org/pdf/2402.09773.pdf
     - Pub: Arxiv
-    - Code: Not available
+    - Code: https://github.com/Luciuslsr/NutePrune
     - Summary: This work = structure pruning + progressive knowledge distillation; However, due to the memory constraints, knowledge distillation is hard in the context of LLM. To mitigate the memory cost, this paper propose to switch teacher and student by apply different sparsity ratio using various masks and LoRA modules.
     - 摘要：这项工作 = 结构修剪 + 渐进式知识蒸馏；然而，由于内存限制，在LLM环境下知识蒸馏变得困难。为了减轻内存成本，这篇论文提出通过使用不同的掩码和LoRA模块应用不同的稀疏比来切换教师和学生模型。
 
