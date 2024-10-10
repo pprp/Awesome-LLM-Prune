@@ -435,3 +435,14 @@ We encourage the community to engage with this resource; please leave comments o
   - Pub: ACL2024 
   - Summary: The paper proposes post-training methods for expert pruning and dynamic expert skipping to enhance the deployment efficiency of Mixture-of-Experts (MoE) large language models (LLMs). The expert pruning method permanently removes less important experts to reduce memory usage, while the dynamic expert skipping method selectively skips certain experts during inference to improve inference speed, without compromising model performance. Experiments on the Mixtral 8x7B model demonstrate significant reductions in memory usage and inference speedups.
   - 摘要: 本文提出了用于专家修剪和动态专家跳过的后训练方法,以提高混合专家(MoE)大型语言模型(LLM)的部署效率。专家修剪方法永久删除不太重要的专家以减少内存使用,而动态专家跳过方法在推理过程中选择性地跳过某些专家以提高推理速度,而不会影响模型性能。在Mixtral 8x7B模型上的实验表明,内存使用量显著减少,推理速度也有所提高。
+
+Part1:
+
+- SQFT: Low-cost Model Adaptation in Low-precision Sparse Foundation Models
+  - Label: <img src=https://img.shields.io/badge/structured-blue.svg>
+  - Author: J. Pablo Muñoz, Jinjie Yuan, Nilesh Jain
+  - Link: https://arxiv.org/pdf/2410.03750v1.pdf
+  - Code: https://github.com/IntelLabs/Hardware-Aware-Automated-Machine-Learning
+  - Pub: EMNLP 2024 Findings
+  - Summary: SQFT is an end-to-end solution for low-precision sparse parameter-efficient fine-tuning of large pre-trained models. It includes stages for sparsification, quantization, fine-tuning with neural low-rank adapter search (NLS), and sparse parameter-efficient fine-tuning (SparsePEFT) with optional quantization-awareness. SQFT addresses the challenges of merging sparse/quantized weights with dense adapters by preserving sparsity and handling different numerical precisions.
+  - 摘要: SQFT是一个端到端的解决方案,用于对大型预训练模型进行低精度稀疏参数高效微调。它包括稀疏化、量化、使用神经低秩适配器搜索(NLS)进行微调,以及可选的带有量化感知的稀疏参数高效微调(SparsePEFT)等阶段。SQFT通过保留稀疏性和处理不同的数值精度,解决了将稀疏/量化权重与密集适配器合并的挑战。
