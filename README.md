@@ -427,4 +427,11 @@ We encourage the community to engage with this resource; please leave comments o
   - Summary: APT adaptively prunes and tunes parameters of pretrained language models to improve both training and inference efficiency. It uses an outlier-aware salience scoring function to identify and prune less important parameter blocks during early fine-tuning. APT also dynamically adds more tuning parameters to recover the pruned model's performance. Experiments show APT can prune 60% of RoBERTa and T5 parameters while maintaining 98% task performance, and prune 70% of LLaMA parameters while preserving 86.4% performance. APT also speeds up fine-tuning by up to 8x and reduces training memory by up to 70%.
   - 摘要: APT自适应地剪枝和调整预训练语言模型的参数,以提高训练和推理效率。它使用一种考虑异常值的显著性评分函数,在早期微调期间识别并剪枝不重要的参数块。APT还动态添加更多调优参数来恢复被剪枝模型的性能。实验表明,APT可以在保持98%任务性能的情况下剪枝60%的RoBERTa和T5参数,并在保持86.4%性能的情况下剪枝70%的LLaMA参数。APT还可将微调速度提高高达8倍,并将训练内存减少高达70%。
 
-
+- Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models
+  - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg> <img src=https://img.shields.io/badge/structured-blue.svg>
+  - Author: Xudong Lu, Qi Liu, Yuhui Xu, Aojun Zhou, Siyuan Huang, Bo Zhang, Junchi Yan, Hongsheng Li
+  - Link: [arxiv.org/pdf/2402.14800v2](https://arxiv.org/pdf/2402.14800v2)
+  - Code: https://github.com/Lucky-Lance/Expert_Sparsity
+  - Pub: ACL2024 
+  - Summary: The paper proposes post-training methods for expert pruning and dynamic expert skipping to enhance the deployment efficiency of Mixture-of-Experts (MoE) large language models (LLMs). The expert pruning method permanently removes less important experts to reduce memory usage, while the dynamic expert skipping method selectively skips certain experts during inference to improve inference speed, without compromising model performance. Experiments on the Mixtral 8x7B model demonstrate significant reductions in memory usage and inference speedups.
+  - 摘要: 本文提出了用于专家修剪和动态专家跳过的后训练方法,以提高混合专家(MoE)大型语言模型(LLM)的部署效率。专家修剪方法永久删除不太重要的专家以减少内存使用,而动态专家跳过方法在推理过程中选择性地跳过某些专家以提高推理速度,而不会影响模型性能。在Mixtral 8x7B模型上的实验表明,内存使用量显著减少,推理速度也有所提高。
