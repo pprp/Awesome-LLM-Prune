@@ -446,3 +446,11 @@ Part1:
   - Pub: EMNLP 2024 Findings
   - Summary: SQFT is an end-to-end solution for low-precision sparse parameter-efficient fine-tuning of large pre-trained models. It includes stages for sparsification, quantization, fine-tuning with neural low-rank adapter search (NLS), and sparse parameter-efficient fine-tuning (SparsePEFT) with optional quantization-awareness. SQFT addresses the challenges of merging sparse/quantized weights with dense adapters by preserving sparsity and handling different numerical precisions.
   - 摘要: SQFT是一个端到端的解决方案,用于对大型预训练模型进行低精度稀疏参数高效微调。它包括稀疏化、量化、使用神经低秩适配器搜索(NLS)进行微调,以及可选的带有量化感知的稀疏参数高效微调(SparsePEFT)等阶段。SQFT通过保留稀疏性和处理不同的数值精度,解决了将稀疏/量化权重与密集适配器合并的挑战。
+
+- Scaling Law for Post-training after Model Pruning
+    - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
+    - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
+    - Link: https://arxiv.org/abs/2411.10272v1
+    - Code: Not available
+    - Summary: This paper investigates the post-training requirements of pruned Large Language Models (LLMs).  The authors propose a scaling law to predict the optimal amount of post-training data needed after pruning, considering factors like the pre- and post-pruning parameter counts and the post-training token count.  Experiments using Llama-3 and Qwen-2.5 series models with depth, width, and 2:4 semi-structured pruning demonstrate that higher pruning ratios require more post-training data, while larger LLMs need less.  The scaling law, derived from smaller LLMs, is shown to extrapolate effectively to larger models, offering a practical guideline for optimizing post-training data usage and reducing resource consumption.
+    - 摘要：本文研究了剪枝大型语言模型 (LLM) 的后期训练需求。作者提出了一种缩放定律，用于预测剪枝后所需的最佳后期训练数据量，考虑了剪枝前后的参数计数和后期训练的标记计数等因素。使用 Llama-3 和 Qwen-2.5 系列模型进行深度、宽度和 2:4 半结构化剪枝的实验表明，较高的剪枝率需要更多的后期训练数据，而较大的 LLM 需要较少的数据。从较小的 LLM 推导出的缩放定律可以有效地推断到较大的模型，为优化后期训练数据的使用和减少资源消耗提供了实用的指导。
