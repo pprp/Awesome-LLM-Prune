@@ -457,7 +457,7 @@ Part1:
 
 
 - Finding Transformer Circuits with Edge Pruning
-    - Label: <img src=https://img.shields.io/badge/structured-blue.svg> <img src=https://img.shields.io/badge/benchmark-purple.svg>
+    - Label: <img src=https://img.shields.io/badge/structured-blue.svg> 
     - Authors: Adithya Bhaskar, Alexander Wettig, Dan Friedman, Danqi Chen
     - Link: https://arxiv.org/pdf/2406.16778
     - Pub: NeurIPS 24 Spotlight
