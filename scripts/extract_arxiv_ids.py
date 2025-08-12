@@ -18,7 +18,7 @@ def extract_arxiv_ids_from_readme(readme_path: str = "README.md") -> Set[str]:
             
         # Find all arXiv URLs and extract IDs
         # Pattern matches: arxiv.org/abs/2508.04257 or arxiv.org/abs/2508.04257v1
-        pattern = r'arxiv\.org/abs/(\d{4}\.\d{4,5})(?:v\d+)?'
+        pattern = r'arxiv\.org/pdf/(\d{4}\.\d{4,5})(?:v\d+)?'
         matches = re.findall(pattern, content, re.IGNORECASE)
         
         for match in matches:

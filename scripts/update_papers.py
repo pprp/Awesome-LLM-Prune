@@ -102,61 +102,95 @@ class ArXivPaperFetcher:
         ]
         
     def build_query(self, days_back: int = 1) -> str:
-        """Build arXiv API query string - simplified and working approach"""
+        """Build arXiv API query string - focused on LLM pruning and sparsity"""
         
-        # Start with simple, proven query patterns
-        query_parts = [
-            # Basic combinations that work reliably
-            'all:"pruning" AND all:"language model"',
-            'all:"sparse" AND all:"LLM"',
-            'ti:"magnitude pruning"',
-            'ti:"structured pruning"', 
-            'ti:"unstructured pruning"',
-            'ti:"gradual pruning"',
-            'abs:"model pruning"',
-            'cat:cs.CL AND ti:"pruning"'
+        # Ensure LLM is ALWAYS included in search results
+        # All query parts must include LLM-related terms
+        llm_terms = [
+            'all:"large language model"',
+            'all:"LLM"', 
+            'all:"transformer"',
+            'all:"language model"'
         ]
         
-        query = " OR ".join(query_parts)
+        pruning_terms = [
+            'all:"pruning"',
+            'all:"sparse"',
+            'all:"sparsity"',
+        ]
         
-        logger.info(f"Built simplified query with {len(query_parts)} parts")
-        logger.info(f"Query: {query[:200]}...")  # Log first 200 chars for debugging
+        # Create combinations ensuring LLM + pruning/sparsity
+        query_parts = []
+        for llm_term in llm_terms:
+            for prune_term in pruning_terms:
+                query_parts.append(f'({llm_term} AND {prune_term})')
+        
+        # Add specific LLM pruning method combinations
+        specific_combinations = [
+            '(all:"BERT" AND all:"pruning")',
+            '(all:"GPT" AND all:"pruning")', 
+            '(all:"LLaMA" AND all:"pruning")',
+            '(all:"transformer" AND all:"magnitude pruning")',
+            '(all:"language model" AND all:"structured pruning")',
+            '(all:"LLM" AND all:"unstructured pruning")',
+            '(all:"transformer" AND all:"lottery ticket")',
+            '(all:"language model" AND all:"model compression")'
+        ]
+        
+        query_parts.extend(specific_combinations)
+        
+        # Join with OR to cast a wider net, but each part ensures LLM + pruning
+        query = ' OR '.join(query_parts)
+        
+        logger.info(f"Built LLM-focused query with {len(query_parts)} combinations")
+        logger.info(f"Query: {query[:400]}...")  # Log first 400 chars for debugging
         return query
         
     def is_relevant_paper(self, paper: Dict) -> bool:
-        """Check if paper is actually relevant to LLM pruning"""
+        """Check if paper is actually relevant to LLM pruning - LLM is REQUIRED"""
         title_lower = paper['title'].lower()
         abstract_lower = paper['summary'].lower()
         
-        # Must have pruning-related terms
+        # Must have LLM-related terms (REQUIRED - this is the key filter)
+        llm_keywords = [
+            'large language model', 'language model', 'llm', 'transformer', 
+            'bert', 'gpt', 'llama', 'chatgpt', 'generative model', 'nlp',
+            'pre-trained model', 'foundation model', 'autoregressive',
+            't5', 'opt', 'palm', 'claude', 'gemini', 'qwen', 'baichuan'
+        ]
+        
+        # Must have pruning-related terms 
         prune_keywords = [
             'pruning', 'prune', 'sparse', 'sparsity', 'compression',
             'magnitude pruning', 'structured pruning', 'unstructured pruning',
-            'gradual pruning', 'lottery ticket', 'network compression', 'weight pruning'
+            'gradual pruning', 'lottery ticket', 'network compression', 'weight pruning',
+            'channel pruning', 'layer pruning', 'head pruning', 'token pruning'
         ]
         
-        # Must have LLM-related terms  
-        llm_keywords = [
-            'large language model', 'language model', 'llm', 'transformer', 
-            'bert', 'gpt', 'llama', 'chatgpt', 'generative', 'nlp'
-        ]
-        
-        # Check if both types of keywords are present
-        has_prune = any(keyword in title_lower or keyword in abstract_lower for keyword in prune_keywords)
+        # LLM requirement is STRICT - must have LLM terms
         has_llm = any(keyword in title_lower or keyword in abstract_lower for keyword in llm_keywords)
+        has_prune = any(keyword in title_lower or keyword in abstract_lower for keyword in prune_keywords)
         
-        # Additional check: exclude papers that are clearly not about LLM pruning
+        # Exclude papers that are clearly not about LLM (even stricter exclusion)
         exclude_keywords = [
-            'motion generation', 'video', 'image', 'computer vision', 'cv',
-            'robotics', 'control', 'mechanical', 'hardware design', 'circuit'
+            'motion generation', 'video', 'image', 'computer vision', 'cv', 'visual',
+            'robotics', 'control', 'mechanical', 'hardware design', 'circuit',
+            'convolutional neural network', 'cnn', 'image classification', 'object detection',
+            'medical imaging', 'recommendation system', 'graph neural', 'reinforcement learning'
         ]
         
         has_exclude = any(keyword in title_lower or keyword in abstract_lower for keyword in exclude_keywords)
         
-        is_relevant = has_prune and has_llm and not has_exclude
+        # BOTH LLM and pruning terms are required, no exclusions allowed
+        is_relevant = has_llm and has_prune and not has_exclude
         
         if not is_relevant:
-            logger.info(f"Filtered out irrelevant paper: {paper['title']}")
+            if not has_llm:
+                logger.info(f"Filtered out - NO LLM terms: {paper['title']}")
+            elif not has_prune:
+                logger.info(f"Filtered out - NO pruning terms: {paper['title']}")
+            else:
+                logger.info(f"Filtered out - excluded domain: {paper['title']}")
             
         return is_relevant
         
@@ -167,10 +201,11 @@ class ArXivPaperFetcher:
             'search_query': query,
             'sortBy': 'submittedDate',
             'sortOrder': 'descending',
-            'max_results': 50  # Get more results to filter by date
+            'max_results': 200  # Get many results to find recent ones
         }
         
         try:
+            logger.info(f"Making arXiv API request with {days_back} days lookback...")
             response = requests.get(self.BASE_URL, params=params, timeout=30)
             response.raise_for_status()
             
@@ -180,18 +215,32 @@ class ArXivPaperFetcher:
             # Parse the Atom feed
             feed = feedparser.parse(response.content)
             
-            logger.info(f"Feed parsed. Total entries: {len(feed.entries)}")
+            logger.info(f"Feed parsed. Total entries found: {len(feed.entries)}")
+            
+            if len(feed.entries) == 0:
+                logger.warning("No entries found in arXiv response - may indicate query issues")
+                return []
             
             papers = []
             cutoff_date = datetime.now() - timedelta(days=days_back)
             logger.info(f"Looking for papers newer than: {cutoff_date}")
             
-            for entry in feed.entries:
+            date_filtered_count = 0
+            relevance_filtered_count = 0
+            
+            for i, entry in enumerate(feed.entries):
+                if i < 3:  # Log first few entries for debugging
+                    logger.info(f"Entry {i+1}: {entry.title[:100]}...")
+                    logger.info(f"  Published: {entry.published}")
+                
                 # Parse submission date
                 published_date = parse_date(entry.published)
+                logger.info(f"  Parsed date: {published_date}")
                 
-                # Only include papers from the last N days AND are relevant
+                # Check date filter
                 if published_date.replace(tzinfo=None) > cutoff_date:
+                    date_filtered_count += 1
+                    
                     paper = {
                         'id': entry.id.split('/')[-1],  # Extract arXiv ID
                         'title': entry.title.replace('\n', ' ').strip(),
@@ -204,15 +253,19 @@ class ArXivPaperFetcher:
                     
                     # Apply relevance filter
                     if self.is_relevant_paper(paper):
+                        relevance_filtered_count += 1
                         papers.append(paper)
-                        logger.info(f"Added relevant paper: {paper['title']}")
+                        logger.info(f"Added relevant paper: {paper['title'][:100]}...")
                     
-                    
-            logger.info(f"Found {len(papers)} recent papers")
+            logger.info(f"Date filtering: {date_filtered_count} papers within {days_back} days")
+            logger.info(f"Relevance filtering: {relevance_filtered_count} relevant papers")
+            logger.info(f"Final result: {len(papers)} papers to process")
             return papers
             
         except Exception as e:
             logger.error(f"Error fetching papers: {e}")
+            import traceback
+            logger.error(f"Traceback: {traceback.format_exc()}")
             return []
 
 class PaperSummarizer:
@@ -339,7 +392,7 @@ class ReadmeUpdater:
             return False
             
     def format_paper_entry(self, paper: Dict, summary: str) -> str:
-        """Format a paper entry for the README table"""
+        """Format a paper entry for the README list format"""
         # Format authors - limit to first 3 for space
         authors = paper['authors'][:3]
         if len(paper['authors']) > 3:
@@ -350,47 +403,50 @@ class ReadmeUpdater:
         # Format date
         date_str = paper['published'].strftime('%Y-%m-%d')
         
-        # Create the table row
-        entry = f"| Arxiv{paper['published'].year} <br/> [{paper['title']}]({paper['link']}) <br/> {authors_str} | {summary} |"
+        # Create the list entry in the new format
+        entry = f"""- {paper['title']}
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: {authors_str}
+    - Link: {paper['link'].replace('/abs/', '/pdf/')} 
+    - Code: Not available
+    - Pub: Arxiv {paper['published'].year}
+    - Summary: {summary}
+    - 摘要: {summary}"""
         
         return entry
         
-    def update_papers_table(self, content: str, new_papers: List[Dict], summaries: List[str]) -> str:
-        """Update the papers table with new entries"""
+    def update_papers_list(self, content: str, new_papers: List[Dict], summaries: List[str]) -> str:
+        """Update the papers list with new entries"""
         if not new_papers:
             logger.info("No new papers to add")
             return content
             
-        # Find the papers table
-        table_start = content.find("| Title & Author & Link")
-        if table_start == -1:
-            logger.error("Could not find papers table in README")
+        # Find the end of the taxonomy table (after the label row)
+        taxonomy_end = content.find('| <img src=https://img.shields.io/badge/benchmark-purple.svg > |')
+        if taxonomy_end == -1:
+            logger.error("Could not find taxonomy table in README")
             return content
             
-        # Find the end of the table header (after the separator line)
-        header_end = content.find("| ---", table_start)
-        if header_end == -1:
-            logger.error("Could not find table header separator")
-            return content
-            
-        # Find the end of the separator line
-        separator_end = content.find("\n", header_end)
-        if separator_end == -1:
-            logger.error("Could not find end of separator line")
+        # Find the next newline after the taxonomy table
+        insert_pos = content.find('\n', taxonomy_end)
+        if insert_pos == -1:
+            logger.error("Could not find insertion point after taxonomy table")
             return content
             
         logger.info(f"Adding {len(new_papers)} new papers to README")
             
-        # Insert new papers at the beginning of the table (after header)
+        # Insert new papers at the beginning of the list (after taxonomy table)
         new_entries = []
         for paper, summary in zip(new_papers, summaries):
             entry = self.format_paper_entry(paper, summary)
             new_entries.append(entry)
             
+        # Add spacing and new entries
         new_content = (
-            content[:separator_end + 1] + 
-            '\n'.join(new_entries) + '\n' +
-            content[separator_end + 1:]
+            content[:insert_pos + 1] + 
+            '\n\n' + 
+            '\n\n'.join(new_entries) + '\n\n' +
+            content[insert_pos + 1:]
         )
         
         return new_content
@@ -405,14 +461,21 @@ def main():
     summarizer = PaperSummarizer()
     updater = ReadmeUpdater()
     
-    # Check if we have API keys
-    if not (summarizer.openai_api_key or summarizer.anthropic_api_key):
-        logger.error("No LLM API keys found. Please set OPENAI_API_KEY or ANTHROPIC_API_KEY")
-        sys.exit(1)
+    # Test mode - just fetch and show papers without API requirement
+    test_mode = len(sys.argv) > 1 and sys.argv[1] == "--test"
+    
+    if test_mode:
+        logger.info("Running in test mode - will fetch papers but not update README")
+    else:
+        # Check if we have API keys
+        if not (summarizer.openai_api_key or summarizer.anthropic_api_key):
+            logger.error("No LLM API keys found. Please set OPENAI_API_KEY or ANTHROPIC_API_KEY")
+            logger.info("You can run in test mode with: python update_papers.py --test")
+            sys.exit(1)
         
     # Fetch recent papers
     logger.info("Fetching recent papers from arXiv...")
-    papers = fetcher.fetch_recent_papers(days_back=30)
+    papers = fetcher.fetch_recent_papers(days_back=30)  # Increase to 30 days for better results
     
     if not papers:
         logger.info("No new papers found from arXiv - exiting without changes")
@@ -425,13 +488,32 @@ def main():
         logger.info("No new unprocessed papers found - exiting without changes")
         sys.exit(0)
         
-    logger.info(f"Processing {len(new_papers)} new papers...")
+    logger.info(f"Processing {len(new_papers)} new papers (limited to max 5 commits per run)...")
+    
+    # STRICT LIMIT: Maximum 5 commits per run to avoid spam
+    MAX_COMMITS_PER_RUN = 5
+    papers_to_process = new_papers[:MAX_COMMITS_PER_RUN]
+    
+    if len(new_papers) > MAX_COMMITS_PER_RUN:
+        logger.info(f"Found {len(new_papers)} papers, but limiting to {MAX_COMMITS_PER_RUN} commits per run")
+        logger.info(f"Remaining {len(new_papers) - MAX_COMMITS_PER_RUN} papers will be processed in next run")
+    
+    if test_mode:
+        logger.info("Test mode - showing found papers:")
+        for i, paper in enumerate(papers_to_process):  # Show limited papers
+            logger.info(f"Paper {i+1}: {paper['title']}")
+            logger.info(f"  Authors: {', '.join(paper['authors'][:3])}")
+            logger.info(f"  Date: {paper['published']}")
+            logger.info(f"  Abstract: {paper['summary'][:200]}...")
+            logger.info("---")
+        logger.info(f"Found {len(new_papers)} total papers, showing first {len(papers_to_process)}. Exiting test mode.")
+        sys.exit(0)
     
     # Process each paper separately and create individual commits
     total_added = 0
     
-    for i, paper in enumerate(new_papers):
-        logger.info(f"Processing paper {i+1}/{len(new_papers)}: {paper['title']}")
+    for i, paper in enumerate(papers_to_process):
+        logger.info(f"Processing paper {i+1}/{len(papers_to_process)} (max 5): {paper['title']}")
         
         # Summarize the paper
         summary = summarizer.summarize_paper(paper)
@@ -443,7 +525,7 @@ def main():
             continue
             
         # Update with single paper
-        updated_content = updater.update_papers_table(readme_content, [paper], [summary])
+        updated_content = updater.update_papers_list(readme_content, [paper], [summary])
         
         # Check if content actually changed
         if len(updated_content) != len(readme_content):
@@ -468,13 +550,23 @@ def main():
         # Add delay to avoid rate limiting
         time.sleep(1)
     
-    # Save the updated tracking file
+    # Save the updated tracking file with all processed papers (even if limited to 5)
+    # This ensures we don't reprocess the same papers in future runs
     if total_added > 0:
         tracker.save_processed_ids()
-        logger.info(f"Successfully processed {total_added} new papers with individual commits")
+        logger.info(f"Successfully processed {total_added}/{len(papers_to_process)} papers with individual commits")
+        
+        if len(new_papers) > MAX_COMMITS_PER_RUN:
+            logger.info(f"Note: {len(new_papers) - MAX_COMMITS_PER_RUN} papers remain for next run")
+            logger.info("These will be automatically processed when the script runs again")
+        
         logger.info("Git commits created - workflow should detect changes")
     else:
         logger.info("No new papers were added")
+        
+        # Even if no papers were added, update the tracking file to mark attempted papers as processed
+        # This prevents infinite retry of papers that fail to be added
+        tracker.save_processed_ids()
         
     logger.info("Paper update completed successfully")
 
