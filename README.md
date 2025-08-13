@@ -16,6 +16,17 @@ We encourage the community to engage with this resource; please leave comments o
 | Label    | <img src=https://img.shields.io/badge/unstructured-turquoise.svg > | <img src=https://img.shields.io/badge/structured-blue.svg > | <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > | <img src=https://img.shields.io/badge/benchmark-purple.svg > |
 
 
+- Retrospective Sparse Attention for Efficient Long-Context Generation
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Seonghwan Choi, Beomseok Kang, Dongwon Jo, et al.
+    - Link: http://arxiv.org/pdf/2508.09001v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces RetroAttention, a novel KV cache update technique for efficient long-context generation in LLMs, which retrospectively revises past attention outputs using new KV entries from subsequent decoding steps. By maintaining a lightweight output cache, RetroAttention allows continual correction of prior approximations, increasing effective KV exposure and accuracy compared to existing KV compression methods. Experiments on long-generation benchmarks demonstrate that RetroAttention outperforms state-of-the-art methods, improving accuracy by up to 21.9%. #LLM #Pruning #SparseAttention #LongContext #EfficientInference
+    - 摘要: This paper introduces RetroAttention, a novel KV cache update technique for efficient long-context generation in LLMs, which retrospectively revises past attention outputs using new KV entries from subsequent decoding steps. By maintaining a lightweight output cache, RetroAttention allows continual correction of prior approximations, increasing effective KV exposure and accuracy compared to existing KV compression methods. Experiments on long-generation benchmarks demonstrate that RetroAttention outperforms state-of-the-art methods, improving accuracy by up to 21.9%. #LLM #Pruning #SparseAttention #LongContext #EfficientInference
+
+
+
 
 - SparseGPT: Massive Language Models Can be Accurately Pruned in One-shot 
     - Label: <img src=https://img.shields.io/badge/unstructured-turquoise.svg ><img src=https://img.shields.io/badge/semi_structured-brightgreen.svg >
