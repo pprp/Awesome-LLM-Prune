@@ -457,16 +457,6 @@ Part1:
     - Summary: This paper introduces RetroAttention, a novel KV cache update technique that retrospectively revises past attention outputs using new KV entries from subsequent decoding steps to improve long-context generation in LLMs. By maintaining a lightweight output cache, RetroAttention allows past queries to access more relevant context, outperforming state-of-the-art KV compression methods by increasing effective KV exposure and accuracy on long-generation benchmarks. #LLM #Pruning #SparseAttention #LongContext #KVcache #EfficientInference
     - 摘要: 该论文提出了一种名为RetroAttention的新型KV缓存更新技术，旨在解决长文本生成中因KV缓存线性增长导致的推理瓶颈问题。RetroAttention通过回顾性地利用后续解码步骤中新到达的KV条目来修正过去的注意力输出，从而提高有效KV暴露并显著提升生成精度，在长文本生成任务上优于现有KV压缩方法。#剪枝 #稀疏注意力 #长文本生成 #KV缓存 #大语言模型
 
-- Solving Approximation Tasks with Greedy Deep Kernel Methods
-    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
-    - Author: Marian Klink, Tobias Ehring, Robin Herkert, et al.
-    - Link: http://arxiv.org/pdf/2508.08759v1 
-    - Code: Not available
-    - Pub: Arxiv 2025
-    - Summary: This paper introduces a novel approach to function approximation using deep kernel greedy methods, which combine the benefits of kernel methods (sparsity, provable convergence) with the expressiveness of deep neural networks through a multilayer kernel structure. The authors demonstrate that these deep kernel models, pre-trained with a tailored optimization objective, achieve superior approximation accuracies compared to standard kernels and neural networks in various applications, including model problems, reactive flow prediction, and solving parametric ODE systems. #KernelMethods #GreedyApproximation #DeepLearning #FunctionApproximation
-    - 摘要: 这篇论文提出了一种基于贪婪深度核方法的新型函数逼近方法，通过交替使用线性核层和可优化的核激活函数层构建深度、多层核，提高了核的表达能力和逼近精度。实验结果表明，该方法在模型问题逼近、多孔介质反应流预测以及参数化常微分方程系统求解等方面优于传统核方法和神经网络，展现了深度核贪婪模型在逼近任务中的优势。
-
-#深度核方法 #贪婪算法 #函数逼近 #核方法 #机器学习
 
 - Classifier Language Models: Unifying Sparse Finetuning and Adaptive   Tokenization for Specialized Classification Tasks
     - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
@@ -477,16 +467,6 @@ Part1:
     - Summary: This paper introduces a token-driven sparse finetuning method for adapting small language models to specialized classification tasks by identifying and finetuning a sensitive subset of model parameters based on task-specific token constructs, avoiding the introduction of new parameters like LoRA. The proposed approach outperforms full finetuning, LoRA, layer selection, and prefix tuning on five diverse semantic classification tasks by identifying highly relevant semantic tokens. #Pruning #SparseFinetuning #LLM #Tokenization #SemanticClassification
     - 摘要: 这篇论文提出了一种针对特定分类任务的token驱动的稀疏微调策略，用于适配小型语言模型。该方法通过识别并微调数据集中与任务相关的关键token对应的模型参数子集，在不引入额外参数的情况下，实现了优于全参数微调、LoRA等方法的性能，并在多个语义分类任务上取得了显著效果。#剪枝 #稀疏微调 #大语言模型 #语义分类 #token驱动
 
-- AgriGPT: a Large Language Model Ecosystem for Agriculture
-    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
-    - Author: Bo Yang, Yu Zhang, Lanfei Feng, et al.
-    - Link: http://arxiv.org/pdf/2508.08632v1 
-    - Code: Not available
-    - Pub: Arxiv 2025
-    - Summary: This paper introduces AgriGPT, a domain-specific LLM ecosystem for agriculture, addressing the lack of specialized models and datasets in this field. The key contributions include a multi-agent data engine for creating Agri-342K, a high-quality QA dataset, a Tri-RAG framework for enhanced factual grounding, and AgriBench-13K, a comprehensive evaluation benchmark, demonstrating AgriGPT's superior performance over general LLMs in agricultural tasks. #LLM #Agriculture #DomainSpecific #RetrievalAugmentedGeneration #Benchmark
-    - 摘要: AgriGPT 是一项针对农业领域的大语言模型生态系统研究，通过构建大规模高质量农业问答数据集 Agri-342K，并采用 Tri-RAG 框架增强模型的知识检索能力，从而显著提升了模型在农业领域的适应性和推理能力。研究还提出了 AgriBench-13K 评估基准，证明 AgriGPT 在多个农业任务上优于通用 LLM，为开发特定领域的 LLM 提供了一个可推广的框架。
-
-#农业 #大语言模型 #知识检索 #领域适应
 
 - OverFill: Two-Stage Models for Efficient Language Model Decoding
     - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
