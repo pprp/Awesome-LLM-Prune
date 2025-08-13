@@ -16,6 +16,17 @@ We encourage the community to engage with this resource; please leave comments o
 | Label    | <img src=https://img.shields.io/badge/unstructured-turquoise.svg > | <img src=https://img.shields.io/badge/structured-blue.svg > | <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > | <img src=https://img.shields.io/badge/benchmark-purple.svg > |
 
 
+- Classifier Language Models: Unifying Sparse Finetuning and Adaptive   Tokenization for Specialized Classification Tasks
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Adit Krishnan, Chu Wang, Chris Kong
+    - Link: http://arxiv.org/pdf/2508.08635v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces a token-driven sparse finetuning strategy for adapting small language models to specialized classification tasks by identifying and finetuning a sensitive subset of model parameters based on task-specific token constructs, without introducing new parameters. The approach outperforms full finetuning, LoRA, layer selection, and prefix tuning on several semantic classification tasks by identifying relevant semantic tokens and improving performance. #Pruning #SparseFinetuning #LLM #Tokenization #SemanticClassification
+    - 摘要: This paper introduces a token-driven sparse finetuning strategy for adapting small language models to specialized classification tasks by identifying and finetuning a sensitive subset of model parameters based on task-specific token constructs, without introducing new parameters. The approach outperforms full finetuning, LoRA, layer selection, and prefix tuning on several semantic classification tasks by identifying relevant semantic tokens and improving performance. #Pruning #SparseFinetuning #LLM #Tokenization #SemanticClassification
+
+
+
 - Solving Approximation Tasks with Greedy Deep Kernel Methods
     - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
     - Author: Marian Klink, Tobias Ehring, Robin Herkert, et al.
