@@ -82,7 +82,7 @@ jobs:
       if: steps.verify-changed-files.outputs.changed == 'true'
       uses: peter-evans/create-pull-request@v5
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.PAT_TOKEN }}
         commit-message: "Add new LLM pruning papers"
         title: "📄 Daily ArXiv Paper Update - ${{ steps.verify-changed-files.outputs.current_date }}"
         body: |
