@@ -16,6 +16,17 @@ We encourage the community to engage with this resource; please leave comments o
 | Label    | <img src=https://img.shields.io/badge/unstructured-turquoise.svg > | <img src=https://img.shields.io/badge/structured-blue.svg > | <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > | <img src=https://img.shields.io/badge/benchmark-purple.svg > |
 
 
+- Solving Approximation Tasks with Greedy Deep Kernel Methods
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Marian Klink, Tobias Ehring, Robin Herkert, et al.
+    - Link: http://arxiv.org/pdf/2508.08759v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces deep kernel greedy models, a novel approach to function approximation that combines the benefits of kernel methods with the expressiveness of deep learning. The method uses a multilayer kernel structure with alternating linear kernel layers and optimizable kernel activation functions, pre-trained with a tailored optimization objective, to achieve improved approximation accuracy compared to standard kernels and neural networks in various applications. #KernelMethods #GreedyApproximation #DeepLearning #FunctionApproximation
+    - 摘要: This paper introduces deep kernel greedy models, a novel approach to function approximation that combines the benefits of kernel methods with the expressiveness of deep learning. The method uses a multilayer kernel structure with alternating linear kernel layers and optimizable kernel activation functions, pre-trained with a tailored optimization objective, to achieve improved approximation accuracy compared to standard kernels and neural networks in various applications. #KernelMethods #GreedyApproximation #DeepLearning #FunctionApproximation
+
+
+
 - Retrospective Sparse Attention for Efficient Long-Context Generation
     - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
     - Author: Seonghwan Choi, Beomseok Kang, Dongwon Jo, et al.
