@@ -447,6 +447,35 @@ Part1:
   - Summary: SQFT is an end-to-end solution for low-precision sparse parameter-efficient fine-tuning of large pre-trained models. It includes stages for sparsification, quantization, fine-tuning with neural low-rank adapter search (NLS), and sparse parameter-efficient fine-tuning (SparsePEFT) with optional quantization-awareness. SQFT addresses the challenges of merging sparse/quantized weights with dense adapters by preserving sparsity and handling different numerical precisions.
   - 摘要: SQFT是一个端到端的解决方案,用于对大型预训练模型进行低精度稀疏参数高效微调。它包括稀疏化、量化、使用神经低秩适配器搜索(NLS)进行微调,以及可选的带有量化感知的稀疏参数高效微调(SparsePEFT)等阶段。SQFT通过保留稀疏性和处理不同的数值精度,解决了将稀疏/量化权重与密集适配器合并的挑战。
 
+
+- Retrospective Sparse Attention for Efficient Long-Context Generation
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Seonghwan Choi, Beomseok Kang, Dongwon Jo, et al.
+    - Link: http://arxiv.org/pdf/2508.09001v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces RetroAttention, a novel KV cache update technique that retrospectively revises past attention outputs using new KV entries from subsequent decoding steps to improve long-context generation in LLMs. By maintaining a lightweight output cache, RetroAttention allows past queries to access more relevant context, outperforming state-of-the-art KV compression methods by increasing effective KV exposure and accuracy on long-generation benchmarks. #LLM #Pruning #SparseAttention #LongContext #KVcache #EfficientInference
+    - 摘要: 该论文提出了一种名为RetroAttention的新型KV缓存更新技术，旨在解决长文本生成中因KV缓存线性增长导致的推理瓶颈问题。RetroAttention通过回顾性地利用后续解码步骤中新到达的KV条目来修正过去的注意力输出，从而提高有效KV暴露并显著提升生成精度，在长文本生成任务上优于现有KV压缩方法。#剪枝 #稀疏注意力 #长文本生成 #KV缓存 #大语言模型
+
+
+- Classifier Language Models: Unifying Sparse Finetuning and Adaptive   Tokenization for Specialized Classification Tasks
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Adit Krishnan, Chu Wang, Chris Kong
+    - Link: http://arxiv.org/pdf/2508.08635v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces a token-driven sparse finetuning method for adapting small language models to specialized classification tasks by identifying and finetuning a sensitive subset of model parameters based on task-specific token constructs, avoiding the introduction of new parameters like LoRA. The proposed approach outperforms full finetuning, LoRA, layer selection, and prefix tuning on five diverse semantic classification tasks by identifying highly relevant semantic tokens. #Pruning #SparseFinetuning #LLM #Tokenization #SemanticClassification
+    - 摘要: 这篇论文提出了一种针对特定分类任务的token驱动的稀疏微调策略，用于适配小型语言模型。该方法通过识别并微调数据集中与任务相关的关键token对应的模型参数子集，在不引入额外参数的情况下，实现了优于全参数微调、LoRA等方法的性能，并在多个语义分类任务上取得了显著效果。#剪枝 #稀疏微调 #大语言模型 #语义分类 #token驱动
+
+
+- OverFill: Two-Stage Models for Efficient Language Model Decoding
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Woojeong Kim, Junxiong Wang, Jing Nathan Yan, et al.
+    - Link: http://arxiv.org/pdf/2508.08446v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: The paper introduces OverFill, a two-stage approach to LLM inference that decouples the prefill and decode stages, using a full model for the compute-intensive prefill and a dense pruned model for the memory-intensive decode. This strategy allows for improved generation quality with minimal latency overhead, achieving significant performance gains over similarly sized pruned models and matching the performance of models trained from scratch with less data. #Pruning #EfficientInference #LLM #TwoStageModel
+    - 摘要: 这篇论文提出了OverFill，一种两阶段的大语言模型解码方法，旨在提高推理效率。OverFill利用完整模型进行预填充（prefill）阶段，并行处理输入，然后切换到剪枝后的模型进行解码阶段，从而在保证生成质量的同时，显著降低延迟。实验结果表明，OverFill在多个基准测试中优于同等大小的剪枝模型，甚至可以媲美从头训练的模型，同时减少了训练数据需求。#剪枝 #两阶段模型 #大语言模型 #推理优化 #效率提升
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
