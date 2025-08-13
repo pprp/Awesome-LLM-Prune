@@ -476,7 +476,18 @@ Part1:
     - Pub: Arxiv 2025
     - Summary: The paper introduces OverFill, a two-stage approach to LLM inference that decouples the prefill and decode stages, using a full model for the compute-intensive prefill and a dense pruned model for the memory-intensive decode. This strategy allows for improved generation quality with minimal latency overhead, achieving significant performance gains over similarly sized pruned models and matching the performance of models trained from scratch with less data. #Pruning #EfficientInference #LLM #TwoStageModel
     - 摘要: 这篇论文提出了OverFill，一种两阶段的大语言模型解码方法，旨在提高推理效率。OverFill利用完整模型进行预填充（prefill）阶段，并行处理输入，然后切换到剪枝后的模型进行解码阶段，从而在保证生成质量的同时，显著降低延迟。实验结果表明，OverFill在多个基准测试中优于同等大小的剪枝模型，甚至可以媲美从头训练的模型，同时减少了训练数据需求。#剪枝 #两阶段模型 #大语言模型 #推理优化 #效率提升
-- Scaling Law for Post-training after Model Pruning
+
+
+- SAEMark: Multi-bit LLM Watermarking with Inference-Time Scaling
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Zhuohao Yu, Xingru Jiang, Weizheng Gu, et al.
+    - Link: http://arxiv.org/pdf/2508.08211v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: The paper introduces SAEMark, a novel post-hoc multi-bit watermarking framework for LLMs that embeds personalized messages by using inference-time feature-based rejection sampling on generated text, avoiding the need for white-box access or logit manipulation. By leveraging deterministic features extracted from the text and Sparse Autoencoders (SAEs), SAEMark achieves high detection accuracy and text quality across multiple datasets and languages, establishing a scalable watermarking paradigm suitable for closed-source LLMs. #Watermarking #LLMsecurity #Attribution #SparseAutoencoders
+    - 摘要: SAEMark 提出了一种通用的、事后多比特水印框架，它仅通过推理时的特征拒绝采样，在不改变模型 logits 或需要训练的情况下嵌入个性化消息。该方法利用从生成文本中提取的确定性特征，选择其特征统计与密钥派生目标对齐的输出，从而在保证文本质量的同时实现跨语言和领域的泛化。实验表明，使用稀疏自编码器 (SAE) 作为特征提取器，SAEMark 在多个数据集上实现了卓越的检测精度和文本质量，为闭源 LLM 的可扩展水印提供了一种新的范式。
+
+#水印 #大语言模型 #后处理 #内容溯源 #特征提取- Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
     - Link: https://arxiv.org/abs/2411.10272v1
