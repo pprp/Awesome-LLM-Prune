@@ -16,6 +16,17 @@ We encourage the community to engage with this resource; please leave comments o
 | Label    | <img src=https://img.shields.io/badge/unstructured-turquoise.svg > | <img src=https://img.shields.io/badge/structured-blue.svg > | <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > | <img src=https://img.shields.io/badge/benchmark-purple.svg > |
 
 
+- OverFill: Two-Stage Models for Efficient Language Model Decoding
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Woojeong Kim, Junxiong Wang, Jing Nathan Yan, et al.
+    - Link: http://arxiv.org/pdf/2508.08446v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: The paper introduces OverFill, a two-stage approach to LLM decoding that decouples the prefill and decode stages, using a full model for the compute-intensive prefill and a dense pruned model for the memory-intensive decode. This strategy allows for improved generation quality by leveraging more compute during prefill, while maintaining efficiency during decode, achieving significant performance gains over similarly sized pruned models and matching the performance of models trained from scratch with less data. #Pruning #EfficientLLM #TwoStageDecoding #LLMInference
+    - 摘要: The paper introduces OverFill, a two-stage approach to LLM decoding that decouples the prefill and decode stages, using a full model for the compute-intensive prefill and a dense pruned model for the memory-intensive decode. This strategy allows for improved generation quality by leveraging more compute during prefill, while maintaining efficiency during decode, achieving significant performance gains over similarly sized pruned models and matching the performance of models trained from scratch with less data. #Pruning #EfficientLLM #TwoStageDecoding #LLMInference
+
+
+
 - AgriGPT: a Large Language Model Ecosystem for Agriculture
     - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
     - Author: Bo Yang, Yu Zhang, Lanfei Feng, et al.
