@@ -284,10 +284,10 @@ class PaperSummarizer:
         self.openai_base_url = os.getenv('OPENAI_BASE_URL')
         self.anthropic_api_key = os.getenv('ANTHROPIC_API_KEY')
         
-    def summarize_paper(self, paper: Dict) -> Optional[str]:
-        """Summarize a paper using available LLM APIs"""
+    def summarize_paper(self, paper: Dict) -> tuple[str, str]:
+        """Summarize a paper using available LLM APIs, returns (english_summary, chinese_summary)"""
         
-        prompt = f"""
+        english_prompt = f"""
         Please provide a concise summary of this research paper about LLM pruning in 2-3 sentences. 
         Focus on the key contributions, methods, and results. End with relevant hashtags.
         
@@ -297,6 +297,32 @@ class PaperSummarizer:
         
         Format your response as a single paragraph summary followed by hashtags like #Pruning #Sparse #LLM
         """
+        
+        chinese_prompt = f"""
+        请用中文为这篇关于LLM剪枝的研究论文提供2-3句话的简洁摘要。
+        重点关注关键贡献、方法和结果。以相关标签结尾。
+        
+        标题: {paper['title']}
+        作者: {', '.join(paper['authors'])}
+        摘要: {paper['summary'][:1500]}...
+        
+        请用中文回答，格式为一个段落的摘要，然后是中文标签如 #剪枝 #稀疏 #大语言模型
+        """
+        
+        # Get English summary
+        english_summary = self._get_summary_from_apis(english_prompt)
+        if not english_summary:
+            english_summary = self._generate_basic_summary(paper, "en")
+            
+        # Get Chinese summary
+        chinese_summary = self._get_summary_from_apis(chinese_prompt)
+        if not chinese_summary:
+            chinese_summary = self._generate_basic_summary(paper, "zh")
+            
+        return english_summary, chinese_summary
+        
+    def _get_summary_from_apis(self, prompt: str) -> Optional[str]:
+        """Get summary from available APIs"""
         
         # Try OpenAI first
         if self.openai_api_key:
@@ -316,8 +342,7 @@ class PaperSummarizer:
             except Exception as e:
                 logger.warning(f"Anthropic API failed: {e}")
                 
-        # Return a basic summary if APIs fail
-        return self._generate_basic_summary(paper)
+        return None
         
     def _summarize_with_openai(self, prompt: str) -> Optional[str]:
         """Summarize using OpenAI API"""
@@ -370,9 +395,12 @@ class PaperSummarizer:
             logger.error(f"Anthropic API error: {e}")
             return None
             
-    def _generate_basic_summary(self, paper: Dict) -> str:
+    def _generate_basic_summary(self, paper: Dict, language: str) -> str:
         """Generate a basic summary when APIs are unavailable"""
-        return f"This paper presents research on {paper['title'].lower()}. {paper['summary'][:150]}... <br/>#Pruning #LLM"
+        if language == "zh":
+            return f"这篇论文研究了{paper['title'].lower()}。{paper['summary'][:150]}... <br/>#剪枝 #大语言模型"
+        else:
+            return f"This paper presents research on {paper['title'].lower()}. {paper['summary'][:150]}... <br/>#Pruning #LLM"
 
 class ReadmeUpdater:
     """Handles updating the README.md file"""
@@ -399,7 +427,7 @@ class ReadmeUpdater:
             logger.error(f"Error saving README: {e}")
             return False
             
-    def format_paper_entry(self, paper: Dict, summary: str) -> str:
+    def format_paper_entry(self, paper: Dict, english_summary: str, chinese_summary: str) -> str:
         """Format a paper entry for the README list format"""
         # Format authors - limit to first 3 for space
         authors = paper['authors'][:3]
@@ -418,42 +446,52 @@ class ReadmeUpdater:
     - Link: {paper['link'].replace('/abs/', '/pdf/')} 
     - Code: Not available
     - Pub: Arxiv {paper['published'].year}
-    - Summary: {summary}
-    - 摘要: {summary}"""
+    - Summary: {english_summary}
+    - 摘要: {chinese_summary}"""
         
         return entry
         
-    def update_papers_list(self, content: str, new_papers: List[Dict], summaries: List[str]) -> str:
-        """Update the papers list with new entries"""
+    def update_papers_list(self, content: str, new_papers: List[Dict], summaries: List[tuple]) -> str:
+        """Update the papers list with new entries, adding them to the end"""
         if not new_papers:
             logger.info("No new papers to add")
             return content
             
-        # Find the end of the taxonomy table (after the label row)
-        taxonomy_end = content.find('| <img src=https://img.shields.io/badge/benchmark-purple.svg > |')
-        if taxonomy_end == -1:
-            logger.error("Could not find taxonomy table in README")
-            return content
+        # Find the last paper entry in the README to add after it
+        # Look for the last occurrence of a paper entry pattern
+        lines = content.split('\n')
+        last_paper_end = -1
+        
+        # Find the last line that belongs to a paper entry (摘要: line)
+        for i in range(len(lines) - 1, -1, -1):
+            if lines[i].strip().startswith('- 摘要:') or lines[i].strip().startswith('    - 摘要:'):
+                last_paper_end = i
+                break
+        
+        if last_paper_end == -1:
+            # If no papers found, try to find after taxonomy table
+            taxonomy_end = content.find('| <img src=https://img.shields.io/badge/benchmark-purple.svg > |')
+            if taxonomy_end == -1:
+                logger.error("Could not find insertion point in README")
+                return content
+            insert_pos = content.find('\n', taxonomy_end)
+        else:
+            # Insert after the last paper
+            insert_pos = content.find('\n', sum(len(line) + 1 for line in lines[:last_paper_end + 1]) - 1)
             
-        # Find the next newline after the taxonomy table
-        insert_pos = content.find('\n', taxonomy_end)
-        if insert_pos == -1:
-            logger.error("Could not find insertion point after taxonomy table")
-            return content
+        logger.info(f"Adding {len(new_papers)} new papers to end of README")
             
-        logger.info(f"Adding {len(new_papers)} new papers to README")
-            
-        # Insert new papers at the beginning of the list (after taxonomy table)
+        # Create new entries
         new_entries = []
-        for paper, summary in zip(new_papers, summaries):
-            entry = self.format_paper_entry(paper, summary)
+        for i, (paper, (english_summary, chinese_summary)) in enumerate(zip(new_papers, summaries)):
+            entry = self.format_paper_entry(paper, english_summary, chinese_summary)
             new_entries.append(entry)
             
-        # Add spacing and new entries
+        # Add spacing and new entries at the end
         new_content = (
             content[:insert_pos + 1] + 
             '\n\n' + 
-            '\n\n'.join(new_entries) + '\n\n' +
+            '\n\n'.join(new_entries) +
             content[insert_pos + 1:]
         )
         
@@ -517,46 +555,48 @@ def main():
         logger.info(f"Found {len(new_papers)} total papers, showing first {len(papers_to_process)}. Exiting test mode.")
         sys.exit(0)
     
-    # Process each paper separately and create individual commits
+    # Process all papers in batch and create a single commit
     total_added = 0
+    summaries = []
     
+    # Summarize all papers first
     for i, paper in enumerate(papers_to_process):
-        logger.info(f"Processing paper {i+1}/{len(papers_to_process)} (max 5): {paper['title']}")
+        logger.info(f"Summarizing paper {i+1}/{len(papers_to_process)} (max 5): {paper['title']}")
+        english_summary, chinese_summary = summarizer.summarize_paper(paper)
+        summaries.append((english_summary, chinese_summary))
         
-        # Summarize the paper
-        summary = summarizer.summarize_paper(paper)
-        
-        # Load current README
-        readme_content = updater.load_readme()
-        if not readme_content:
-            logger.error("Failed to load README.md")
-            continue
-            
-        # Update with single paper
-        updated_content = updater.update_papers_list(readme_content, [paper], [summary])
-        
-        # Check if content actually changed
-        if len(updated_content) != len(readme_content):
-            # Save the updated README
-            if updater.save_readme(updated_content):
-                logger.info(f"Successfully added paper: {paper['title']}")
-                total_added += 1
-                
-                # Mark paper as processed
-                tracker.add_processed(paper['id'])
-                
-                # Create individual commit for this paper
-                os.system(f'git add README.md')
-                commit_message = f'Add paper: {paper["title"][:60]}{"..." if len(paper["title"]) > 60 else ""}'
-                os.system(f'git commit -m "{commit_message}"')
-                
-            else:
-                logger.error(f"Failed to save README.md for paper: {paper['title']}")
-        else:
-            logger.info(f"Paper content didn't change README, skipped: {paper['title']}")
-            
         # Add delay to avoid rate limiting
         time.sleep(1)
+    
+    # Load current README once
+    readme_content = updater.load_readme()
+    if not readme_content:
+        logger.error("Failed to load README.md")
+        sys.exit(1)
+        
+    # Update with all papers at once
+    updated_content = updater.update_papers_list(readme_content, papers_to_process, summaries)
+    
+    # Check if content actually changed
+    if len(updated_content) != len(readme_content):
+        # Save the updated README
+        if updater.save_readme(updated_content):
+            logger.info(f"Successfully added {len(papers_to_process)} papers")
+            total_added = len(papers_to_process)
+            
+            # Mark all papers as processed
+            for paper in papers_to_process:
+                tracker.add_processed(paper['id'])
+            
+            # Create single commit for all papers
+            os.system(f'git add README.md')
+            commit_message = f'Add {len(papers_to_process)} new LLM pruning papers'
+            os.system(f'git commit -m "{commit_message}"')
+            
+        else:
+            logger.error("Failed to save README.md")
+    else:
+        logger.info("No changes to README, no papers added")
     
     # Save the updated tracking file with all processed papers (even if limited to 5)
     # This ensures we don't reprocess the same papers in future runs
