@@ -16,6 +16,17 @@ We encourage the community to engage with this resource; please leave comments o
 | Label    | <img src=https://img.shields.io/badge/unstructured-turquoise.svg > | <img src=https://img.shields.io/badge/structured-blue.svg > | <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > | <img src=https://img.shields.io/badge/benchmark-purple.svg > |
 
 
+- AgriGPT: a Large Language Model Ecosystem for Agriculture
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Bo Yang, Yu Zhang, Lanfei Feng, et al.
+    - Link: http://arxiv.org/pdf/2508.08632v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces AgriGPT, a domain-specific LLM ecosystem for agriculture, addressing the lack of specialized models and datasets in this field. The key contributions include Agri-342K, a high-quality QA dataset, Tri-RAG, a three-channel retrieval-augmented generation framework for enhanced factual grounding, and AgriBench-13K, a comprehensive evaluation benchmark. AgriGPT demonstrates significant performance improvements over general-purpose LLMs in agricultural domain adaptation and reasoning, providing a modular framework for developing specialized LLMs. #LLM #Agriculture #DomainSpecific #RetrievalAugmentedGeneration #Benchmark
+    - 摘要: This paper introduces AgriGPT, a domain-specific LLM ecosystem for agriculture, addressing the lack of specialized models and datasets in this field. The key contributions include Agri-342K, a high-quality QA dataset, Tri-RAG, a three-channel retrieval-augmented generation framework for enhanced factual grounding, and AgriBench-13K, a comprehensive evaluation benchmark. AgriGPT demonstrates significant performance improvements over general-purpose LLMs in agricultural domain adaptation and reasoning, providing a modular framework for developing specialized LLMs. #LLM #Agriculture #DomainSpecific #RetrievalAugmentedGeneration #Benchmark
+
+
+
 - Classifier Language Models: Unifying Sparse Finetuning and Adaptive   Tokenization for Specialized Classification Tasks
     - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
     - Author: Adit Krishnan, Chu Wang, Chris Kong
