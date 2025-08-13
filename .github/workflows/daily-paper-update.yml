@@ -43,6 +43,15 @@ jobs:
       run: |
         echo "Checking for new commits..."
         
+        # Set date variables
+        CURRENT_DATE=$(date +'%Y-%m-%d')
+        CURRENT_DATETIME=$(date +'%Y-%m-%d %H:%M:%S UTC')
+        BRANCH_NAME="daily-papers-$(date +'%Y%m%d')"
+        
+        echo "current_date=$CURRENT_DATE" >> $GITHUB_OUTPUT
+        echo "current_datetime=$CURRENT_DATETIME" >> $GITHUB_OUTPUT
+        echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+        
         # Get list of new commits (commits not in origin/main)
         git fetch origin main
         NEW_COMMITS=$(git rev-list HEAD ^origin/main --reverse)
@@ -75,7 +84,7 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "Add new LLM pruning papers"
-        title: "📄 Daily ArXiv Paper Update - $(date +'%Y-%m-%d')"
+        title: "📄 Daily ArXiv Paper Update - ${{ steps.verify-changed-files.outputs.current_date }}"
         body: |
           ## 🔬 New LLM Pruning Papers Found
           
@@ -84,9 +93,9 @@ jobs:
           ${{ steps.verify-changed-files.outputs.commit_messages }}
           
           🤖 Generated automatically by GitHub Actions
-          📅 Run Date: $(date +'%Y-%m-%d %H:%M:%S UTC')
+          📅 Run Date: ${{ steps.verify-changed-files.outputs.current_datetime }}
           🔗 Workflow Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        branch: daily-papers-$(date +'%Y%m%d')
+        branch: ${{ steps.verify-changed-files.outputs.branch_name }}
         delete-branch: true
       
     - name: No changes found
