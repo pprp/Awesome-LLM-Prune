@@ -476,6 +476,53 @@ Part1:
     - Pub: Arxiv 2025
     - Summary: The paper introduces OverFill, a two-stage approach to LLM inference that decouples the prefill and decode stages, using a full model for the compute-intensive prefill and a dense pruned model for the memory-intensive decode. This strategy allows for improved generation quality with minimal latency overhead, achieving significant performance gains over similarly sized pruned models and matching the performance of models trained from scratch with less data. #Pruning #EfficientInference #LLM #TwoStageModel
     - 摘要: 这篇论文提出了OverFill，一种两阶段的大语言模型解码方法，旨在提高推理效率。OverFill利用完整模型进行预填充（prefill）阶段，并行处理输入，然后切换到剪枝后的模型进行解码阶段，从而在保证生成质量的同时，显著降低延迟。实验结果表明，OverFill在多个基准测试中优于同等大小的剪枝模型，甚至可以媲美从头训练的模型，同时减少了训练数据需求。#剪枝 #两阶段模型 #大语言模型 #推理优化 #效率提升
+
+
+- Speed Always Wins: A Survey on Efficient Architectures for Large   Language Models
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Weigao Sun, Jiaxi Hu, Yucheng Zhou, et al.
+    - Link: http://arxiv.org/pdf/2508.09834v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This survey paper provides a comprehensive overview of efficient LLM architectures, focusing on techniques that address the computational limitations of traditional transformers. It categorizes and examines methods like linear and sparse sequence modeling, efficient attention mechanisms, Mixture-of-Experts, and hybrid architectures, highlighting their applications across modalities to enable scalable and resource-aware foundation models. The paper serves as a blueprint for modern efficient LLM design, motivating future research in versatile AI systems. #EfficientLLM #LLMArchitectures #ModelEfficiency #SparseModels #MoE
+    - 摘要: 这篇综述论文系统性地考察了提升大语言模型效率的创新架构，重点关注线性/稀疏序列建模、高效注意力机制变体、稀疏混合专家模型以及混合模型架构等技术。通过对这些技术的分类和讨论，论文旨在为构建更高效、通用的AI系统提供蓝图，并推动未来相关研究。#大语言模型 #高效架构 #模型压缩
+
+- MoIIE: Mixture of Intra- and Inter-Modality Experts for Large Vision   Language Models
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Dianyi Wang, Siyuan Wang, Zejun Li, et al.
+    - Link: http://arxiv.org/pdf/2508.09779v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces MoIIE, a Mixture of Intra- and Inter-Modality Experts, to improve the efficiency of large vision-language models by routing tokens to modality-specific and shared cross-modal experts. Using a two-stage training strategy, MoIIE achieves comparable or superior performance to existing MoE-LLMs with fewer activated parameters, demonstrating effectiveness and generality across different data scales and LLM backbones. #MoE #VisionLanguage #SparseModels #ParameterEfficient #LLM
+    - 摘要: 该论文提出了一种名为MoIIE (Mixture of Intra- and Inter-Modality Experts) 的新型视觉语言大模型稀疏化方法，通过混合模态内和模态间专家，有效提升了模型参数效率。MoIIE根据token的模态类型进行专家路由，使其分别进入模态内专家和共享的模态间专家，从而联合学习丰富的模态内特征和跨模态交互。实验结果表明，MoIIE模型在激活较少参数的情况下，性能可以媲美甚至超越现有的大型MoE视觉语言模型。#剪枝 #稀疏化 #混合专家模型 #视觉语言模型 #多模态学习
+
+- HierMoE: Accelerating MoE Training with Hierarchical Token Deduplication   and Expert Swap
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Wenxiang Lin, Xinglin Pan, Lin Zhang, et al.
+    - Link: http://arxiv.org/pdf/2508.09591v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces HierMoE, a novel system that accelerates the training of Mixture-of-Experts (MoE) models by employing topology-aware techniques: hierarchical token deduplication to reduce communication overhead and expert swapping to balance workloads across GPUs. By theoretically modeling optimal strategies for token duplication and expert swapping, HierMoE achieves significant speedups in communication ($1.55\times$ to $3.32\times$) and end-to-end training ($1.18\times$ to $1.27\times$) compared to existing MoE training systems. #MoE #LLM #DistributedTraining #SparseModels #HierarchicalOptimization
+    - 摘要: 该论文提出了HierMoE，一种通过层级Token去重和专家交换加速MoE模型训练的方法。 HierMoE通过减少通信流量和平衡GPU间负载，显著提升了MoE模型在分布式系统中的可扩展性，实验证明其在DeepSeek-V3和Qwen3-30B-A3B模型上相比现有系统实现了更快的通信速度和端到端训练速度。 #MoE #加速训练 #分布式训练 #通信优化 #负载均衡 #大语言模型
+
+- NeuronTune: Fine-Grained Neuron Modulation for Balanced Safety-Utility   Alignment in LLMs
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Birong Pan, Mayi Xu, Qiankun Pi, et al.
+    - Link: http://arxiv.org/pdf/2508.09473v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: NeuronTune introduces a fine-grained neuron modulation framework for LLMs that balances safety and utility by selectively amplifying safety-critical neurons and suppressing utility-preserving neurons identified through attribution. This meta-learning approach outperforms existing layer-wise methods, achieving superior safety against malicious attacks and reducing unnecessary refusals, all while maintaining high-quality text generation and general task performance. #LLMPruning #NeuronModulation #SafetyAlignment #MetaLearning #SparseNetworks
+    - 摘要: NeuronTune 提出了一种细粒度的神经元调制框架，旨在解决大语言模型在安全性和实用性对齐方面的挑战。该方法通过归因识别安全关键和实用性保留的神经元，并利用元学习自适应地增强安全神经元的激活，抑制实用神经元的激活，从而在提升模型安全性的同时保持其卓越的实用性，显著优于现有技术。#剪枝 #神经元调制 #安全性对齐 #实用性 #大语言模型
+
+- EGGS-PTP: An Expander-Graph Guided Structured Post-training Pruning   Method for Large Language Models
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Omar Bazarbachi, Zijun Sun, Yanning Shen
+    - Link: http://arxiv.org/pdf/2508.09471v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces EGGS-PTP, a novel structured post-training pruning method for LLMs that uses expander graphs to guide N:M sparsity patterns, ensuring efficient information flow and preserving accuracy after pruning. EGGS-PTP achieves significant acceleration and memory savings while outperforming existing structured pruning techniques across various LLMs. #Pruning #Sparse #LLM #Expanders #ModelCompression
+    - 摘要: 这篇论文提出了EGGS-PTP，一种基于扩展图引导的结构化后训练剪枝方法，旨在解决大语言模型部署时的计算和内存挑战。该方法利用图论指导N:M结构化剪枝，通过扩展图确保剪枝后网络的信息流动，从而在显著减少模型大小和计算量的同时，保持甚至超越现有结构化剪枝技术的精度表现。#剪枝 #结构化剪枝 #大语言模型 #后训练剪枝 #扩展图
+
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
