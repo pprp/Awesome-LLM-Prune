@@ -494,9 +494,7 @@ Part1:
     - Code: Not available
     - Pub: Arxiv 2025
     - Summary: This paper introduces MoIIE, a Mixture of Intra- and Inter-Modality Experts, to improve the efficiency of large vision-language models by routing tokens to modality-specific and shared cross-modal experts. Using a two-stage training strategy, MoIIE achieves comparable or superior performance to existing MoE-LLMs with fewer activated parameters, demonstrating effectiveness and generality across different data scales and LLM backbones. #MoE #VisionLanguage #SparseModels #ParameterEfficient #LLM
-    - 摘要: 该论文提出了一种名为MoIIE (Mixture of Intra- and Inter-Modality Experts) 的新型视觉语言大模型稀疏化方法，通过混合模态内和模态间专家，有效提升了模型参数效率。MoIIE根据token的模态类型进行专家路由，使其分别进入模态内专家和共享的模态间专家，从而联合学习丰富的模态内特征和跨模态交互。实验结果表明，MoIIE模型在激活较少参数的情况下，性能可以媲美甚至超越现有的大型MoE视觉语言模型。
-
-#剪枝 #稀疏化 #混合专家模型 #视觉语言模型 #多模态学习
+    - 摘要: 该论文提出了一种名为MoIIE (Mixture of Intra- and Inter-Modality Experts) 的新型视觉语言大模型稀疏化方法，通过混合模态内和模态间专家，有效提升了模型参数效率。MoIIE根据token的模态类型进行专家路由，使其分别进入模态内专家和共享的模态间专家，从而联合学习丰富的模态内特征和跨模态交互。实验结果表明，MoIIE模型在激活较少参数的情况下，性能可以媲美甚至超越现有的大型MoE视觉语言模型。#剪枝 #稀疏化 #混合专家模型 #视觉语言模型 #多模态学习
 
 - HierMoE: Accelerating MoE Training with Hierarchical Token Deduplication   and Expert Swap
     - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
