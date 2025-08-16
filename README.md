@@ -523,6 +523,55 @@ Part1:
     - Summary: This paper introduces EGGS-PTP, a novel structured post-training pruning method for LLMs that uses expander graphs to guide N:M sparsity patterns, ensuring efficient information flow and preserving accuracy after pruning. EGGS-PTP achieves significant acceleration and memory savings while outperforming existing structured pruning techniques across various LLMs. #Pruning #Sparse #LLM #Expanders #ModelCompression
     - 摘要: 这篇论文提出了EGGS-PTP，一种基于扩展图引导的结构化后训练剪枝方法，旨在解决大语言模型部署时的计算和内存挑战。该方法利用图论指导N:M结构化剪枝，通过扩展图确保剪枝后网络的信息流动，从而在显著减少模型大小和计算量的同时，保持甚至超越现有结构化剪枝技术的精度表现。#剪枝 #结构化剪枝 #大语言模型 #后训练剪枝 #扩展图
 
+
+- UI-Venus Technical Report: Building High-performance UI Agents with RFT
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Zhangxuan Gu, Zhengwen Zeng, Zhenyu Xu, et al.
+    - Link: http://arxiv.org/pdf/2508.10833v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces UI-Venus, a high-performance UI agent based on Qwen2.5-VL, which achieves state-of-the-art results on UI grounding and navigation tasks using reinforcement finetuning (RFT) and only screenshot inputs. Key contributions include carefully designed reward functions, efficient data cleaning strategies, and a self-evolving trajectory history alignment with sparse action enhancement to refine reasoning and improve generalization in complex UI tasks, significantly outperforming existing models on benchmarks like Screenspot-V2/Pro and AndroidWorld. #MultimodalLLM #UIAgent #ReinforcementLearning #FineTuning #Qwen
+    - 摘要: UI-Venus 提出了一种基于多模态大语言模型的高性能 UI 智能体，仅以屏幕截图作为输入，通过基于 Qwen2.5-VL 的强化微调 (RFT) 实现了 UI 定位和导航任务的 SOTA 性能。该研究的关键在于精心设计的奖励函数、高效的数据清洗策略，以及用于提升导航性能的自进化轨迹历史对齐和稀疏动作增强方法，最终在标准基准测试和在线 UI 导航平台 AndroidWorld 上均超越了现有模型。#UI智能体 #强化学习 #多模态 #大语言模型 #导航
+
+- Natively Trainable Sparse Attention for Hierarchical Point Cloud   Datasets
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Nicolas Lapautre, Maria Marchenko, Carlos Miguel Patiño, et al.
+    - Link: http://arxiv.org/pdf/2508.10758v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces an adaptation of the Native Sparse Attention (NSA) mechanism within the Erwin architecture to enhance transformer efficiency for large-scale physical system datasets. By modifying NSA for non-sequential data, the authors achieve comparable or superior performance to the original Erwin model across cosmology, molecular dynamics, and air pressure modeling tasks, effectively addressing the quadratic complexity of attention in transformers. #SparseAttention #LLMPruning #Transformers #PhysicalSystems #ErwinArchitecture
+    - 摘要: 该论文提出了一种结合Erwin架构和原生稀疏注意力（NSA）机制的方法，旨在克服Transformer模型在处理大规模物理系统数据时注意力机制的二次复杂度问题。通过将NSA机制适配于非序列数据，并在宇宙学模拟、分子动力学和气压建模等物理科学数据集上进行评估，该模型在性能上达到或超过了原始Erwin模型，有效提升了模型效率和感受野。#剪枝 #稀疏注意力 #Transformer #物理系统建模
+
+- Efficient Methods for Accurate Sparse Trajectory Recovery and Map   Matching
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Wei Tian, Jieming Shi, Man Lung Yiu
+    - Link: http://arxiv.org/pdf/2508.10460v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces TRMMA and MMA, efficient methods for trajectory recovery and map matching of sparse GPS trajectories. MMA uses a classification approach with learned embeddings to accurately map GPS points to road segments, while TRMMA leverages MMA's output and a dual-transformer architecture to infer missing points and generate high-sampling trajectories. The methods effectively improve the quality of sparse trajectory data by aligning it with road networks and increasing sampling rates. #TrajectoryRecovery #MapMatching #SparseData #Transformers #GPSData
+    - 摘要: 该论文提出了一种高效的方法TRMMA和MMA，用于解决稀疏轨迹的恢复和地图匹配问题。MMA首先将GPS点映射到候选路段集合，通过嵌入技术捕捉GPS数据、方向信息和路段的模式，实现精确的地图匹配。TRMMA则在MMA的基础上，利用双Transformer编码过程捕捉轨迹和路线的潜在模式，并解码出路段上的位置比例，从而高效地推断缺失点，恢复高采样率的轨迹。#轨迹恢复 #地图匹配 #稀疏轨迹 #Transformer #嵌入
+
+- Computational Economics in Large Language Models: Exploring Model   Behavior and Incentive Design under Resource Constraints
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Sandeep Reddy, Kabir Khan, Rohit Patil, et al.
+    - Link: http://arxiv.org/pdf/2508.10426v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces a computational economics framework for LLMs, treating them as internal economies that allocate scarce computation resources. They demonstrate that standard LLMs reallocate attention to high-value tokens under resource constraints and propose an incentive-driven training method that encourages sparse activations, achieving significant FLOPS reduction and lower latency compared to post-hoc pruning while maintaining accuracy on GLUE and WikiText-103. #Pruning #SparseTraining #LLM #ComputationalEconomics #EfficientLLM
+    - 摘要: 该研究提出了一种“计算经济学”框架，将大语言模型视为内部资源受限的智能体经济体，通过优化计算资源分配来最大化任务效用。研究表明，在计算资源有限的情况下，标准LLM会重新分配注意力到高价值token，同时保持准确性。基于此，作者提出了一种激励驱动的训练范式，通过引入可微的计算成本项来鼓励稀疏和高效的激活，实验结果表明该方法在GLUE和WikiText-103上优于事后剪枝，在相似准确率下降低了约40%的FLOPS和延迟，并获得了更具可解释性的注意力模式。
+
+#剪枝 #稀疏 #大语言模型 #计算经济学 #效率优化 #激励学习
+
+- Layer-Wise Perturbations via Sparse Autoencoders for Adversarial Text   Generation
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Huizhen Shu, Xuying Li, Qirui Wang, et al.
+    - Link: http://arxiv.org/pdf/2508.10404v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces a novel black-box adversarial text generation method, the Sparse Feature Perturbation Framework (SFPF), which uses sparse autoencoders to identify and perturb critical features in text to jailbreak LLMs. By clustering features from successfully attacked texts and selectively perturbing highly activated ones, SFPF generates adversarial examples that bypass state-of-the-art defenses, revealing vulnerabilities in NLP systems while balancing adversarial effectiveness with safety alignment. #AdversarialAttacks #SparseAutoencoders #LLMSecurity #RedTeaming
+    - 摘要: 该研究提出了一种新颖的黑盒攻击方法，通过稀疏自编码器识别并扰动文本中的关键特征，从而生成对抗性文本以绕过LLM的防御机制。提出的稀疏特征扰动框架（SFPF）通过重建隐藏层表示并聚类成功攻击的文本特征，选择性地扰动高激活特征，在保持恶意意图的同时增强安全信号。实验结果表明，SFPF生成的对抗性文本能够有效绕过现有防御机制，揭示了当前NLP系统的潜在漏洞。
+
+#对抗攻击 #黑盒攻击 #稀疏自编码器 #大语言模型安全 #红队测试
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
