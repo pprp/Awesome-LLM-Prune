@@ -534,15 +534,15 @@ def main():
         logger.info("No new unprocessed papers found - exiting without changes")
         sys.exit(0)
         
-    logger.info(f"Processing {len(new_papers)} new papers (limited to max 5 commits per run)...")
+    logger.info(f"Processing {len(new_papers)} new papers (limited to 1 paper per run)...")
     
-    # STRICT LIMIT: Maximum 5 commits per run to avoid spam
-    MAX_COMMITS_PER_RUN = 5
+    # STRICT LIMIT: Maximum 1 commit per run (one paper per day)
+    MAX_COMMITS_PER_RUN = 1
     papers_to_process = new_papers[:MAX_COMMITS_PER_RUN]
     
     if len(new_papers) > MAX_COMMITS_PER_RUN:
-        logger.info(f"Found {len(new_papers)} papers, but limiting to {MAX_COMMITS_PER_RUN} commits per run")
-        logger.info(f"Remaining {len(new_papers) - MAX_COMMITS_PER_RUN} papers will be processed in next run")
+        logger.info(f"Found {len(new_papers)} papers, but limiting to {MAX_COMMITS_PER_RUN} paper per run (one paper per day)")
+        logger.info(f"Remaining {len(new_papers) - MAX_COMMITS_PER_RUN} papers will be processed in subsequent runs")
     
     if test_mode:
         logger.info("Test mode - showing found papers:")
@@ -555,13 +555,13 @@ def main():
         logger.info(f"Found {len(new_papers)} total papers, showing first {len(papers_to_process)}. Exiting test mode.")
         sys.exit(0)
     
-    # Process all papers in batch and create a single commit
+    # Process papers in batch and create a single commit
     total_added = 0
     summaries = []
     
-    # Summarize all papers first
+    # Summarize papers (should only be 1 paper due to limit)
     for i, paper in enumerate(papers_to_process):
-        logger.info(f"Summarizing paper {i+1}/{len(papers_to_process)} (max 5): {paper['title']}")
+        logger.info(f"Summarizing paper {i+1}/{len(papers_to_process)}: {paper['title']}")
         english_summary, chinese_summary = summarizer.summarize_paper(paper)
         summaries.append((english_summary, chinese_summary))
         
@@ -581,16 +581,19 @@ def main():
     if len(updated_content) != len(readme_content):
         # Save the updated README
         if updater.save_readme(updated_content):
-            logger.info(f"Successfully added {len(papers_to_process)} papers")
+            logger.info(f"Successfully added {len(papers_to_process)} paper(s)")
             total_added = len(papers_to_process)
             
-            # Mark all papers as processed
+            # Mark papers as processed
             for paper in papers_to_process:
                 tracker.add_processed(paper['id'])
             
-            # Create single commit for all papers
+            # Create single commit with specific paper title for better tracking
             os.system(f'git add README.md')
-            commit_message = f'Add {len(papers_to_process)} new LLM pruning papers'
+            if len(papers_to_process) == 1:
+                commit_message = f'Add paper: {papers_to_process[0]["title"]}'
+            else:
+                commit_message = f'Add {len(papers_to_process)} new LLM pruning papers'
             os.system(f'git commit -m "{commit_message}"')
             
         else:
@@ -602,7 +605,7 @@ def main():
     # This ensures we don't reprocess the same papers in future runs
     if total_added > 0:
         tracker.save_processed_ids()
-        logger.info(f"Successfully processed {total_added}/{len(papers_to_process)} papers with individual commits")
+        logger.info(f"Successfully processed {total_added} paper(s)")
         
         if len(new_papers) > MAX_COMMITS_PER_RUN:
             logger.info(f"Note: {len(new_papers) - MAX_COMMITS_PER_RUN} papers remain for next run")
