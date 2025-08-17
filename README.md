@@ -523,6 +523,17 @@ Part1:
     - Summary: This paper introduces EGGS-PTP, a novel structured post-training pruning method for LLMs that uses expander graphs to guide N:M sparsity patterns, ensuring efficient information flow and preserving accuracy after pruning. EGGS-PTP achieves significant acceleration and memory savings while outperforming existing structured pruning techniques across various LLMs. #Pruning #Sparse #LLM #Expanders #ModelCompression
     - 摘要: 这篇论文提出了EGGS-PTP，一种基于扩展图引导的结构化后训练剪枝方法，旨在解决大语言模型部署时的计算和内存挑战。该方法利用图论指导N:M结构化剪枝，通过扩展图确保剪枝后网络的信息流动，从而在显著减少模型大小和计算量的同时，保持甚至超越现有结构化剪枝技术的精度表现。#剪枝 #结构化剪枝 #大语言模型 #后训练剪枝 #扩展图
 
+
+- UI-Venus Technical Report: Building High-performance UI Agents with RFT
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Zhangxuan Gu, Zhengwen Zeng, Zhenyu Xu, et al.
+    - Link: http://arxiv.org/pdf/2508.10833v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces UI-Venus, a high-performance UI agent built upon Qwen2.5-VL, achieving state-of-the-art results in UI grounding and navigation tasks through reinforcement finetuning (RFT) with carefully designed reward functions and data cleaning strategies. A novel "Self-Evolving Trajectory History Alignment & Sparse Action Enhancement" method is proposed to refine reasoning and balance action distribution, significantly boosting navigation performance on complex UI tasks. #MultimodalLLM #UIAgent #ReinforcementLearning #Qwen #Navigation
+    - 摘要: UI-Venus通过基于Qwen2.5-VL的强化微调(RFT)，仅使用少量高质量训练样本，便在UI定位和导航任务上取得了SOTA性能。为实现这一目标，该研究提出了精心设计的奖励函数和高效的数据清洗策略，并引入了自进化轨迹历史对齐与稀疏动作增强方法，以提升导航性能。UI-Venus的7B和72B变体在标准定位基准测试和AndroidWorld导航竞技场上均超越了现有模型。
+
+#多模态 #UI智能体 #强化学习 #微调 #导航
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
