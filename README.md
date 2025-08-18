@@ -523,6 +523,15 @@ Part1:
     - Summary: This paper introduces EGGS-PTP, a novel structured post-training pruning method for LLMs that uses expander graphs to guide N:M sparsity patterns, ensuring efficient information flow and preserving accuracy after pruning. EGGS-PTP achieves significant acceleration and memory savings while outperforming existing structured pruning techniques across various LLMs. #Pruning #Sparse #LLM #Expanders #ModelCompression
     - 摘要: 这篇论文提出了EGGS-PTP，一种基于扩展图引导的结构化后训练剪枝方法，旨在解决大语言模型部署时的计算和内存挑战。该方法利用图论指导N:M结构化剪枝，通过扩展图确保剪枝后网络的信息流动，从而在显著减少模型大小和计算量的同时，保持甚至超越现有结构化剪枝技术的精度表现。#剪枝 #结构化剪枝 #大语言模型 #后训练剪枝 #扩展图
 
+
+- A Tight Lower Bound for Doubling Spanners
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: An La, Hung Le, Shay Solomon, et al.
+    - Link: http://arxiv.org/pdf/2508.11555v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper focuses on the theoretical limits of spanner constructions in doubling metrics, proving a tight lower bound on the number of edges and lightness required for $(1+\epsilon)$-spanners. It demonstrates that, unlike Euclidean spaces, doubling metrics fundamentally require $\tilde{\Omega}(n \cdot \epsilon^{-d+1})$ edges and lightness $\tilde{\Omega}(\epsilon^{-d})$ for any $(1+\epsilon)$-spanner, resolving a long-standing open question. #Spanners #DoublingMetrics #LowerBounds #GraphTheory
+    - 摘要: 该研究证明了在常数维度欧几里得空间中，任何(1+ε)-spanner都存在一个紧下界，即需要tilde{Ω}(n * ε^(-d+1))条边和tilde{Ω}(ε^(-d))的lightness。更重要的是，论文通过构造一个反例，否定了在倍增度量空间中达到与欧几里得空间相同的边数和lightness界限的可能性，从而解决了该领域长期存在的开放性问题。#几何优化 #倍增度量 #近似算法
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
