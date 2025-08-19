@@ -523,6 +523,15 @@ Part1:
     - Summary: This paper introduces EGGS-PTP, a novel structured post-training pruning method for LLMs that uses expander graphs to guide N:M sparsity patterns, ensuring efficient information flow and preserving accuracy after pruning. EGGS-PTP achieves significant acceleration and memory savings while outperforming existing structured pruning techniques across various LLMs. #Pruning #Sparse #LLM #Expanders #ModelCompression
     - 摘要: 这篇论文提出了EGGS-PTP，一种基于扩展图引导的结构化后训练剪枝方法，旨在解决大语言模型部署时的计算和内存挑战。该方法利用图论指导N:M结构化剪枝，通过扩展图确保剪枝后网络的信息流动，从而在显著减少模型大小和计算量的同时，保持甚至超越现有结构化剪枝技术的精度表现。#剪枝 #结构化剪枝 #大语言模型 #后训练剪枝 #扩展图
 
+
+- Accelerating Edge Inference for Distributed MoE Models with   Latency-Optimized Expert Placement
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Tian Wu, Liming Wang, Zijian Wen, et al.
+    - Link: http://arxiv.org/pdf/2508.12851v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces DanceMoE, a framework for efficient Mixture-of-Experts (MoE) inference on collaborative, heterogeneous edge servers. DanceMoE uses an activation-aware expert placement algorithm to minimize cross-server communication and balance memory usage, along with a lightweight migration mechanism to adapt to changing workloads, achieving up to 30.6% lower inference latency compared to existing methods. #EdgeInference #MoE #DistributedSystems #LLM #HeterogeneousComputing
+    - 摘要: 这篇论文提出了DanceMoE，一个高效的MoE模型推理框架，旨在加速边缘环境中分布式MoE模型的推理速度。DanceMoE通过激活感知的专家放置算法，在异构的边缘服务器上实现负载均衡和内存优化，显著降低了跨服务器的通信量，并最终降低了推理延迟，实验结果表明，与现有技术相比，推理延迟降低了高达30.6%。#边缘计算 #MoE #专家放置 #分布式推理 #异构环境
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
