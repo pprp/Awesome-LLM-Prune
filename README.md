@@ -523,6 +523,17 @@ Part1:
     - Summary: This paper introduces EGGS-PTP, a novel structured post-training pruning method for LLMs that uses expander graphs to guide N:M sparsity patterns, ensuring efficient information flow and preserving accuracy after pruning. EGGS-PTP achieves significant acceleration and memory savings while outperforming existing structured pruning techniques across various LLMs. #Pruning #Sparse #LLM #Expanders #ModelCompression
     - 摘要: 这篇论文提出了EGGS-PTP，一种基于扩展图引导的结构化后训练剪枝方法，旨在解决大语言模型部署时的计算和内存挑战。该方法利用图论指导N:M结构化剪枝，通过扩展图确保剪枝后网络的信息流动，从而在显著减少模型大小和计算量的同时，保持甚至超越现有结构化剪枝技术的精度表现。#剪枝 #结构化剪枝 #大语言模型 #后训练剪枝 #扩展图
 
+
+- GeoSAM2: Unleashing the Power of SAM2 for 3D Part Segmentation
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Ken Deng, Yunhan Yang, Jingxiang Sun, et al.
+    - Link: http://arxiv.org/pdf/2508.14036v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces DetailGen3D, a novel generative approach that enhances the geometric detail of 3D shapes produced by modern generation methods by using data-dependent flows in latent space for coarse-to-fine transformation. The method employs a token matching strategy to maintain spatial correspondence during refinement, enabling local detail synthesis without sacrificing global structure. Experiments show DetailGen3D effectively enhances shapes from various 3D generation and reconstruction approaches while maintaining training efficiency. #3DGeneration #GenerativeModels #GeometricDetail #LatentSpace #DetailSynthesis
+    - 摘要: 该研究提出了一种名为DetailGen3D的生成式方法，旨在提升3D生成模型输出的几何细节。它通过在潜在空间中建模数据相关的流来直接进行粗到精的转换，避免了大型3D生成模型的计算负担。实验表明，DetailGen3D能够在保持训练效率的同时，实现高保真度的几何细节合成。
+
+#三维生成 #几何细节增强 #潜在空间流 #数据驱动
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
