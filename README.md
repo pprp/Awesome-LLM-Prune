@@ -523,6 +523,15 @@ Part1:
     - Summary: This paper introduces EGGS-PTP, a novel structured post-training pruning method for LLMs that uses expander graphs to guide N:M sparsity patterns, ensuring efficient information flow and preserving accuracy after pruning. EGGS-PTP achieves significant acceleration and memory savings while outperforming existing structured pruning techniques across various LLMs. #Pruning #Sparse #LLM #Expanders #ModelCompression
     - 摘要: 这篇论文提出了EGGS-PTP，一种基于扩展图引导的结构化后训练剪枝方法，旨在解决大语言模型部署时的计算和内存挑战。该方法利用图论指导N:M结构化剪枝，通过扩展图确保剪枝后网络的信息流动，从而在显著减少模型大小和计算量的同时，保持甚至超越现有结构化剪枝技术的精度表现。#剪枝 #结构化剪枝 #大语言模型 #后训练剪枝 #扩展图
 
+
+- ELATE: Evolutionary Language model for Automated Time-series Engineering
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Andrew Murray, Danial Dervovic, Michael Cashmore
+    - Link: http://arxiv.org/pdf/2508.14667v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: ELATE leverages a language model within an evolutionary framework to automate feature engineering for time-series data, using time-series statistical measures and feature importance metrics to guide and prune features, while the language model proposes new feature transformations. Experiments show that ELATE improves forecasting accuracy by an average of 8.4% across various domains by intelligently exploring and pruning the feature space. #FeatureEngineering #TimeSeries #Automation #LanguageModels
+    - 摘要: ELATE 提出了一种新颖的自动化时间序列特征工程方法，它利用语言模型在进化框架内生成和优化特征。该方法通过时间序列统计指标和特征重要性度量来引导和剪枝特征，并利用语言模型提出上下文相关的特征转换，实验表明，ELATE 在多个领域平均提高了 8.4% 的预测精度。#自动化特征工程 #时间序列预测 #语言模型 #进化算法 #特征剪枝
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
