@@ -523,6 +523,15 @@ Part1:
     - Summary: This paper introduces EGGS-PTP, a novel structured post-training pruning method for LLMs that uses expander graphs to guide N:M sparsity patterns, ensuring efficient information flow and preserving accuracy after pruning. EGGS-PTP achieves significant acceleration and memory savings while outperforming existing structured pruning techniques across various LLMs. #Pruning #Sparse #LLM #Expanders #ModelCompression
     - 摘要: 这篇论文提出了EGGS-PTP，一种基于扩展图引导的结构化后训练剪枝方法，旨在解决大语言模型部署时的计算和内存挑战。该方法利用图论指导N:M结构化剪枝，通过扩展图确保剪枝后网络的信息流动，从而在显著减少模型大小和计算量的同时，保持甚至超越现有结构化剪枝技术的精度表现。#剪枝 #结构化剪枝 #大语言模型 #后训练剪枝 #扩展图
 
+
+- Communication Efficient LLM Pre-training with SparseLoCo
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Amir Sarfi, Benjamin Thérien, Joel Lidin, et al.
+    - Link: http://arxiv.org/pdf/2508.15706v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces SparseLoCo, a novel communication-efficient training algorithm for LLMs that combines Top-k sparsification and quantization to achieve extreme compression ratios (1-3% sparsity, 2-bit quantization). SparseLoCo approximates outer momentum locally with error feedback and sparse aggregation, outperforming full-precision DiLoCo while significantly reducing communication costs in bandwidth-constrained LLM pre-training scenarios. #Pruning #SparseTraining #LLM #DistributedTraining #CommunicationEfficiency
+    - 摘要: 该论文提出了一种名为SparseLoCo的通信高效LLM预训练算法，通过结合Top-k稀疏化和量化技术，在带宽受限的环境下大幅降低通信成本。SparseLoCo的关键在于利用误差反馈近似局部外层动量，并发现稀疏聚合实际上可以提升模型性能，最终实现了优于全精度DiLoCo的性能，同时达到1-3%的稀疏度和2-bit量化的极端压缩率。#剪枝 #稀疏 #大语言模型 #通信高效 #分布式训练
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
