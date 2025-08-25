@@ -532,7 +532,18 @@ Part1:
     - Pub: Arxiv 2025
     - Summary: This paper introduces SparseLoCo, a novel communication-efficient training algorithm for LLMs that combines Top-k sparsification and quantization to achieve extreme compression ratios (1-3% sparsity, 2-bit quantization). SparseLoCo approximates outer momentum locally with error feedback and sparse aggregation, outperforming full-precision DiLoCo while significantly reducing communication costs in bandwidth-constrained LLM pre-training scenarios. #Pruning #SparseTraining #LLM #DistributedTraining #CommunicationEfficiency
     - 摘要: 该论文提出了一种名为SparseLoCo的通信高效LLM预训练算法，通过结合Top-k稀疏化和量化技术，在带宽受限的环境下大幅降低通信成本。SparseLoCo的关键在于利用误差反馈近似局部外层动量，并发现稀疏聚合实际上可以提升模型性能，最终实现了优于全精度DiLoCo的性能，同时达到1-3%的稀疏度和2-bit量化的极端压缩率。#剪枝 #稀疏 #大语言模型 #通信高效 #分布式训练
-- Scaling Law for Post-training after Model Pruning
+
+
+- Sparse but Wrong: Incorrect L0 Leads to Incorrect Features in Sparse   Autoencoders
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: David Chanin, Adrià Garriga-Alonso
+    - Link: http://arxiv.org/pdf/2508.16560v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper investigates the impact of the L0 sparsity parameter on Sparse Autoencoders (SAEs) used for extracting features from LLMs, demonstrating that an incorrectly set L0 leads to the SAE learning mixed or degenerate features instead of the intended single concepts. The authors introduce a method for determining the correct L0 value, showing it aligns with peak sparse probing performance and revealing that many existing SAEs use an L0 that is too low, hindering accurate feature learning. #Pruning #SparseAutoencoders #LLMFeatureExtraction #L0Regularization
+    - 摘要: 该研究表明，稀疏自编码器(SAE)在训练中，L0稀疏度参数的设置至关重要，如果L0设置不当（过低或过高），SAE将无法学习到LLM的正确特征，导致特征混合。论文提出了一种确定正确L0值的方法，并在实验中验证了其有效性，发现常用的SAE的L0值通常偏低。
+
+#剪枝 #稀疏自编码器 #大语言模型 #特征提取 #L0正则化- Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
     - Link: https://arxiv.org/abs/2411.10272v1
