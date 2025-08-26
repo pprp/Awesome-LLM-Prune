@@ -532,7 +532,16 @@ Part1:
     - Pub: Arxiv 2025
     - Summary: This paper introduces SparseLoCo, a novel communication-efficient training algorithm for LLMs that combines Top-k sparsification and quantization to achieve extreme compression ratios (1-3% sparsity, 2-bit quantization). SparseLoCo approximates outer momentum locally with error feedback and sparse aggregation, outperforming full-precision DiLoCo while significantly reducing communication costs in bandwidth-constrained LLM pre-training scenarios. #Pruning #SparseTraining #LLM #DistributedTraining #CommunicationEfficiency
     - 摘要: 该论文提出了一种名为SparseLoCo的通信高效LLM预训练算法，通过结合Top-k稀疏化和量化技术，在带宽受限的环境下大幅降低通信成本。SparseLoCo的关键在于利用误差反馈近似局部外层动量，并发现稀疏聚合实际上可以提升模型性能，最终实现了优于全精度DiLoCo的性能，同时达到1-3%的稀疏度和2-bit量化的极端压缩率。#剪枝 #稀疏 #大语言模型 #通信高效 #分布式训练
-- Scaling Law for Post-training after Model Pruning
+
+
+- Flash Sparse Attention: An Alternative Efficient Implementation of   Native Sparse Attention Kernel
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Ran Yan, Youhe Jiang, Binhang Yuan
+    - Link: http://arxiv.org/pdf/2508.18224v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces Flash Sparse Attention (FSA), an optimized kernel implementation for Native Sparse Attention (NSA) that addresses the limitations of the original NSA kernel's efficiency with smaller Grouped Query Attention (GQA) sizes common in modern LLMs. FSA achieves significant kernel-level latency reduction (up to 3.5x) and end-to-end training/prefill speedups (up to 1.25x and 1.36x, respectively) compared to the vanilla NSA kernel, making sparse attention more practical for a wider range of LLM architectures. #Pruning #SparseAttention #LLM #KernelOptimization #EfficientComputation
+    - 摘要: 这篇论文提出了Flash Sparse Attention (FSA)，一种改进的稀疏注意力核实现，旨在解决原生稀疏注意力(NSA)在小GQA组大小下效率低下的问题。FSA通过优化的内核设计，在现代GPU上实现了更广泛的LLM适用性，并显著提升了训练和推理速度，最高可达3.5倍的内核延迟降低和1.25倍的端到端训练加速。#剪枝 #稀疏注意力 #大语言模型 #GPU优化 #内核优化- Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
     - Link: https://arxiv.org/abs/2411.10272v1
