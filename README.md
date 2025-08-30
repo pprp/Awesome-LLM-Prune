@@ -542,7 +542,16 @@ Part1:
     - Pub: Arxiv 2025
     - Summary: This paper introduces Flash Sparse Attention (FSA), an optimized kernel implementation for Native Sparse Attention (NSA) that addresses the limitations of the original NSA kernel's efficiency with smaller Grouped Query Attention (GQA) sizes common in modern LLMs. FSA achieves significant kernel-level latency reduction (up to 3.5x) and end-to-end training/prefill speedups (up to 1.25x and 1.36x, respectively) compared to the vanilla NSA kernel, making sparse attention more practical for a wider range of LLM architectures. #Pruning #SparseAttention #LLM #KernelOptimization #EfficientComputation
     - 摘要: 这篇论文提出了Flash Sparse Attention (FSA)，一种改进的稀疏注意力核实现，旨在解决原生稀疏注意力(NSA)在小GQA组大小下效率低下的问题。FSA通过优化的内核设计，在现代GPU上实现了更广泛的LLM适用性，并显著提升了训练和推理速度，最高可达3.5倍的内核延迟降低和1.25倍的端到端训练加速。#剪枝 #稀疏注意力 #大语言模型 #GPU优化 #内核优化- Scaling Law for Post-training after Model Pruning
-    - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
+
+
+- MSRS: Evaluating Multi-Source Retrieval-Augmented Generation
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Rohan Phanse, Yijie Zhou, Kejian Shi, et al.
+    - Link: http://arxiv.org/pdf/2508.20867v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces a new framework and two benchmarks, MSRS-Story and MSRS-Meet, to evaluate Retrieval-Augmented Generation (RAG) systems in multi-source information integration and long-form response generation scenarios. The study reveals that generation quality heavily relies on retrieval effectiveness, with reasoning models outperforming standard LLMs in synthesizing information across multiple retrieved sources, even with oracle retrieval. #RAG #RetrievalAugmentedGeneration #MultiSource #Evaluation #LLM
+    - 摘要: 该研究提出了一种新的评估框架，用于测试检索增强生成（RAG）系统在需要整合多个信息源并生成长篇回复时的能力。作者利用该框架构建了两个新的多源检索和合成基准测试集MSRS-Story和MSRS-Meet，并发现生成质量高度依赖于检索效果，且推理模型在多源合成方面优于标准LLM。#检索增强生成 #RAG #多源信息整合 #评估框架 #长文本生成    - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
     - Link: https://arxiv.org/abs/2411.10272v1
     - Code: Not available
