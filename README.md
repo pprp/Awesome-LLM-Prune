@@ -436,8 +436,6 @@ We encourage the community to engage with this resource; please leave comments o
   - Summary: The paper proposes post-training methods for expert pruning and dynamic expert skipping to enhance the deployment efficiency of Mixture-of-Experts (MoE) large language models (LLMs). The expert pruning method permanently removes less important experts to reduce memory usage, while the dynamic expert skipping method selectively skips certain experts during inference to improve inference speed, without compromising model performance. Experiments on the Mixtral 8x7B model demonstrate significant reductions in memory usage and inference speedups.
   - 摘要: 本文提出了用于专家修剪和动态专家跳过的后训练方法,以提高混合专家(MoE)大型语言模型(LLM)的部署效率。专家修剪方法永久删除不太重要的专家以减少内存使用,而动态专家跳过方法在推理过程中选择性地跳过某些专家以提高推理速度,而不会影响模型性能。在Mixtral 8x7B模型上的实验表明,内存使用量显著减少,推理速度也有所提高。
 
-Part1:
-
 - SQFT: Low-cost Model Adaptation in Low-precision Sparse Foundation Models
   - Label: <img src=https://img.shields.io/badge/structured-blue.svg>
   - Author: J. Pablo Muñoz, Jinjie Yuan, Nilesh Jain
@@ -541,7 +539,10 @@ Part1:
     - Code: Not available
     - Pub: Arxiv 2025
     - Summary: This paper introduces Flash Sparse Attention (FSA), an optimized kernel implementation for Native Sparse Attention (NSA) that addresses the limitations of the original NSA kernel's efficiency with smaller Grouped Query Attention (GQA) sizes common in modern LLMs. FSA achieves significant kernel-level latency reduction (up to 3.5x) and end-to-end training/prefill speedups (up to 1.25x and 1.36x, respectively) compared to the vanilla NSA kernel, making sparse attention more practical for a wider range of LLM architectures. #Pruning #SparseAttention #LLM #KernelOptimization #EfficientComputation
-    - 摘要: 这篇论文提出了Flash Sparse Attention (FSA)，一种改进的稀疏注意力核实现，旨在解决原生稀疏注意力(NSA)在小GQA组大小下效率低下的问题。FSA通过优化的内核设计，在现代GPU上实现了更广泛的LLM适用性，并显著提升了训练和推理速度，最高可达3.5倍的内核延迟降低和1.25倍的端到端训练加速。#剪枝 #稀疏注意力 #大语言模型 #GPU优化 #内核优化- Scaling Law for Post-training after Model Pruning
+    - 摘要: 这篇论文提出了Flash Sparse Attention (FSA)，一种改进的稀疏注意力核实现，旨在解决原生稀疏注意力(NSA)在小GQA组大小下效率低下的问题。FSA通过优化的内核设计，在现代GPU上实现了更广泛的LLM适用性，并显著提升了训练和推理速度，最高可达3.5倍的内核延迟降低和1.25倍的端到端训练加速。#剪枝 #稀疏注意力 #大语言模型 #GPU优化 #内核优化
+
+
+- Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
     - Link: https://arxiv.org/abs/2411.10272v1
