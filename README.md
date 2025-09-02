@@ -542,7 +542,16 @@ Part1:
     - Pub: Arxiv 2025
     - Summary: This paper introduces Flash Sparse Attention (FSA), an optimized kernel implementation for Native Sparse Attention (NSA) that addresses the limitations of the original NSA kernel's efficiency with smaller Grouped Query Attention (GQA) sizes common in modern LLMs. FSA achieves significant kernel-level latency reduction (up to 3.5x) and end-to-end training/prefill speedups (up to 1.25x and 1.36x, respectively) compared to the vanilla NSA kernel, making sparse attention more practical for a wider range of LLM architectures. #Pruning #SparseAttention #LLM #KernelOptimization #EfficientComputation
     - 摘要: 这篇论文提出了Flash Sparse Attention (FSA)，一种改进的稀疏注意力核实现，旨在解决原生稀疏注意力(NSA)在小GQA组大小下效率低下的问题。FSA通过优化的内核设计，在现代GPU上实现了更广泛的LLM适用性，并显著提升了训练和推理速度，最高可达3.5倍的内核延迟降低和1.25倍的端到端训练加速。#剪枝 #稀疏注意力 #大语言模型 #GPU优化 #内核优化- Scaling Law for Post-training after Model Pruning
-    - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
+
+
+- Data-driven Discovery of Digital Twins in Biomedical Research
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Clémence Métayer, Annabelle Ballesta, Julien Martinelli
+    - Link: http://arxiv.org/pdf/2508.21484v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper reviews methodologies for automatically inferring digital twins from biological time series data, primarily focusing on symbolic and sparse regression techniques. It evaluates these algorithms based on biological and methodological challenges, finding that sparse regression, especially with Bayesian frameworks, generally outperforms symbolic regression. The review also highlights the potential of deep learning and large language models for prior knowledge integration, while noting the need to improve their reliability and consistency in this context. #DigitalTwins #Biomedical #SparseRegression #SymbolicRegression #LLM
+    - 摘要: 这篇论文综述了从生物医学时间序列数据中自动推断数字孪生的方法，重点评估了符号回归和稀疏回归在应对生物数据特有挑战方面的表现。研究发现，在考虑噪声、不完整数据等因素时，稀疏回归通常优于符号回归，尤其是在贝叶斯框架下，并强调了深度学习和大语言模型在整合先验知识方面的潜力，但其可靠性仍需提升。#数字孪生 #生物医学 #稀疏回归 #大语言模型 #自动化建模    - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
     - Link: https://arxiv.org/abs/2411.10272v1
     - Code: Not available
