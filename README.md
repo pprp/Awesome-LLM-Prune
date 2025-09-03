@@ -542,6 +542,15 @@ We encourage the community to engage with this resource; please leave comments o
     - 摘要: 这篇论文提出了Flash Sparse Attention (FSA)，一种改进的稀疏注意力核实现，旨在解决原生稀疏注意力(NSA)在小GQA组大小下效率低下的问题。FSA通过优化的内核设计，在现代GPU上实现了更广泛的LLM适用性，并显著提升了训练和推理速度，最高可达3.5倍的内核延迟降低和1.25倍的端到端训练加速。#剪枝 #稀疏注意力 #大语言模型 #GPU优化 #内核优化
 
 
+- Data-driven Discovery of Digital Twins in Biomedical Research
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Clémence Métayer, Annabelle Ballesta, Julien Martinelli
+    - Link: http://arxiv.org/pdf/2508.21484v2 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper reviews methodologies for automatically inferring digital twins from biological time series data, primarily focusing on symbolic and sparse regression techniques. It evaluates these algorithms based on challenges specific to biological data, finding that sparse regression, especially with Bayesian frameworks, generally performs better; the paper also highlights the potential of deep learning and large language models for prior knowledge integration in this domain. #DigitalTwins #BiomedicalResearch #SparseRegression #SymbolicRegression #MachineLearning
+    - 摘要: 这篇论文综述了生物医学领域中利用数据驱动方法自动构建数字孪生的研究进展，重点评估了符号回归和稀疏回归等算法在处理生物时间序列数据时面临的挑战。研究表明，在考虑噪声、不完整数据等因素后，稀疏回归（尤其是贝叶斯框架下）通常优于符号回归，同时强调了深度学习和大语言模型在整合先验知识方面的潜力，但其可靠性和一致性仍需提升。#数字孪生 #生物医学 #数据驱动 #稀疏回归 #大语言模型
+
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
