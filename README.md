@@ -542,6 +542,15 @@ We encourage the community to engage with this resource; please leave comments o
     - 摘要: 这篇论文提出了Flash Sparse Attention (FSA)，一种改进的稀疏注意力核实现，旨在解决原生稀疏注意力(NSA)在小GQA组大小下效率低下的问题。FSA通过优化的内核设计，在现代GPU上实现了更广泛的LLM适用性，并显著提升了训练和推理速度，最高可达3.5倍的内核延迟降低和1.25倍的端到端训练加速。#剪枝 #稀疏注意力 #大语言模型 #GPU优化 #内核优化
 
 
+- The Transparent Earth: A Multimodal Foundation Model for the Earth's   Subsurface
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Arnab Mazumder, Javier E. Santos, Noah Hobbs, et al.
+    - Link: http://arxiv.org/pdf/2509.02783v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces the Transparent Earth, a multimodal transformer-based foundation model designed to reconstruct subsurface properties from diverse and sparse datasets. By incorporating positional and modality encodings (derived from text embeddings of modality descriptions), the model effectively integrates heterogeneous data, enabling in-context learning and significantly reducing prediction errors for properties like stress angle. The architecture's scalability and improved performance with increased parameters demonstrate its potential as a foundational tool for predicting various subsurface properties globally. #FoundationModels #MultimodalLearning #Geoscience #InContextLearning
+    - 摘要: 这篇论文提出了“透明地球”，一个基于Transformer的多模态基础模型，旨在利用不同稀疏度、分辨率和模态的异构数据集重建地球次表面的属性。该模型通过结合位置编码和模态编码，实现了对多种地球物理属性（如应力角、地幔温度、板块类型等）的有效预测，并在验证数据上显著降低了应力角预测误差。#多模态学习 #地球科学 #Transformer #基础模型
+
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
