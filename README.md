@@ -542,6 +542,15 @@ We encourage the community to engage with this resource; please leave comments o
     - 摘要: 这篇论文提出了Flash Sparse Attention (FSA)，一种改进的稀疏注意力核实现，旨在解决原生稀疏注意力(NSA)在小GQA组大小下效率低下的问题。FSA通过优化的内核设计，在现代GPU上实现了更广泛的LLM适用性，并显著提升了训练和推理速度，最高可达3.5倍的内核延迟降低和1.25倍的端到端训练加速。#剪枝 #稀疏注意力 #大语言模型 #GPU优化 #内核优化
 
 
+- PagedEviction: Structured Block-wise KV Cache Pruning for Efficient   Large Language Model Inference
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Krishna Teja Chitty-Venkata, Jie Ye, Xian-He Sun, et al.
+    - Link: http://arxiv.org/pdf/2509.04377v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces PagedEviction, a structured block-wise KV cache pruning strategy designed to improve the memory efficiency of LLM inference within vLLM's PagedAttention framework. By intelligently evicting blocks from the KV cache based on a novel algorithm tailored for paged memory layouts, PagedEviction achieves better memory usage and accuracy on long context tasks compared to existing token-level pruning methods, without requiring modifications to CUDA attention kernels. #LLM #Pruning #KVcache #PagedAttention #MemoryOptimization
+    - 摘要: 该论文提出了一种名为PagedEviction的新型KV缓存剪枝策略，旨在提升vLLM中PagedAttention的内存效率。PagedEviction通过针对分页内存布局设计的块状驱逐算法，在不修改CUDA attention内核的情况下，实现了更精细粒度的结构化剪枝，并在长文本任务中展现出比现有方法更好的内存利用率和准确性。#剪枝 #KV缓存 #PagedAttention #大语言模型 #长文本
+
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
