@@ -551,6 +551,17 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: This paper introduces PagedEviction, a structured block-wise KV cache pruning strategy designed to improve the memory efficiency of LLM inference within vLLM's PagedAttention framework. By intelligently evicting blocks from the KV cache based on a novel algorithm tailored for paged memory layouts, PagedEviction achieves better memory usage and accuracy on long context tasks compared to existing token-level pruning methods, without requiring modifications to CUDA attention kernels. #LLM #Pruning #KVcache #PagedAttention #MemoryOptimization
     - 摘要: 该论文提出了一种名为PagedEviction的新型KV缓存剪枝策略，旨在提升vLLM中PagedAttention的内存效率。PagedEviction通过针对分页内存布局设计的块状驱逐算法，在不修改CUDA attention内核的情况下，实现了更精细粒度的结构化剪枝，并在长文本任务中展现出比现有方法更好的内存利用率和准确性。#剪枝 #KV缓存 #PagedAttention #大语言模型 #长文本
 
+
+- RAGuard: A Novel Approach for in-context Safe Retrieval Augmented   Generation for LLMs
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Connor Walker, Koorosh Aslansefat, Mohammad Naveed Akram, et al.
+    - Link: http://arxiv.org/pdf/2509.03768v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: RAGuard is a novel Retrieval-Augmented Generation (RAG) framework designed to enhance safety and accuracy in specialized domains like offshore wind maintenance by integrating safety-critical documents alongside technical manuals. It uses parallel queries to knowledge and safety indices with separate retrieval budgets, and a "SafetyClamp" extension to guarantee safety coverage. Experiments demonstrate a significant increase in Safety Recall@K (from near 0% to over 50%) while maintaining Technical Recall above 60%, establishing a new standard for safety assurance in LLM-powered decision support. #RAG #RetrievalAugmentedGeneration #Safety #LLM #OffshoreWind
+    - 摘要: RAGuard提出了一种新颖的检索增强生成（RAG）框架，通过并行查询知识和安全文档索引，并引入SafetyClamp机制，显著提升了LLM在特定领域（如海上风电维护）中的安全检索能力，同时保持了技术准确性。实验表明，RAGuard及其SafetyClamp扩展将安全召回率从接近0%提升至50%以上，技术召回率保持在60%以上，为关键维护场景中LLM的安全决策支持奠定了基础。
+
+#检索增强生成 #RAG #安全 #大语言模型 #特定领域应用
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
