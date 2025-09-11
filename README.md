@@ -551,6 +551,17 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: This paper introduces PagedEviction, a structured block-wise KV cache pruning strategy designed to improve the memory efficiency of LLM inference within vLLM's PagedAttention framework. By intelligently evicting blocks from the KV cache based on a novel algorithm tailored for paged memory layouts, PagedEviction achieves better memory usage and accuracy on long context tasks compared to existing token-level pruning methods, without requiring modifications to CUDA attention kernels. #LLM #Pruning #KVcache #PagedAttention #MemoryOptimization
     - 摘要: 该论文提出了一种名为PagedEviction的新型KV缓存剪枝策略，旨在提升vLLM中PagedAttention的内存效率。PagedEviction通过针对分页内存布局设计的块状驱逐算法，在不修改CUDA attention内核的情况下，实现了更精细粒度的结构化剪枝，并在长文本任务中展现出比现有方法更好的内存利用率和准确性。#剪枝 #KV缓存 #PagedAttention #大语言模型 #长文本
 
+
+- ChemBOMAS: Accelerated BO in Chemistry with LLM-Enhanced Multi-Agent   System
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Dong Han, Zhehong Ai, Pengxiang Cai, et al.
+    - Link: http://arxiv.org/pdf/2509.08736v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: ChemBOMAS accelerates Bayesian Optimization (BO) in chemistry by using LLMs in a multi-agent system, employing a two-stage approach: knowledge-driven coarse-grained optimization to identify promising regions and data-driven fine-grained optimization to refine BO with LLM-generated pseudo-data. The framework significantly outperforms existing BO algorithms and achieves superior results in wet-lab experiments, demonstrating its practical utility in optimizing challenging chemical reactions. #LLM #BayesianOptimization #Chemistry #DrugDiscovery
+    - 摘要: ChemBOMAS 提出了一种基于大语言模型增强的多智能体系统，用于加速化学领域的贝叶斯优化。该框架通过知识驱动的粗粒度优化（利用 LLM 推理化学知识缩小搜索空间）和数据驱动的细粒度优化（利用 LLM 生成伪数据点增强 BO 过程）相结合，显著提高了优化效率和效果。实验结果表明，ChemBOMAS 在基准测试和湿实验中均优于传统 BO 算法和领域专家，在实际化学反应优化中取得了显著成果。
+
+#贝叶斯优化 #大语言模型 #化学优化 #多智能体系统 #知识驱动 #数据驱动
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
