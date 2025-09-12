@@ -551,6 +551,15 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: This paper introduces PagedEviction, a structured block-wise KV cache pruning strategy designed to improve the memory efficiency of LLM inference within vLLM's PagedAttention framework. By intelligently evicting blocks from the KV cache based on a novel algorithm tailored for paged memory layouts, PagedEviction achieves better memory usage and accuracy on long context tasks compared to existing token-level pruning methods, without requiring modifications to CUDA attention kernels. #LLM #Pruning #KVcache #PagedAttention #MemoryOptimization
     - 摘要: 该论文提出了一种名为PagedEviction的新型KV缓存剪枝策略，旨在提升vLLM中PagedAttention的内存效率。PagedEviction通过针对分页内存布局设计的块状驱逐算法，在不修改CUDA attention内核的情况下，实现了更精细粒度的结构化剪枝，并在长文本任务中展现出比现有方法更好的内存利用率和准确性。#剪枝 #KV缓存 #PagedAttention #大语言模型 #长文本
 
+
+- Efficient Transformer-Based Piano Transcription With Sparse Attention   Mechanisms
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Weixing Wei, Kazuyoshi Yoshii
+    - Link: http://arxiv.org/pdf/2509.09318v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces a computationally efficient Transformer architecture for piano transcription using sparse attention mechanisms, including sliding-window self-attention and a hybrid global-local cross-attention. By incorporating these sparse attention techniques and a hierarchical pooling strategy, the proposed model significantly reduces computational cost and memory usage while maintaining transcription accuracy comparable to full-attention models, enabling the processing of longer audio contexts. #SparseAttention #PianoTranscription #EfficientTransformer #MusicAI
+    - 摘要: 这篇论文提出了一种基于稀疏注意力机制的高效Transformer钢琴转录模型，旨在解决传统Transformer模型在处理长音乐片段时计算复杂度过高的问题。通过引入滑动窗口自注意力机制和混合全局-局部交叉注意力机制，并结合分层池化策略，该模型在保持转录性能的同时，显著降低了计算成本和内存占用，实现了更快的推理速度，并支持更长的音频上下文训练。#钢琴转录 #Transformer #稀疏注意力 #高效模型 #音乐信息处理
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
