@@ -561,6 +561,15 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: This paper introduces DERN (Dropping Experts, Recombining Neurons), a novel retraining-free pruning framework for Sparse Mixture-of-Experts (SMoE) LLMs that addresses neuron-level misalignment issues by pruning redundant experts based on router statistics, decomposing them into neuron-level segments, and recombining these segments into retained experts. Experiments on Mixtral, Qwen, and DeepSeek models demonstrate that DERN achieves over 5% performance improvement on commonsense reasoning and MMLU benchmarks with 50% expert sparsity, while also reducing memory usage and the number of experts. #Pruning #SparseMoE #LLM #RetrainingFree #Mixtral #ModelCompression
     - 摘要: 该论文提出了一种名为DERN (Dropping Experts, Recombining Neurons) 的免训练剪枝框架，用于压缩稀疏混合专家 (SMoE) 大语言模型。DERN通过路由器统计信息剪枝冗余专家，并将剩余专家分解为神经元级别的片段，然后将这些片段重新分配并合并到保留的专家中，从而构建紧凑的表示。实验表明，DERN在不进行额外训练的情况下，在常识推理和MMLU基准测试中将性能提高了 5% 以上，同时显著减少了专家数量和内存使用。
 
+
+- AMQ: Enabling AutoML for Mixed-precision Weight-Only Quantization of   Large Language Models
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Sangjun Lee, Seung-taek Woo, Jungyu Jin, et al.
+    - Link: http://arxiv.org/pdf/2509.12019v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces AMQ, a novel AutoML framework for mixed-precision weight-only quantization of LLMs, which tackles the vast search space of quantization configurations using search space pruning, a quantization proxy, a quality predictor, and an iterative search-and-update strategy. AMQ efficiently identifies Pareto-optimal bit-width configurations, achieving high model quality under strict memory constraints, thus enabling broader LLM deployment. #Quantization #AutoML #LLMPruning #MixedPrecision #WeightOnly
+    - 摘要: 这篇论文提出了AMQ框架，旨在通过自动混合精度权重量化，在严格的内存限制下找到性能最佳的大语言模型。AMQ通过先验知识剪枝搜索空间、量化代理加速搜索、质量预测器减少评估开销以及迭代搜索更新策略，高效探索模型质量和效率之间的平衡，最终获得兼具紧凑性和高性能的量化模型。#量化 #混合精度 #自动化机器学习 #大语言模型 #模型压缩
 #剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
