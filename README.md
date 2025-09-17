@@ -561,6 +561,17 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: This paper introduces DERN (Dropping Experts, Recombining Neurons), a novel retraining-free pruning framework for Sparse Mixture-of-Experts (SMoE) LLMs that addresses neuron-level misalignment issues by pruning redundant experts based on router statistics, decomposing them into neuron-level segments, and recombining these segments into retained experts. Experiments on Mixtral, Qwen, and DeepSeek models demonstrate that DERN achieves over 5% performance improvement on commonsense reasoning and MMLU benchmarks with 50% expert sparsity, while also reducing memory usage and the number of experts. #Pruning #SparseMoE #LLM #RetrainingFree #Mixtral #ModelCompression
     - 摘要: 该论文提出了一种名为DERN (Dropping Experts, Recombining Neurons) 的免训练剪枝框架，用于压缩稀疏混合专家 (SMoE) 大语言模型。DERN通过路由器统计信息剪枝冗余专家，并将剩余专家分解为神经元级别的片段，然后将这些片段重新分配并合并到保留的专家中，从而构建紧凑的表示。实验表明，DERN在不进行额外训练的情况下，在常识推理和MMLU基准测试中将性能提高了 5% 以上，同时显著减少了专家数量和内存使用。
 
+
+- Efficient Cold-Start Recommendation via BPE Token-Level Embedding   Initialization with LLM
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Yushang Zhao, Xinyue Han, Qian Leng, et al.
+    - Link: http://arxiv.org/pdf/2509.13179v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces a novel cold-start recommendation strategy leveraging Byte Pair Encoding (BPE) tokenization and pre-trained Large Language Model (LLM) embeddings to generate fine-grained, subword-level representations for new items, enabling immediate recommendation without interaction history. The proposed BPE-LLM method demonstrates superior performance in Recall@k, NDCG@k, and Hit Rate compared to baselines, showcasing improved generalizability and interpretability, particularly in multilingual and sparse data scenarios. #ColdStartRecommendation #BPE #LLM #TokenEmbeddings #RecommendationSystems
+    - 摘要: 该论文提出了一种基于BPE token级别嵌入初始化和预训练大语言模型（LLM）的高效冷启动推荐策略。该方法利用BPE分词获得细粒度的token级别向量，并将其与LLM嵌入对齐，为未见过的实体提供密集的语义先验，从而在没有用户-物品交互历史的情况下实现即时推荐。实验结果表明，该方法在冷启动场景下优于传统基线，并具有良好的泛化能力和可解释性，尤其是在多语言和稀疏输入环境中。
+
+#冷启动推荐 #BPE分词 #大语言模型 #嵌入初始化 #语义先验
 #剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
