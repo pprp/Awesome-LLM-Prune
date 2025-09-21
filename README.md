@@ -561,6 +561,15 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: This paper introduces DERN (Dropping Experts, Recombining Neurons), a novel retraining-free pruning framework for Sparse Mixture-of-Experts (SMoE) LLMs that addresses neuron-level misalignment issues by pruning redundant experts based on router statistics, decomposing them into neuron-level segments, and recombining these segments into retained experts. Experiments on Mixtral, Qwen, and DeepSeek models demonstrate that DERN achieves over 5% performance improvement on commonsense reasoning and MMLU benchmarks with 50% expert sparsity, while also reducing memory usage and the number of experts. #Pruning #SparseMoE #LLM #RetrainingFree #Mixtral #ModelCompression
     - 摘要: 该论文提出了一种名为DERN (Dropping Experts, Recombining Neurons) 的免训练剪枝框架，用于压缩稀疏混合专家 (SMoE) 大语言模型。DERN通过路由器统计信息剪枝冗余专家，并将剩余专家分解为神经元级别的片段，然后将这些片段重新分配并合并到保留的专家中，从而构建紧凑的表示。实验表明，DERN在不进行额外训练的情况下，在常识推理和MMLU基准测试中将性能提高了 5% 以上，同时显著减少了专家数量和内存使用。
 
+
+- (P)rior(D)yna(F)low: A Priori Dynamic Workflow Construction via   Multi-Agent Collaboration
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Yi Lin, Lujin Zhao, Yijie Shi
+    - Link: http://arxiv.org/pdf/2509.14547v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces Prior DynaFlow, a novel framework for automated LLM workflow construction that combines Q-table learning to leverage historical experience with a priori decision-making based on task progress. By enabling agents to proactively select the most suitable workflow structure and incorporating efficiency mechanisms like cold-start initialization and pruning, Prior DynaFlow achieves significant improvements in task-solving performance while substantially reducing workflow construction and inference costs compared to existing methods. #LLMWorkflows #MultiAgentSystems #DynamicWorkflow #Efficiency #QLearning
+    - 摘要: 该论文提出了一种名为Prior DynaFlow的先验动态工作流构建框架，旨在提升LLM在复杂任务中的表现。该框架通过多智能体协作，结合Q-table学习优化决策空间，并根据任务进度进行先验决策，动态选择更合适的工作流结构。实验结果表明，该方法在提升性能的同时，显著降低了工作流构建和推理成本。#工作流构建 #多智能体协作 #动态调整 #LLM优化
 #剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
