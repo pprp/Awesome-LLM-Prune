@@ -561,6 +561,15 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: This paper introduces DERN (Dropping Experts, Recombining Neurons), a novel retraining-free pruning framework for Sparse Mixture-of-Experts (SMoE) LLMs that addresses neuron-level misalignment issues by pruning redundant experts based on router statistics, decomposing them into neuron-level segments, and recombining these segments into retained experts. Experiments on Mixtral, Qwen, and DeepSeek models demonstrate that DERN achieves over 5% performance improvement on commonsense reasoning and MMLU benchmarks with 50% expert sparsity, while also reducing memory usage and the number of experts. #Pruning #SparseMoE #LLM #RetrainingFree #Mixtral #ModelCompression
     - 摘要: 该论文提出了一种名为DERN (Dropping Experts, Recombining Neurons) 的免训练剪枝框架，用于压缩稀疏混合专家 (SMoE) 大语言模型。DERN通过路由器统计信息剪枝冗余专家，并将剩余专家分解为神经元级别的片段，然后将这些片段重新分配并合并到保留的专家中，从而构建紧凑的表示。实验表明，DERN在不进行额外训练的情况下，在常识推理和MMLU基准测试中将性能提高了 5% 以上，同时显著减少了专家数量和内存使用。
 
+
+- Optimizing Inference in Transformer-Based Models: A Multi-Method   Benchmark
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Siu Hang Ho, Prasad Ganesan, Nguyen Duong, et al.
+    - Link: http://arxiv.org/pdf/2509.17894v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper benchmarks various methods for optimizing inference in Transformer-based models, specifically focusing on the Fast Diffusion Transformer (fast-DiT). It explores pruning, quantization, knowledge distillation, simplified attention mechanisms, and Mixture of Experts (MoE) to reduce computational overhead while maintaining performance. The research provides insights into optimizing inference for large diffusion models by evaluating the trade-offs between efficiency and accuracy for each technique. #Pruning #Quantization #KnowledgeDistillation #LLM #InferenceOptimization #DiffusionModels
+    - 摘要: 这篇论文深入研究了Transformer模型推理加速的多种方法，包括剪枝、量化、知识蒸馏和简化注意力机制，并探索了MoE架构以提升效率。研究重点在于如何在不显著降低性能的前提下，减少计算开销、降低延迟和内存需求，并针对Fast Diffusion Transformer (fast-DiT)模型进行了实验验证。#剪枝 #量化 #知识蒸馏 #模型压缩 #推理加速 #大语言模型
 #剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
