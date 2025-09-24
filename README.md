@@ -561,6 +561,17 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: This paper introduces DERN (Dropping Experts, Recombining Neurons), a novel retraining-free pruning framework for Sparse Mixture-of-Experts (SMoE) LLMs that addresses neuron-level misalignment issues by pruning redundant experts based on router statistics, decomposing them into neuron-level segments, and recombining these segments into retained experts. Experiments on Mixtral, Qwen, and DeepSeek models demonstrate that DERN achieves over 5% performance improvement on commonsense reasoning and MMLU benchmarks with 50% expert sparsity, while also reducing memory usage and the number of experts. #Pruning #SparseMoE #LLM #RetrainingFree #Mixtral #ModelCompression
     - 摘要: 该论文提出了一种名为DERN (Dropping Experts, Recombining Neurons) 的免训练剪枝框架，用于压缩稀疏混合专家 (SMoE) 大语言模型。DERN通过路由器统计信息剪枝冗余专家，并将剩余专家分解为神经元级别的片段，然后将这些片段重新分配并合并到保留的专家中，从而构建紧凑的表示。实验表明，DERN在不进行额外训练的情况下，在常识推理和MMLU基准测试中将性能提高了 5% 以上，同时显著减少了专家数量和内存使用。
 
+
+- Towards Practical Multi-label Causal Discovery in High-Dimensional Event   Sequences via One-Shot Graph Aggregation
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Hugo Math, Rainer Lienhart
+    - Link: http://arxiv.org/pdf/2509.19112v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces CARGO, a scalable two-stage causal discovery method for high-dimensional event sequences, leveraging pre-trained causal Transformers to infer per-sequence causal graphs and then aggregating them using adaptive frequency fusion to reconstruct global Markov boundaries of labels. CARGO demonstrates strong performance on a real-world automotive fault prediction dataset with thousands of event types and imbalanced labels, showcasing its ability to perform structured reasoning at scale. #CausalDiscovery #EventSequences #Transformers #GraphAggregation
+    - 摘要: 该研究提出了一种名为CARGO的可扩展多标签因果发现方法，用于从高维事件序列中推断因果关系。CARGO利用预训练的因果Transformer模型，通过并行推断序列的因果图并使用自适应频率融合进行聚合，高效地重建标签的全局马尔可夫边界，从而在大型数据集上实现结构化推理。在真实的汽车故障预测数据集上的实验结果表明，CARGO具有强大的因果推理能力。
+
+#因果发现 #事件序列 #Transformer #高维数据 #多标签学习
 #剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
