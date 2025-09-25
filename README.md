@@ -561,6 +561,17 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: This paper introduces DERN (Dropping Experts, Recombining Neurons), a novel retraining-free pruning framework for Sparse Mixture-of-Experts (SMoE) LLMs that addresses neuron-level misalignment issues by pruning redundant experts based on router statistics, decomposing them into neuron-level segments, and recombining these segments into retained experts. Experiments on Mixtral, Qwen, and DeepSeek models demonstrate that DERN achieves over 5% performance improvement on commonsense reasoning and MMLU benchmarks with 50% expert sparsity, while also reducing memory usage and the number of experts. #Pruning #SparseMoE #LLM #RetrainingFree #Mixtral #ModelCompression
     - 摘要: 该论文提出了一种名为DERN (Dropping Experts, Recombining Neurons) 的免训练剪枝框架，用于压缩稀疏混合专家 (SMoE) 大语言模型。DERN通过路由器统计信息剪枝冗余专家，并将剩余专家分解为神经元级别的片段，然后将这些片段重新分配并合并到保留的专家中，从而构建紧凑的表示。实验表明，DERN在不进行额外训练的情况下，在常识推理和MMLU基准测试中将性能提高了 5% 以上，同时显著减少了专家数量和内存使用。
 
+
+- AnchDrive: Bootstrapping Diffusion Policies with Hybrid Trajectory   Anchors for End-to-End Driving
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Jinhao Chai, Anqing Jiang, Hao Jiang, et al.
+    - Link: http://arxiv.org/pdf/2509.20253v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: AnchDrive introduces a novel end-to-end driving framework that bootstraps a diffusion policy with hybrid trajectory anchors derived from static driving priors and dynamic, context-aware trajectories decoded by a Transformer. By refining these anchors through trajectory offset prediction, AnchDrive achieves efficient generation of diverse, high-quality trajectories, setting a new state-of-the-art on the NAVSIM benchmark and demonstrating strong generalizability. #DiffusionModels #AutonomousDriving #TrajectoryPrediction #EndToEndDriving
+    - 摘要: AnchDrive提出了一种端到端自动驾驶框架，通过混合轨迹锚点引导扩散策略，有效降低了传统生成模型的计算成本。该方法利用静态驾驶先验和动态上下文感知轨迹作为锚点，驱动扩散模型学习轨迹偏移的分布，从而高效生成高质量且多样化的轨迹。在NAVSIM基准测试上的实验表明，AnchDrive达到了新的state-of-the-art，并展现出强大的泛化能力。
+
+#自动驾驶 #扩散模型 #轨迹预测 #端到端学习
 #剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
