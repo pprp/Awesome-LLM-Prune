@@ -161,9 +161,8 @@ class ArXivPaperFetcher:
         
         # Must have LLM-related terms (REQUIRED - this is the key filter)
         llm_keywords = [
-            'large language model', 'language model', 'llm', 'transformer', 
-            'bert', 'gpt', 'llama', 'chatgpt', 'generative model', 'nlp',
-            'pre-trained model', 'foundation model', 'autoregressive',
+            'large language model', 'language model', 'llm', 'transformer',
+            'bert', 'gpt', 'llama', 'chatgpt', 'foundation model', 'autoregressive',
             't5', 'opt', 'palm', 'claude', 'gemini', 'qwen', 'baichuan'
         ]
         
@@ -184,7 +183,10 @@ class ArXivPaperFetcher:
             'motion generation', 'video', 'image', 'computer vision', 'cv', 'visual',
             'robotics', 'control', 'mechanical', 'hardware design', 'circuit',
             'convolutional neural network', 'cnn', 'image classification', 'object detection',
-            'medical imaging', 'recommendation system', 'graph neural', 'reinforcement learning'
+            'medical imaging', 'recommendation system', 'graph neural', 'reinforcement learning',
+            'vision transformer', 'vit', 'speech', 'audio', 'sound', 'acoustic',
+            'segmentation', 'image generation', 'point cloud', 'gan',
+            'generative adversarial network', 'diffusion model'
         ]
         
         has_exclude = any(keyword in title_lower or keyword in abstract_lower for keyword in exclude_keywords)
