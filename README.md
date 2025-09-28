@@ -561,6 +561,17 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: This paper introduces DERN (Dropping Experts, Recombining Neurons), a novel retraining-free pruning framework for Sparse Mixture-of-Experts (SMoE) LLMs that addresses neuron-level misalignment issues by pruning redundant experts based on router statistics, decomposing them into neuron-level segments, and recombining these segments into retained experts. Experiments on Mixtral, Qwen, and DeepSeek models demonstrate that DERN achieves over 5% performance improvement on commonsense reasoning and MMLU benchmarks with 50% expert sparsity, while also reducing memory usage and the number of experts. #Pruning #SparseMoE #LLM #RetrainingFree #Mixtral #ModelCompression
     - 摘要: 该论文提出了一种名为DERN (Dropping Experts, Recombining Neurons) 的免训练剪枝框架，用于压缩稀疏混合专家 (SMoE) 大语言模型。DERN通过路由器统计信息剪枝冗余专家，并将剩余专家分解为神经元级别的片段，然后将这些片段重新分配并合并到保留的专家中，从而构建紧凑的表示。实验表明，DERN在不进行额外训练的情况下，在常识推理和MMLU基准测试中将性能提高了 5% 以上，同时显著减少了专家数量和内存使用。
 
+
+- NIRVANA: Structured pruning reimagined for large language models   compression
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Mengting Ai, Tianxin Wei, Sirui Chen, et al.
+    - Link: http://arxiv.org/pdf/2509.14230v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: NIRVANA introduces a structured pruning method for LLMs that balances zero-shot accuracy and fine-tuning capability by using a Neural Tangent Kernel-derived saliency criterion and adaptive sparsity allocation across layers and modules. It also employs KL divergence-based calibration data selection for more reliable pruning. Experiments on Llama3, Qwen, and T5 show NIRVANA outperforms existing structured pruning methods. #Pruning #Sparse #LLM #NIRVANA #LanguageModels #Efficiency #Compression
+    - 摘要: NIRVANA 提出了一种新的大语言模型结构化剪枝方法，旨在平衡零样本精度保持和微调能力。该方法基于神经正切核推导出的Adam优化动态的一阶显著性准则进行剪枝，并结合自适应稀疏分配机制和KL散度校准数据选择策略，以提高剪枝的鲁棒性和泛化性。实验结果表明，NIRVANA 在 Llama3、Qwen 和 T5 模型上优于现有的结构化剪枝方法。
+
+#剪枝 #稀疏 #大语言模型 #结构化剪枝 #神经正切核 #微调
 #剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
