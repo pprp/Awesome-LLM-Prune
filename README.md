@@ -561,6 +561,15 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: This paper introduces DERN (Dropping Experts, Recombining Neurons), a novel retraining-free pruning framework for Sparse Mixture-of-Experts (SMoE) LLMs that addresses neuron-level misalignment issues by pruning redundant experts based on router statistics, decomposing them into neuron-level segments, and recombining these segments into retained experts. Experiments on Mixtral, Qwen, and DeepSeek models demonstrate that DERN achieves over 5% performance improvement on commonsense reasoning and MMLU benchmarks with 50% expert sparsity, while also reducing memory usage and the number of experts. #Pruning #SparseMoE #LLM #RetrainingFree #Mixtral #ModelCompression
     - 摘要: 该论文提出了一种名为DERN (Dropping Experts, Recombining Neurons) 的免训练剪枝框架，用于压缩稀疏混合专家 (SMoE) 大语言模型。DERN通过路由器统计信息剪枝冗余专家，并将剩余专家分解为神经元级别的片段，然后将这些片段重新分配并合并到保留的专家中，从而构建紧凑的表示。实验表明，DERN在不进行额外训练的情况下，在常识推理和MMLU基准测试中将性能提高了 5% 以上，同时显著减少了专家数量和内存使用。
 
+
+- A Sentinel-3 foundation model for ocean colour
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Geoffrey Dawson, Remy Vandaele, Andrew Taylor, et al.
+    - Link: http://arxiv.org/pdf/2509.21273v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces a novel foundation model for ocean color based on the Prithvi-EO Vision Transformer, pre-trained on Sentinel-3 OLCI data using a self-supervised reconstruction task. The model demonstrates strong performance when fine-tuned for chlorophyll concentration estimation and ocean primary production refinement, showcasing its ability to leverage limited labeled data and capture detailed spatial patterns. #FoundationModels #OceanColor #RemoteSensing #SelfSupervisedLearning #VisionTransformer
+    - 摘要: 该研究提出了一种基于Prithvi-EO Vision Transformer架构的Sentinel-3海洋颜色基础模型，通过自监督预训练重建OLCI数据。该模型在叶绿素浓度量化和海洋初级生产力估算两个下游任务上进行了微调评估，结果表明其在利用少量高质量标注数据和捕捉海洋颜色空间细节方面优于现有基线模型，展现了其在海洋监测领域的潜力。 #海洋颜色 #基础模型 #自监督学习 #Vision Transformer #Sentinel-3
 #剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
