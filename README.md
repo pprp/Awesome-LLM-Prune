@@ -571,6 +571,15 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: NIRVANA introduces a structured pruning method for LLMs that balances zero-shot accuracy and fine-tuning capability by using a Neural Tangent Kernel-derived saliency criterion and adaptive sparsity allocation across layers and modules. It also employs KL divergence-based calibration data selection for more reliable pruning. Experiments on Llama3, Qwen, and T5 show NIRVANA outperforms existing structured pruning methods. #Pruning #Sparse #LLM #NIRVANA #LanguageModels #Efficiency #Compression
     - 摘要: NIRVANA 提出了一种新的大语言模型结构化剪枝方法，旨在平衡零样本精度保持和微调能力。该方法基于神经正切核推导出的Adam优化动态的一阶显著性准则进行剪枝，并结合自适应稀疏分配机制和KL散度校准数据选择策略，以提高剪枝的鲁棒性和泛化性。实验结果表明，NIRVANA 在 Llama3、Qwen 和 T5 模型上优于现有的结构化剪枝方法。
 
+
+- Linear Causal Representation Learning by Topological Ordering, Pruning,   and Disentanglement
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Hao Chen, Lin Liu, Yu Guang Wang
+    - Link: http://arxiv.org/pdf/2509.22553v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces a novel linear Causal Representation Learning (CRL) algorithm for disentangling latent causal features in linear structural causal models, operating under weaker assumptions than existing methods regarding environment heterogeneity and data-generating distributions. The algorithm leverages topological ordering, pruning, and disentanglement techniques, demonstrating superior performance in synthetic experiments and showing potential for interpretability analysis in large language models (LLMs) by identifying causal relationships within their latent representations. #CausalRepresentationLearning #Disentanglement #LLMInterpretability #CausalAI
+    - 摘要: 这篇论文提出了一种新的线性因果表示学习算法，旨在从观测数据中恢复潜在的因果特征，并放宽了现有方法对环境异质性和数据生成分布的严格假设。该算法通过拓扑排序、剪枝和解耦技术，在较弱的假设下实现了潜在因果特征的恢复，并在合成实验和大语言模型的可解释性分析中验证了其优越性。#因果表示学习 #线性模型 #拓扑排序 #解耦 #大语言模型可解释性
 #剪枝 #稀疏 #大语言模型 #结构化剪枝 #神经正切核 #微调
 #剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
 - Scaling Law for Post-training after Model Pruning
