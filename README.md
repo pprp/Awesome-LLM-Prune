@@ -571,6 +571,17 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: NIRVANA introduces a structured pruning method for LLMs that balances zero-shot accuracy and fine-tuning capability by using a Neural Tangent Kernel-derived saliency criterion and adaptive sparsity allocation across layers and modules. It also employs KL divergence-based calibration data selection for more reliable pruning. Experiments on Llama3, Qwen, and T5 show NIRVANA outperforms existing structured pruning methods. #Pruning #Sparse #LLM #NIRVANA #LanguageModels #Efficiency #Compression
     - 摘要: NIRVANA 提出了一种新的大语言模型结构化剪枝方法，旨在平衡零样本精度保持和微调能力。该方法基于神经正切核推导出的Adam优化动态的一阶显著性准则进行剪枝，并结合自适应稀疏分配机制和KL散度校准数据选择策略，以提高剪枝的鲁棒性和泛化性。实验结果表明，NIRVANA 在 Llama3、Qwen 和 T5 模型上优于现有的结构化剪枝方法。
 
+
+- GRACE-MoE: Grouping and Replication with Locality-Aware Routing for   Efficient Distributed MoE Inference
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Yu Han, Lehan Pan, Jie Peng, et al.
+    - Link: http://arxiv.org/pdf/2509.25041v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: The paper introduces GRACE-MoE, a co-optimization framework designed to enhance distributed inference of Sparse Mixture of Experts (SMoE) models by addressing communication overhead and computational load imbalance. GRACE-MoE achieves this through grouping experts based on affinity and dynamic replication to reduce cross-device communication and mitigate load skew, coupled with a locality-aware routing strategy that incorporates load prediction. This approach aims to improve the efficiency and scalability of SMoE models in distributed environments. #MoE #DistributedInference #LoadBalancing #CommunicationOptimization #LLM
+    - 摘要: 这篇论文提出了GRACE-MoE，一个针对稀疏混合专家模型（SMoE）的分布式推理优化框架。该框架通过专家分组和动态复制来减少跨设备通信，并采用局部感知路由策略来平衡计算负载，从而实现高效的分布式SMoE推理。实验结果表明，GRACE-MoE能够有效降低通信开销并缓解负载不均衡问题。
+
+#剪枝 #稀疏混合专家模型 #分布式推理 #负载均衡 #大语言模型
 #剪枝 #稀疏 #大语言模型 #结构化剪枝 #神经正切核 #微调
 #剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
 - Scaling Law for Post-training after Model Pruning
