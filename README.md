@@ -571,6 +571,15 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: NIRVANA introduces a structured pruning method for LLMs that balances zero-shot accuracy and fine-tuning capability by using a Neural Tangent Kernel-derived saliency criterion and adaptive sparsity allocation across layers and modules. It also employs KL divergence-based calibration data selection for more reliable pruning. Experiments on Llama3, Qwen, and T5 show NIRVANA outperforms existing structured pruning methods. #Pruning #Sparse #LLM #NIRVANA #LanguageModels #Efficiency #Compression
     - 摘要: NIRVANA 提出了一种新的大语言模型结构化剪枝方法，旨在平衡零样本精度保持和微调能力。该方法基于神经正切核推导出的Adam优化动态的一阶显著性准则进行剪枝，并结合自适应稀疏分配机制和KL散度校准数据选择策略，以提高剪枝的鲁棒性和泛化性。实验结果表明，NIRVANA 在 Llama3、Qwen 和 T5 模型上优于现有的结构化剪枝方法。
 
+
+- CAST: Continuous and Differentiable Semi-Structured Sparsity-Aware   Training for Large Language Models
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Weiyu Huang, Yuezhou Hu, Jun Zhu, et al.
+    - Link: http://arxiv.org/pdf/2509.25996v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces CAST, a novel continuous and differentiable sparsity-aware training framework for LLMs that enables joint optimization of weights and semi-structured sparsity patterns. CAST incorporates AdamS, Weight Scaling, and Knowledge Distillation to achieve superior performance compared to existing methods, demonstrated by minimal perplexity increase and even accuracy gains on models up to 13B parameters with significantly reduced training resources. #Pruning #Sparse #LLM #SparsityAwareTraining #N:MSparsity #LargeLanguageModels
+    - 摘要: 这篇论文提出了一个名为CAST的连续可微的半结构化稀疏训练框架，用于高效地剪枝大语言模型。CAST通过联合优化稀疏模式和权重，并引入自适应L1衰减的优化器AdamS、权重缩放模块和知识蒸馏，实现了在保持模型性能的同时，显著提升稀疏训练的效果。实验结果表明，CAST在多种模型上，以极少的训练资源，超越了现有的稀疏训练方法，并在LLaMA2-7B上实现了几乎与稠密模型相当甚至更优的性能。#剪枝 #稀疏 #大语言模型 #半结构化稀疏 #知识蒸馏 #优化器
 #剪枝 #稀疏 #大语言模型 #结构化剪枝 #神经正切核 #微调
 #剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
 - Scaling Law for Post-training after Model Pruning
