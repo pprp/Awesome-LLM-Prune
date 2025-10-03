@@ -571,6 +571,15 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: NIRVANA introduces a structured pruning method for LLMs that balances zero-shot accuracy and fine-tuning capability by using a Neural Tangent Kernel-derived saliency criterion and adaptive sparsity allocation across layers and modules. It also employs KL divergence-based calibration data selection for more reliable pruning. Experiments on Llama3, Qwen, and T5 show NIRVANA outperforms existing structured pruning methods. #Pruning #Sparse #LLM #NIRVANA #LanguageModels #Efficiency #Compression
     - 摘要: NIRVANA 提出了一种新的大语言模型结构化剪枝方法，旨在平衡零样本精度保持和微调能力。该方法基于神经正切核推导出的Adam优化动态的一阶显著性准则进行剪枝，并结合自适应稀疏分配机制和KL散度校准数据选择策略，以提高剪枝的鲁棒性和泛化性。实验结果表明，NIRVANA 在 Llama3、Qwen 和 T5 模型上优于现有的结构化剪枝方法。
 
+
+- Contrastive Retrieval Heads Improve Attention-Based Re-Ranking
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Linh Tran, Yulong Li, Radu Florian, et al.
+    - Link: http://arxiv.org/pdf/2510.02219v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces "CoRe" heads, a contrastive scoring method to identify and leverage a small subset of highly discriminative attention heads in LLMs for re-ranking tasks. By focusing on heads that correlate with relevant documents and downplaying those associated with irrelevant ones, CoRe heads achieve state-of-the-art re-ranking accuracy using less than 1% of all heads and enabling significant inference speedups through layer pruning. #LLMPruning #AttentionHeads #InformationRetrieval #ContrastiveLearning
+    - 摘要: 该研究提出了一种名为CoRe heads的对比检索头方法，通过对比学习的方式筛选出与相关文档高度相关的少量（<1%）高注意力头，用于提升基于LLM的重排序性能。实验表明，CoRe heads显著优于现有基线，并且主要集中在中间层，通过剪枝后50%的层，可以在保持精度的前提下大幅减少推理时间和内存使用。#剪枝 #对比学习 #大语言模型 #重排序 #注意力机制
 #剪枝 #稀疏 #大语言模型 #结构化剪枝 #神经正切核 #微调
 #剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
 - Scaling Law for Post-training after Model Pruning
