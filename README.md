@@ -571,6 +571,15 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: NIRVANA introduces a structured pruning method for LLMs that balances zero-shot accuracy and fine-tuning capability by using a Neural Tangent Kernel-derived saliency criterion and adaptive sparsity allocation across layers and modules. It also employs KL divergence-based calibration data selection for more reliable pruning. Experiments on Llama3, Qwen, and T5 show NIRVANA outperforms existing structured pruning methods. #Pruning #Sparse #LLM #NIRVANA #LanguageModels #Efficiency #Compression
     - 摘要: NIRVANA 提出了一种新的大语言模型结构化剪枝方法，旨在平衡零样本精度保持和微调能力。该方法基于神经正切核推导出的Adam优化动态的一阶显著性准则进行剪枝，并结合自适应稀疏分配机制和KL散度校准数据选择策略，以提高剪枝的鲁棒性和泛化性。实验结果表明，NIRVANA 在 Llama3、Qwen 和 T5 模型上优于现有的结构化剪枝方法。
 
+
+- FocusAgent: Simple Yet Effective Ways of Trimming the Large Context of   Web Agents
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Imene Kerboua, Sahar Omidi Shayegan, Megh Thakkar, et al.
+    - Link: http://arxiv.org/pdf/2510.03204v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: FocusAgent, a novel pruning method for LLM-powered web agents, uses a lightweight LLM retriever to selectively extract relevant content from web page accessibility trees (AxTrees) based on task goals, thereby reducing context size and computational cost. Experiments on WorkArena and WebArena demonstrate that FocusAgent matches the performance of strong baselines while achieving over 50% reduction in observation size and significantly mitigating prompt-injection attack success rates. #LLMPruning #WebAgents #InformationRetrieval #PromptInjectionDefense
+    - 摘要: FocusAgent 提出了一种简单有效的 LLM 剪枝方法，通过轻量级 LLM 检索器从网页可访问性树 (AxTree) 中提取与任务目标最相关的行，从而显著减少了 Web Agent 处理的上下文长度。实验表明，FocusAgent 在 WorkArena 和 WebArena 基准测试中，能够在保持甚至提高性能的同时，将观察大小减少 50% 以上，并有效降低了 prompt 注入攻击的成功率。#剪枝 #WebAgent #大语言模型 #上下文压缩 #信息检索 #安全
 #剪枝 #稀疏 #大语言模型 #结构化剪枝 #神经正切核 #微调
 #剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
 - Scaling Law for Post-training after Model Pruning
