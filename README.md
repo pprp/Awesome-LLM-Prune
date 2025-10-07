@@ -571,6 +571,15 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: NIRVANA introduces a structured pruning method for LLMs that balances zero-shot accuracy and fine-tuning capability by using a Neural Tangent Kernel-derived saliency criterion and adaptive sparsity allocation across layers and modules. It also employs KL divergence-based calibration data selection for more reliable pruning. Experiments on Llama3, Qwen, and T5 show NIRVANA outperforms existing structured pruning methods. #Pruning #Sparse #LLM #NIRVANA #LanguageModels #Efficiency #Compression
     - 摘要: NIRVANA 提出了一种新的大语言模型结构化剪枝方法，旨在平衡零样本精度保持和微调能力。该方法基于神经正切核推导出的Adam优化动态的一阶显著性准则进行剪枝，并结合自适应稀疏分配机制和KL散度校准数据选择策略，以提高剪枝的鲁棒性和泛化性。实验结果表明，NIRVANA 在 Llama3、Qwen 和 T5 模型上优于现有的结构化剪枝方法。
 
+
+- Boomerang Distillation Enables Zero-Shot Model Size Interpolation
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Sara Kangaslahti, Nihal V. Nayak, Jonathan Geuter, et al.
+    - Link: http://arxiv.org/pdf/2510.05064v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces "Boomerang Distillation," a novel zero-shot method for generating intermediate-sized LLMs by distilling a large teacher model into a small student and then progressively re-incorporating teacher layers back into the student, creating a smooth performance scaling across model sizes without further training. The method leverages alignment between teacher and student through pruning and distillation to achieve performance comparable to or exceeding independently trained or distilled models of similar sizes, offering a cost-effective way to create fine-grained model families. #LLMPruning #ZeroShotLearning #ModelInterpolation #KnowledgeDistillation #EfficientLLM
+    - 摘要: 这篇论文提出了一种名为“回旋镖蒸馏”（Boomerang Distillation）的新方法，它通过先将大型语言模型蒸馏成小型模型，然后逐步将教师模型的层重新合并到学生模型中，无需额外训练即可生成零样本插值模型。这种方法能够高效地创建细粒度的模型家族，在多种部署环境下实现灵活的适应，并且性能可以平滑地在学生和教师模型之间缩放，甚至超过相同大小的预训练或蒸馏模型。#剪枝 #知识蒸馏 #模型插值 #大语言模型 #零样本学习
 #剪枝 #稀疏 #大语言模型 #结构化剪枝 #神经正切核 #微调
 #剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
 - Scaling Law for Post-training after Model Pruning
