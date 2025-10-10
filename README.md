@@ -571,6 +571,15 @@ We encourage the community to engage with this resource; please leave comments o
     - Summary: NIRVANA introduces a structured pruning method for LLMs that balances zero-shot accuracy and fine-tuning capability by using a Neural Tangent Kernel-derived saliency criterion and adaptive sparsity allocation across layers and modules. It also employs KL divergence-based calibration data selection for more reliable pruning. Experiments on Llama3, Qwen, and T5 show NIRVANA outperforms existing structured pruning methods. #Pruning #Sparse #LLM #NIRVANA #LanguageModels #Efficiency #Compression
     - 摘要: NIRVANA 提出了一种新的大语言模型结构化剪枝方法，旨在平衡零样本精度保持和微调能力。该方法基于神经正切核推导出的Adam优化动态的一阶显著性准则进行剪枝，并结合自适应稀疏分配机制和KL散度校准数据选择策略，以提高剪枝的鲁棒性和泛化性。实验结果表明，NIRVANA 在 Llama3、Qwen 和 T5 模型上优于现有的结构化剪枝方法。
 
+
+- DeepPrune: Parallel Scaling without Inter-trace Redundancy
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Shangqing Tu, Yaxuan Li, Yushi Bai, et al.
+    - Link: http://arxiv.org/pdf/2510.08483v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: DeepPrune introduces a novel framework for efficient parallel scaling of LLMs by dynamically pruning redundant reasoning traces. It employs a judge model, trained with focal loss and oversampling, to predict answer equivalence from partial traces, coupled with an online greedy clustering algorithm to prune redundant paths while preserving answer diversity, achieving over 80% token reduction with minimal accuracy loss compared to consensus sampling. #Pruning #LLM #ParallelScaling #ReasoningEfficiency #DeepLearning
+    - 摘要: DeepPrune提出了一种新颖的LLM并行推理剪枝框架，旨在解决并行CoT推理中大量冗余计算的问题。该方法通过训练一个判别模型来预测推理轨迹的答案等价性，并结合在线贪婪聚类算法动态剪枝冗余路径，从而在保证答案多样性的同时显著减少计算量。实验表明，DeepPrune在多个基准测试中实现了超过80%的token缩减，且精度损失在3个百分点以内，为高效并行推理树立了新标准。#剪枝 #并行推理 #大语言模型 #效率优化 #CoT
 #剪枝 #稀疏 #大语言模型 #结构化剪枝 #神经正切核 #微调
 #剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
 - Scaling Law for Post-training after Model Pruning
