@@ -590,7 +590,16 @@ We encourage the community to engage with this resource; please leave comments o
     - Pub: Arxiv 2025
     - Summary: This paper introduces CAST, a novel continuous and differentiable sparsity-aware training framework for LLMs that enables joint optimization of sparsity patterns and weights, progressively transforming the model into a semi-structured (N:M) sparse format. CAST incorporates AdamS, a sparsity-aware optimizer, weight scaling, and knowledge distillation to achieve improved perplexity and zero-shot accuracy compared to previous methods, even with limited training resources, as demonstrated on models up to 13B parameters. #Pruning #Sparse #LLM #SparsityAwareTraining #NMSparsity #KnowledgeDistillation
     - 摘要: 该论文提出了CAST，一个连续且可微的稀疏感知训练框架，用于训练半结构化（N:M）稀疏大语言模型。CAST通过联合优化稀疏模式和权重，并引入自适应L1衰减、权重缩放和知识蒸馏等关键技术，显著提升了稀疏模型的性能，在多种模型上实现了优于现有方法的困惑度和零样本精度，同时减少了训练资源。#剪枝 #稀疏 #大语言模型 #半结构化稀疏
- 
+
+
+- DeepPrune: Parallel Scaling without Inter-trace Redundancy
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Shangqing Tu, Yaxuan Li, Yushi Bai, et al.
+    - Link: http://arxiv.org/pdf/2510.08483v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: The paper introduces DeepPrune, a novel framework for efficient parallel scaling of LLMs that tackles the problem of inter-trace redundancy in Chain-of-Thought reasoning. DeepPrune uses a judge model to predict answer equivalence from partial traces and an online greedy clustering algorithm to dynamically prune redundant reasoning paths, achieving over 80% token reduction while maintaining competitive accuracy. This approach significantly improves the efficiency of parallel reasoning in LLMs. #Pruning #LLM #EfficientInference #ParallelScaling #ChainOfThought
+    - 摘要: DeepPrune 提出了一种通过动态剪枝实现高效并行推理的新框架，旨在解决并行 CoT 推理中存在的冗余计算问题。该方法利用一个专门训练的判别模型预测答案等价性，并结合在线贪婪聚类算法动态剪枝冗余路径，从而在保证答案多样性的同时，显著减少计算量，实验表明，DeepPrune 在多个基准测试中实现了超过 80% 的 token 减少，同时保持了具有竞争力的准确率。#剪枝 #并行推理 #大语言模型 #效率优化 #CoT 
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
