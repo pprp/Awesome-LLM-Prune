@@ -580,8 +580,17 @@ We encourage the community to engage with this resource; please leave comments o
     - Pub: Arxiv 2025
     - Summary: This paper introduces a framework for efficient pretraining of small language models (SLMs) by combining subnetwork selection, evolutionary search for optimal initializations, and knowledge distillation from larger teacher models. The method identifies structurally sparse subnetworks that outperform randomly initialized models and leverages evolutionary search to find high-quality initializations, achieving comparable performance to Pythia SLMs with 9.2x fewer pretraining tokens. The code and models are publicly released to facilitate cost-efficient SLM development. #Pruning #SparseNetworks #KnowledgeDistillation #EfficientPretraining #LLM
     - 摘要: 该研究提出了一种高效的小型语言模型(SLM)预训练框架，通过子网络选择、进化搜索和知识蒸馏相结合，显著降低了预训练所需的计算资源。实验结果表明，利用进化搜索发现的优质子网络初始化，并结合LLM权重初始化，可以使SLM在更少的预训练tokens下达到与Pythia SLM相当的性能。#剪枝 #稀疏 #大语言模型 #知识蒸馏 #进化搜索 #子网络选择
-#剪枝 #稀疏 #大语言模型 #结构化剪枝 #神经正切核 #微调
-#剪枝 #稀疏混合专家 #大语言模型 #免训练 #模型压缩
+
+
+- CAST: Continuous and Differentiable Semi-Structured Sparsity-Aware   Training for Large Language Models
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Weiyu Huang, Yuezhou Hu, Jun Zhu, et al.
+    - Link: http://arxiv.org/pdf/2509.25996v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces CAST, a novel continuous and differentiable sparsity-aware training framework for LLMs that enables joint optimization of sparsity patterns and weights, progressively transforming the model into a semi-structured (N:M) sparse format. CAST incorporates AdamS, a sparsity-aware optimizer, weight scaling, and knowledge distillation to achieve improved perplexity and zero-shot accuracy compared to previous methods, even with limited training resources, as demonstrated on models up to 13B parameters. #Pruning #Sparse #LLM #SparsityAwareTraining #NMSparsity #KnowledgeDistillation
+    - 摘要: 该论文提出了CAST，一个连续且可微的稀疏感知训练框架，用于训练半结构化（N:M）稀疏大语言模型。CAST通过联合优化稀疏模式和权重，并引入自适应L1衰减、权重缩放和知识蒸馏等关键技术，显著提升了稀疏模型的性能，在多种模型上实现了优于现有方法的困惑度和零样本精度，同时减少了训练资源。#剪枝 #稀疏 #大语言模型 #半结构化稀疏
+ 
 - Scaling Law for Post-training after Model Pruning
     - Label: <img src=https://img.shields.io/badge/semi_structured-brightgreen.svg > <img src=https://img.shields.io/badge/structured-blue.svg >
     - Authors: Xiaodong Chen, Yuxuan Hu, Jing Zhang, Xiaokang Zhang, Cuiping Li, Hong Chen
