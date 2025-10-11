@@ -572,6 +572,16 @@ We encourage the community to engage with this resource; please leave comments o
     - 摘要: NIRVANA 提出了一种新的大语言模型结构化剪枝方法，旨在平衡零样本精度保持和微调能力。该方法基于神经正切核推导出的Adam优化动态的一阶显著性准则进行剪枝，并结合自适应稀疏分配机制和KL散度校准数据选择策略，以提高剪枝的鲁棒性和泛化性。实验结果表明，NIRVANA 在 Llama3、Qwen 和 T5 模型上优于现有的结构化剪枝方法。
 
 
+- Where to Begin: Efficient Pretraining via Subnetwork Selection and   Distillation
+    - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
+    - Author: Arjun Krishnakumar, Rhea Sanjay Sukthanker, Hannan Javed Mahadik, et al.
+    - Link: http://arxiv.org/pdf/2510.07227v1 
+    - Code: Not available
+    - Pub: Arxiv 2025
+    - Summary: This paper introduces a framework for efficient pretraining of small language models (SLMs) by combining subnetwork selection, evolutionary search for optimal initializations, and knowledge distillation from larger teacher models. The method identifies structurally sparse subnetworks that outperform randomly initialized models and leverages evolutionary search to find high-quality initializations, achieving comparable performance to Pythia SLMs with 9.2x fewer pretraining tokens. The code and models are publicly released to facilitate cost-efficient SLM development. #Pruning #SparseNetworks #KnowledgeDistillation #EfficientPretraining #LLM
+    - 摘要: 该研究提出了一种高效的小型语言模型(SLM)预训练框架，通过子网络选择、进化搜索和知识蒸馏相结合，显著降低了预训练所需的计算资源。实验结果表明，利用进化搜索发现的优质子网络初始化，并结合LLM权重初始化，可以使SLM在更少的预训练tokens下达到与Pythia SLM相当的性能。#剪枝 #稀疏 #大语言模型 #知识蒸馏 #进化搜索 #子网络选择
+
+
 - CAST: Continuous and Differentiable Semi-Structured Sparsity-Aware   Training for Large Language Models
     - Label: <img src=https://img.shields.io/badge/pruning-turquoise.svg >
     - Author: Weiyu Huang, Yuezhou Hu, Jun Zhu, et al.
